@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace RusticiSoftware\Engine\V2\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
