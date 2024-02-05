@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **typical_time** | **string** |  | [optional] 
 **keywords** | **string[]** |  | [optional] 
 **plugin_specific_metadata** | **object** |  | [optional] 
+**additional_metadata** | **object** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

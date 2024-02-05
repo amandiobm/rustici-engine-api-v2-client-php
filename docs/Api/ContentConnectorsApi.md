@@ -1,4 +1,4 @@
-# RusticiSoftware\Engine\V2\ContentConnectorsApi
+# Swagger\Client\ContentConnectorsApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 
 # **createConnector**
-> \RusticiSoftware\Engine\V2\Model\StringResultSchema createConnector($connector, $engine_tenant_name)
+> \Swagger\Client\Model\StringResultSchema createConnector($connector, $engine_tenant_name)
 
 Create a connector
 
@@ -26,20 +26,20 @@ Creates a connector for the specified tenant, or a system-wide connector if tena
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$connector = new \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema(); // \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema | 
+$connector = new \Swagger\Client\Model\CreateConnectorSchema(); // \Swagger\Client\Model\CreateConnectorSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -55,12 +55,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **connector** | [**\RusticiSoftware\Engine\V2\Model\CreateConnectorSchema**](../Model/CreateConnectorSchema.md)|  |
+ **connector** | [**\Swagger\Client\Model\CreateConnectorSchema**](../Model/CreateConnectorSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConnectorContentList**
-> \RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema getConnectorContentList($engine_tenant_name, $connector_id, $since, $more, $not_imported, $search, $include_all_metadata)
+> \Swagger\Client\Model\ConnectorContentListSchema getConnectorContentList($engine_tenant_name, $connector_id, $since, $more, $not_imported, $search, $include_all_metadata)
 
 Get list of available content
 
@@ -86,14 +86,14 @@ Gets the list of content available, either for all connectors, or for only a spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema**](../Model/ConnectorContentListSchema.md)
+[**\Swagger\Client\Model\ConnectorContentListSchema**](../Model/ConnectorContentListSchema.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getConnectorsList**
-> \RusticiSoftware\Engine\V2\Model\ConnectorListSchema getConnectorsList($engine_tenant_name)
+> \Swagger\Client\Model\ConnectorListSchema getConnectorsList($engine_tenant_name, $include_additional_instance_information)
 
 Get content connectors
 
@@ -156,23 +156,24 @@ Gets list of connectors, for the specified tenant, or connectors that apply to a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
+$include_additional_instance_information = true; // bool | 
 
 try {
-    $result = $apiInstance->getConnectorsList($engine_tenant_name);
+    $result = $apiInstance->getConnectorsList($engine_tenant_name, $include_additional_instance_information);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ContentConnectorsApi->getConnectorsList: ', $e->getMessage(), PHP_EOL;
@@ -185,10 +186,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **include_additional_instance_information** | **bool**|  | [optional]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\ConnectorListSchema**](../Model/ConnectorListSchema.md)
+[**\Swagger\Client\Model\ConnectorListSchema**](../Model/ConnectorListSchema.md)
 
 ### Authorization
 
@@ -202,7 +204,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRefreshJobStatus**
-> \RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema getRefreshJobStatus($refresh_job_id, $engine_tenant_name)
+> \Swagger\Client\Model\RefreshConnectorResultListSchema getRefreshJobStatus($refresh_job_id, $engine_tenant_name)
 
 Check the status of a refresh job.
 
@@ -212,14 +214,14 @@ Check the status of a refresh job.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -246,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema**](../Model/RefreshConnectorResultListSchema.md)
+[**\Swagger\Client\Model\RefreshConnectorResultListSchema**](../Model/RefreshConnectorResultListSchema.md)
 
 ### Authorization
 
@@ -260,7 +262,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **refreshConnectorContentListJob**
-> \RusticiSoftware\Engine\V2\Model\StringResultSchema refreshConnectorContentListJob($engine_tenant_name, $connector_id)
+> \Swagger\Client\Model\StringResultSchema refreshConnectorContentListJob($engine_tenant_name, $connector_id)
 
 Start a job to refresh the list of available content
 
@@ -272,14 +274,14 @@ Starts a job to refresh the list of content available, either for all connectors
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -306,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -320,7 +322,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchRemoteConnectorContent**
-> \RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema searchRemoteConnectorContent($search_info, $engine_tenant_name)
+> \Swagger\Client\Model\ConnectorContentListSchema searchRemoteConnectorContent($search_info, $engine_tenant_name)
 
 search remote content
 
@@ -332,20 +334,20 @@ Searches the remote content available, either for all connectors, or for only a 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$search_info = new \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema(); // \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema | 
+$search_info = new \Swagger\Client\Model\ConnectorContentSearchSchema(); // \Swagger\Client\Model\ConnectorContentSearchSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -361,12 +363,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search_info** | [**\RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema**](../Model/ConnectorContentSearchSchema.md)|  |
+ **search_info** | [**\Swagger\Client\Model\ConnectorContentSearchSchema**](../Model/ConnectorContentSearchSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema**](../Model/ConnectorContentListSchema.md)
+[**\Swagger\Client\Model\ConnectorContentListSchema**](../Model/ConnectorContentListSchema.md)
 
 ### Authorization
 
@@ -392,21 +394,21 @@ Update the specified connector.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
+$apiInstance = new Swagger\Client\Api\ContentConnectorsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $connector_id = "connector_id_example"; // string | the connector id
-$connector = new \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema(); // \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema | 
+$connector = new \Swagger\Client\Model\UpdateConnectorSchema(); // \Swagger\Client\Model\UpdateConnectorSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -422,7 +424,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **connector_id** | **string**| the connector id |
- **connector** | [**\RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema**](../Model/UpdateConnectorSchema.md)|  |
+ **connector** | [**\Swagger\Client\Model\UpdateConnectorSchema**](../Model/UpdateConnectorSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type

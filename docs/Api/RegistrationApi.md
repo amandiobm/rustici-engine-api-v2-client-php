@@ -1,18 +1,22 @@
-# RusticiSoftware\Engine\V2\RegistrationApi
+# Swagger\Client\RegistrationApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**abandonRegistrationSessions**](RegistrationApi.md#abandonRegistrationSessions) | **POST** /registrations/{registrationId}/abandon | Abandon all sessions for &#x60;registrationId&#x60;. Currently only cmi5 session abandon is supported. For cmi5, section 9.3.6 of the specification allows for an activity to indicate an abnormal termination by a learner&#39;s action or due to a system failure. This endpoint thus allows for an activity to mark the session belonging to the specified registration as abandoned.
 [**buildRegistrationLaunchLink**](RegistrationApi.md#buildRegistrationLaunchLink) | **POST** /registrations/{registrationId}/launchLink | Returns the link to use to launch this registration
 [**createNewRegistrationInstance**](RegistrationApi.md#createNewRegistrationInstance) | **POST** /registrations/{registrationId}/instances | Create a new instance for this registration specified by the registration ID
 [**createRegistration**](RegistrationApi.md#createRegistration) | **POST** /registrations | Create a registration.
+[**createRegistrationWithLaunchLink**](RegistrationApi.md#createRegistrationWithLaunchLink) | **POST** /registrations/withLaunchLink | Creates a registration and returns the link to use to launch it
 [**deleteRegistration**](RegistrationApi.md#deleteRegistration) | **DELETE** /registrations/{registrationId} | Delete &#x60;registrationId&#x60;
 [**deleteRegistrationConfigurationSetting**](RegistrationApi.md#deleteRegistrationConfigurationSetting) | **DELETE** /registrations/{registrationId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this registration
 [**deleteRegistrationGlobalData**](RegistrationApi.md#deleteRegistrationGlobalData) | **DELETE** /registrations/{registrationId}/globalData | delete global data associated with &#x60;registrationId&#x60;
 [**deleteRegistrationInstance**](RegistrationApi.md#deleteRegistrationInstance) | **DELETE** /registrations/{registrationId}/instances/{instanceId} | Delete instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;
 [**deleteRegistrationInstanceConfigurationSetting**](RegistrationApi.md#deleteRegistrationInstanceConfigurationSetting) | **DELETE** /registrations/{registrationId}/instances/{instanceId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this registration instance
 [**deleteRegistrationProgress**](RegistrationApi.md#deleteRegistrationProgress) | **DELETE** /registrations/{registrationId}/progress | delete registration progress (clear registration)
+[**finalizeRegistrationInstanceProgress**](RegistrationApi.md#finalizeRegistrationInstanceProgress) | **POST** /registrations/{registrationId}/instances/{instanceId}/finalize | Set registration final progress for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \&quot;waive\&quot; (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires &#x60;isCompleted&#x60; and &#x60;isPassed&#x60; to both be set to &#x60;true&#x60; for the waive operation.
+[**finalizeRegistrationProgress**](RegistrationApi.md#finalizeRegistrationProgress) | **POST** /registrations/{registrationId}/finalize | Set registration&#39;s or activity&#39;s final progress for &#x60;registrationId&#x60;. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \&quot;waive\&quot; (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires &#x60;isCompleted&#x60; and &#x60;isPassed&#x60; to both be set to &#x60;true&#x60; for the waive operation.
 [**getRegistration**](RegistrationApi.md#getRegistration) | **HEAD** /registrations/{registrationId} | Does this registration exist?
 [**getRegistrationConfiguration**](RegistrationApi.md#getRegistrationConfiguration) | **GET** /registrations/{registrationId}/configuration | Returns all configuration settings for this registration
 [**getRegistrationInstanceConfiguration**](RegistrationApi.md#getRegistrationInstanceConfiguration) | **GET** /registrations/{registrationId}/instances/{instanceId}/configuration | Returns all configuration settings for this registration instance
@@ -24,12 +28,70 @@ Method | HTTP request | Description
 [**getRegistrationProgress**](RegistrationApi.md#getRegistrationProgress) | **GET** /registrations/{registrationId} | Get registration progress for &#x60;registrationId&#x60;
 [**getRegistrationStatements**](RegistrationApi.md#getRegistrationStatements) | **GET** /registrations/{registrationId}/xAPIStatements | Get xAPI statements for &#x60;registrationId&#x60;
 [**getRegistrations**](RegistrationApi.md#getRegistrations) | **GET** /registrations | Gets a list of registrations including a summary of the status of each registration.
+[**ltiBasicOutcomes**](RegistrationApi.md#ltiBasicOutcomes) | **POST** /registrations/ltiBasicOutcomes | Endpoint for LTI basic outcomes
 [**setRegistrationConfiguration**](RegistrationApi.md#setRegistrationConfiguration) | **POST** /registrations/{registrationId}/configuration | Set configuration settings for this registration.
 [**setRegistrationInstanceConfiguration**](RegistrationApi.md#setRegistrationInstanceConfiguration) | **POST** /registrations/{registrationId}/instances/{instanceId}/configuration | Set configuration settings for this registration instance.
 
 
+# **abandonRegistrationSessions**
+> abandonRegistrationSessions($engine_tenant_name, $registration_id)
+
+Abandon all sessions for `registrationId`. Currently only cmi5 session abandon is supported. For cmi5, section 9.3.6 of the specification allows for an activity to indicate an abnormal termination by a learner's action or due to a system failure. This endpoint thus allows for an activity to mark the session belonging to the specified registration as abandoned.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$registration_id = "registration_id_example"; // string | id for this registration
+
+try {
+    $apiInstance->abandonRegistrationSessions($engine_tenant_name, $registration_id);
+} catch (Exception $e) {
+    echo 'Exception when calling RegistrationApi->abandonRegistrationSessions: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **buildRegistrationLaunchLink**
-> \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema buildRegistrationLaunchLink($engine_tenant_name, $registration_id, $launch_link_request)
+> \Swagger\Client\Model\LaunchLinkSchema buildRegistrationLaunchLink($engine_tenant_name, $registration_id, $launch_link_request)
 
 Returns the link to use to launch this registration
 
@@ -39,14 +101,14 @@ Returns the link to use to launch this registration
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -54,7 +116,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $registration_id = "registration_id_example"; // string | id for this registration
-$launch_link_request = new \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema(); // \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema | 
+$launch_link_request = new \Swagger\Client\Model\LaunchLinkRequestSchema(); // \Swagger\Client\Model\LaunchLinkRequestSchema | 
 
 try {
     $result = $apiInstance->buildRegistrationLaunchLink($engine_tenant_name, $registration_id, $launch_link_request);
@@ -71,11 +133,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **registration_id** | **string**| id for this registration |
- **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
+ **launch_link_request** | [**\Swagger\Client\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
+[**\Swagger\Client\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
 
 ### Authorization
 
@@ -99,14 +161,14 @@ Create a new instance for this registration specified by the registration ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,21 +218,21 @@ Create a registration.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
-$registration = new \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema(); // \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema | 
+$registration = new \Swagger\Client\Model\CreateRegistrationSchema(); // \Swagger\Client\Model\CreateRegistrationSchema | 
 $course_version = 56; // int | The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to.
 
 try {
@@ -186,12 +248,72 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
- **registration** | [**\RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema**](../Model/CreateRegistrationSchema.md)|  |
+ **registration** | [**\Swagger\Client\Model\CreateRegistrationSchema**](../Model/CreateRegistrationSchema.md)|  |
  **course_version** | **int**| The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. | [optional]
 
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **createRegistrationWithLaunchLink**
+> \Swagger\Client\Model\LaunchLinkSchema createRegistrationWithLaunchLink($engine_tenant_name, $create_request, $course_version)
+
+Creates a registration and returns the link to use to launch it
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$create_request = new \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema(); // \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema | 
+$course_version = 56; // int | The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to.
+
+try {
+    $result = $apiInstance->createRegistrationWithLaunchLink($engine_tenant_name, $create_request, $course_version);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RegistrationApi->createRegistrationWithLaunchLink: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **create_request** | [**\Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema**](../Model/CreateRegistrationWithLaunchLinkSchema.md)|  |
+ **course_version** | **int**| The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
 
 ### Authorization
 
@@ -215,14 +337,14 @@ Delete `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -272,14 +394,14 @@ Clears the `settingId` value for this registration
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -331,14 +453,14 @@ delete global data associated with `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -388,14 +510,14 @@ Delete instance `instanceId` of `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -447,14 +569,14 @@ Clears the `settingId` value for this registration instance
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -508,14 +630,14 @@ delete registration progress (clear registration)
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -554,6 +676,130 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **finalizeRegistrationInstanceProgress**
+> finalizeRegistrationInstanceProgress($engine_tenant_name, $registration_id, $instance_id, $registration_final_state, $activity_id)
+
+Set registration final progress for instance `instanceId` of `registrationId`. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \"waive\" (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires `isCompleted` and `isPassed` to both be set to `true` for the waive operation.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$registration_id = "registration_id_example"; // string | id for this registration
+$instance_id = 56; // int | the instance of this registration
+$registration_final_state = new \Swagger\Client\Model\FinalizeRegistrationProgressSchema(); // \Swagger\Client\Model\FinalizeRegistrationProgressSchema | 
+$activity_id = ""; // string | Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course.
+
+try {
+    $apiInstance->finalizeRegistrationInstanceProgress($engine_tenant_name, $registration_id, $instance_id, $registration_final_state, $activity_id);
+} catch (Exception $e) {
+    echo 'Exception when calling RegistrationApi->finalizeRegistrationInstanceProgress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **registration_final_state** | [**\Swagger\Client\Model\FinalizeRegistrationProgressSchema**](../Model/FinalizeRegistrationProgressSchema.md)|  |
+ **activity_id** | **string**| Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. | [optional] [default to ]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **finalizeRegistrationProgress**
+> finalizeRegistrationProgress($engine_tenant_name, $registration_id, $registration_final_state, $activity_id)
+
+Set registration's or activity's final progress for `registrationId`. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \"waive\" (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires `isCompleted` and `isPassed` to both be set to `true` for the waive operation.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$registration_id = "registration_id_example"; // string | id for this registration
+$registration_final_state = new \Swagger\Client\Model\FinalizeRegistrationProgressSchema(); // \Swagger\Client\Model\FinalizeRegistrationProgressSchema | 
+$activity_id = ""; // string | Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course.
+
+try {
+    $apiInstance->finalizeRegistrationProgress($engine_tenant_name, $registration_id, $registration_final_state, $activity_id);
+} catch (Exception $e) {
+    echo 'Exception when calling RegistrationApi->finalizeRegistrationProgress: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **registration_final_state** | [**\Swagger\Client\Model\FinalizeRegistrationProgressSchema**](../Model/FinalizeRegistrationProgressSchema.md)|  |
+ **activity_id** | **string**| Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. | [optional] [default to ]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getRegistration**
 > getRegistration($engine_tenant_name, $registration_id)
 
@@ -565,14 +811,14 @@ Does this registration exist?
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -612,7 +858,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationConfiguration**
-> \RusticiSoftware\Engine\V2\Model\SettingListSchema getRegistrationConfiguration($engine_tenant_name, $registration_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
+> \Swagger\Client\Model\SettingListSchema getRegistrationConfiguration($engine_tenant_name, $registration_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
 
 Returns all configuration settings for this registration
 
@@ -622,14 +868,14 @@ Returns all configuration settings for this registration
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -664,7 +910,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\SettingListSchema**](../Model/SettingListSchema.md)
+[**\Swagger\Client\Model\SettingListSchema**](../Model/SettingListSchema.md)
 
 ### Authorization
 
@@ -678,7 +924,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationInstanceConfiguration**
-> \RusticiSoftware\Engine\V2\Model\SettingListSchema getRegistrationInstanceConfiguration($engine_tenant_name, $registration_id, $instance_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
+> \Swagger\Client\Model\SettingListSchema getRegistrationInstanceConfiguration($engine_tenant_name, $registration_id, $instance_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
 
 Returns all configuration settings for this registration instance
 
@@ -688,14 +934,14 @@ Returns all configuration settings for this registration instance
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -732,7 +978,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\SettingListSchema**](../Model/SettingListSchema.md)
+[**\Swagger\Client\Model\SettingListSchema**](../Model/SettingListSchema.md)
 
 ### Authorization
 
@@ -746,7 +992,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationInstanceLaunchHistory**
-> \RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema getRegistrationInstanceLaunchHistory($engine_tenant_name, $registration_id, $instance_id, $include_history_log)
+> \Swagger\Client\Model\LaunchHistoryListSchema getRegistrationInstanceLaunchHistory($engine_tenant_name, $registration_id, $instance_id, $include_history_log)
 
 Returns history of this registration's launches
 
@@ -756,14 +1002,14 @@ Returns history of this registration's launches
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -794,7 +1040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema**](../Model/LaunchHistoryListSchema.md)
+[**\Swagger\Client\Model\LaunchHistoryListSchema**](../Model/LaunchHistoryListSchema.md)
 
 ### Authorization
 
@@ -808,7 +1054,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationInstanceProgress**
-> \RusticiSoftware\Engine\V2\Model\RegistrationSchema getRegistrationInstanceProgress($engine_tenant_name, $registration_id, $instance_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent)
+> \Swagger\Client\Model\RegistrationSchema getRegistrationInstanceProgress($engine_tenant_name, $registration_id, $instance_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent)
 
 Get registration progress for instance `instanceId` of `registrationId`
 
@@ -818,14 +1064,14 @@ Get registration progress for instance `instanceId` of `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -862,7 +1108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\RegistrationSchema**](../Model/RegistrationSchema.md)
+[**\Swagger\Client\Model\RegistrationSchema**](../Model/RegistrationSchema.md)
 
 ### Authorization
 
@@ -876,7 +1122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationInstanceStatements**
-> \RusticiSoftware\Engine\V2\Model\XapiStatementResult getRegistrationInstanceStatements($engine_tenant_name, $registration_id, $instance_id, $since, $until, $more)
+> \Swagger\Client\Model\XapiStatementResult getRegistrationInstanceStatements($engine_tenant_name, $registration_id, $instance_id, $since, $until, $more)
 
 Get xAPI statements for instance `instanceId` of `registrationId`
 
@@ -886,14 +1132,14 @@ Get xAPI statements for instance `instanceId` of `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -928,7 +1174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
+[**\Swagger\Client\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
 
 ### Authorization
 
@@ -942,7 +1188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationInstances**
-> \RusticiSoftware\Engine\V2\Model\RegistrationListSchema getRegistrationInstances($engine_tenant_name, $registration_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime)
+> \Swagger\Client\Model\RegistrationListSchema getRegistrationInstances($engine_tenant_name, $registration_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime)
 
 Get all the instances of this the registration specified by the registration ID
 
@@ -952,14 +1198,14 @@ Get all the instances of this the registration specified by the registration ID
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -998,7 +1244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\RegistrationListSchema**](../Model/RegistrationListSchema.md)
+[**\Swagger\Client\Model\RegistrationListSchema**](../Model/RegistrationListSchema.md)
 
 ### Authorization
 
@@ -1012,7 +1258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationLaunchHistory**
-> \RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema getRegistrationLaunchHistory($engine_tenant_name, $registration_id, $include_history_log)
+> \Swagger\Client\Model\LaunchHistoryListSchema getRegistrationLaunchHistory($engine_tenant_name, $registration_id, $include_history_log)
 
 Returns history of this registration's launches
 
@@ -1022,14 +1268,14 @@ Returns history of this registration's launches
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1058,7 +1304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema**](../Model/LaunchHistoryListSchema.md)
+[**\Swagger\Client\Model\LaunchHistoryListSchema**](../Model/LaunchHistoryListSchema.md)
 
 ### Authorization
 
@@ -1072,7 +1318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationProgress**
-> \RusticiSoftware\Engine\V2\Model\RegistrationSchema getRegistrationProgress($engine_tenant_name, $registration_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent)
+> \Swagger\Client\Model\RegistrationSchema getRegistrationProgress($engine_tenant_name, $registration_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent)
 
 Get registration progress for `registrationId`
 
@@ -1082,14 +1328,14 @@ Get registration progress for `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1124,7 +1370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\RegistrationSchema**](../Model/RegistrationSchema.md)
+[**\Swagger\Client\Model\RegistrationSchema**](../Model/RegistrationSchema.md)
 
 ### Authorization
 
@@ -1138,7 +1384,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationStatements**
-> \RusticiSoftware\Engine\V2\Model\XapiStatementResult getRegistrationStatements($engine_tenant_name, $registration_id, $since, $until, $more)
+> \Swagger\Client\Model\XapiStatementResult getRegistrationStatements($engine_tenant_name, $registration_id, $since, $until, $more)
 
 Get xAPI statements for `registrationId`
 
@@ -1148,14 +1394,14 @@ Get xAPI statements for `registrationId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1188,7 +1434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
+[**\Swagger\Client\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
 
 ### Authorization
 
@@ -1202,7 +1448,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrations**
-> \RusticiSoftware\Engine\V2\Model\RegistrationListSchema getRegistrations($engine_tenant_name, $course_id, $learner_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime)
+> \Swagger\Client\Model\RegistrationListSchema getRegistrations($engine_tenant_name, $course_id, $learner_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime)
 
 Gets a list of registrations including a summary of the status of each registration.
 
@@ -1214,14 +1460,14 @@ The 'since' parameter exists to allow retrieving only registrations that have ch
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1262,7 +1508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\RegistrationListSchema**](../Model/RegistrationListSchema.md)
+[**\Swagger\Client\Model\RegistrationListSchema**](../Model/RegistrationListSchema.md)
 
 ### Authorization
 
@@ -1272,6 +1518,53 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **ltiBasicOutcomes**
+> string ltiBasicOutcomes($outcomes_request)
+
+Endpoint for LTI basic outcomes
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$outcomes_request = "outcomes_request_example"; // string | 
+
+try {
+    $result = $apiInstance->ltiBasicOutcomes($outcomes_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling RegistrationApi->ltiBasicOutcomes: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **outcomes_request** | **string**|  |
+
+### Return type
+
+**string**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/xml
+ - **Accept**: application/xml
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -1286,14 +1579,14 @@ Set configuration settings for this registration.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1301,7 +1594,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $registration_id = "registration_id_example"; // string | id for this registration
-$configuration_settings = new \RusticiSoftware\Engine\V2\Model\SettingsPostSchema(); // \RusticiSoftware\Engine\V2\Model\SettingsPostSchema | 
+$configuration_settings = new \Swagger\Client\Model\SettingsPostSchema(); // \Swagger\Client\Model\SettingsPostSchema | 
 
 try {
     $apiInstance->setRegistrationConfiguration($engine_tenant_name, $registration_id, $configuration_settings);
@@ -1317,7 +1610,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **registration_id** | **string**| id for this registration |
- **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+ **configuration_settings** | [**\Swagger\Client\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -1345,14 +1638,14 @@ Set configuration settings for this registration instance.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
+$apiInstance = new Swagger\Client\Api\RegistrationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1361,7 +1654,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $registration_id = "registration_id_example"; // string | id for this registration
 $instance_id = 56; // int | the instance of this registration
-$configuration_settings = new \RusticiSoftware\Engine\V2\Model\SettingsPostSchema(); // \RusticiSoftware\Engine\V2\Model\SettingsPostSchema | 
+$configuration_settings = new \Swagger\Client\Model\SettingsPostSchema(); // \Swagger\Client\Model\SettingsPostSchema | 
 
 try {
     $apiInstance->setRegistrationInstanceConfiguration($engine_tenant_name, $registration_id, $instance_id, $configuration_settings);
@@ -1378,7 +1671,7 @@ Name | Type | Description  | Notes
  **engine_tenant_name** | **string**| tenant for this request |
  **registration_id** | **string**| id for this registration |
  **instance_id** | **int**| the instance of this registration |
- **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+ **configuration_settings** | [**\Swagger\Client\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
