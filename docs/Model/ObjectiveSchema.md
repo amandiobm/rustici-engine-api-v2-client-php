@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | [optional] 
 **primary** | **bool** |  | [optional] 
-**score** | [**\Swagger\Client\Model\ScoreSchema**](ScoreSchema.md) |  | [optional] 
+**score** | [**\RusticiSoftware\Engine\V2\Model\ScoreSchema**](ScoreSchema.md) |  | [optional] 
 **score_max** | **double** |  | [optional] 
 **score_min** | **double** |  | [optional] 
 **score_raw** | **double** |  | [optional] 

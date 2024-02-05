@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ConnectorContentListSchema Class Doc Comment
  *
  * @category Class
  * @description List of content available via a connector
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ConnectorContentListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'content_entries' => '\Swagger\Client\Model\ConnectorContentListEntrySchema[]',
+        'content_entries' => '\RusticiSoftware\Engine\V2\Model\ConnectorContentListEntrySchema[]',
         'more' => 'string'
     ];
 
@@ -214,7 +214,7 @@ class ConnectorContentListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets content_entries
      *
-     * @return \Swagger\Client\Model\ConnectorContentListEntrySchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorContentListEntrySchema[]
      */
     public function getContentEntries()
     {
@@ -224,7 +224,7 @@ class ConnectorContentListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets content_entries
      *
-     * @param \Swagger\Client\Model\ConnectorContentListEntrySchema[] $content_entries content_entries
+     * @param \RusticiSoftware\Engine\V2\Model\ConnectorContentListEntrySchema[] $content_entries content_entries
      *
      * @return $this
      */

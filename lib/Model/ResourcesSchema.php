@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ResourcesSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class ResourcesSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'course' => '\Swagger\Client\Model\CourseResourceSchema',
-        'registration' => '\Swagger\Client\Model\RegistrationResourceSchema'
+        'course' => '\RusticiSoftware\Engine\V2\Model\CourseResourceSchema',
+        'registration' => '\RusticiSoftware\Engine\V2\Model\RegistrationResourceSchema'
     ];
 
     /**
@@ -213,7 +213,7 @@ class ResourcesSchema implements ModelInterface, ArrayAccess
     /**
      * Gets course
      *
-     * @return \Swagger\Client\Model\CourseResourceSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseResourceSchema
      */
     public function getCourse()
     {
@@ -223,7 +223,7 @@ class ResourcesSchema implements ModelInterface, ArrayAccess
     /**
      * Sets course
      *
-     * @param \Swagger\Client\Model\CourseResourceSchema $course course
+     * @param \RusticiSoftware\Engine\V2\Model\CourseResourceSchema $course course
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class ResourcesSchema implements ModelInterface, ArrayAccess
     /**
      * Gets registration
      *
-     * @return \Swagger\Client\Model\RegistrationResourceSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationResourceSchema
      */
     public function getRegistration()
     {
@@ -247,7 +247,7 @@ class ResourcesSchema implements ModelInterface, ArrayAccess
     /**
      * Sets registration
      *
-     * @param \Swagger\Client\Model\RegistrationResourceSchema $registration registration
+     * @param \RusticiSoftware\Engine\V2\Model\RegistrationResourceSchema $registration registration
      *
      * @return $this
      */

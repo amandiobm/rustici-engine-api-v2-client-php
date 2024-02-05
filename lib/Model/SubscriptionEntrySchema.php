@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SubscriptionEntrySchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class SubscriptionEntrySchema implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'last_update' => '\DateTime',
-        'definition' => '\Swagger\Client\Model\SubscriptionDefinitionSchema',
+        'definition' => '\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema',
         'last_exception_reference' => 'string',
         'last_exception_date' => '\DateTime'
     ];
@@ -279,7 +279,7 @@ class SubscriptionEntrySchema implements ModelInterface, ArrayAccess
     /**
      * Gets definition
      *
-     * @return \Swagger\Client\Model\SubscriptionDefinitionSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema
      */
     public function getDefinition()
     {
@@ -289,7 +289,7 @@ class SubscriptionEntrySchema implements ModelInterface, ArrayAccess
     /**
      * Sets definition
      *
-     * @param \Swagger\Client\Model\SubscriptionDefinitionSchema $definition definition
+     * @param \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $definition definition
      *
      * @return $this
      */

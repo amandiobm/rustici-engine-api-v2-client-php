@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,7 +34,7 @@ namespace RusticiSoftware\Engine\V2;
  *
  * @category    Class
  * @description Request to import a new course via content connector. Exactly one of fetchRequest, mediaFileReferenceRequest, lti11LinkReferenceRequest, or lti13LinkReferenceRequest must be supplied, depending on the desired import behavior.
- * @package     Swagger\Client
+ * @package     RusticiSoftware\Engine\V2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiSelfSourcedPipeSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class XapiSelfSourcedPipeSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'params' => '\Swagger\Client\Model\ItemValuePairSchema[]'
+        'params' => '\RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class XapiSelfSourcedPipeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets params
      *
-     * @return \Swagger\Client\Model\ItemValuePairSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]
      */
     public function getParams()
     {
@@ -217,7 +217,7 @@ class XapiSelfSourcedPipeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets params
      *
-     * @param \Swagger\Client\Model\ItemValuePairSchema[] $params params
+     * @param \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[] $params params
      *
      * @return $this
      */

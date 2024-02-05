@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RuntimeSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
         'credit' => 'string',
         'entry' => 'string',
         'exit' => 'string',
-        'learner_preference' => '\Swagger\Client\Model\LearnerPreferenceSchema',
+        'learner_preference' => '\RusticiSoftware\Engine\V2\Model\LearnerPreferenceSchema',
         'location' => 'string',
         'mode' => 'string',
         'progress_measure' => 'string',
@@ -73,10 +73,10 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
         'time_tracked' => 'string',
         'runtime_success_status' => 'string',
         'suspend_data' => 'string',
-        'learner_comments' => '\Swagger\Client\Model\CommentSchema[]',
-        'lms_comments' => '\Swagger\Client\Model\CommentSchema[]',
-        'runtime_interactions' => '\Swagger\Client\Model\RuntimeInteractionSchema[]',
-        'runtime_objectives' => '\Swagger\Client\Model\RuntimeObjectiveSchema[]'
+        'learner_comments' => '\RusticiSoftware\Engine\V2\Model\CommentSchema[]',
+        'lms_comments' => '\RusticiSoftware\Engine\V2\Model\CommentSchema[]',
+        'runtime_interactions' => '\RusticiSoftware\Engine\V2\Model\RuntimeInteractionSchema[]',
+        'runtime_objectives' => '\RusticiSoftware\Engine\V2\Model\RuntimeObjectiveSchema[]'
     ];
 
     /**
@@ -442,7 +442,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets learner_preference
      *
-     * @return \Swagger\Client\Model\LearnerPreferenceSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LearnerPreferenceSchema
      */
     public function getLearnerPreference()
     {
@@ -452,7 +452,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets learner_preference
      *
-     * @param \Swagger\Client\Model\LearnerPreferenceSchema $learner_preference learner_preference
+     * @param \RusticiSoftware\Engine\V2\Model\LearnerPreferenceSchema $learner_preference learner_preference
      *
      * @return $this
      */
@@ -739,7 +739,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets learner_comments
      *
-     * @return \Swagger\Client\Model\CommentSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\CommentSchema[]
      */
     public function getLearnerComments()
     {
@@ -749,7 +749,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets learner_comments
      *
-     * @param \Swagger\Client\Model\CommentSchema[] $learner_comments learner_comments
+     * @param \RusticiSoftware\Engine\V2\Model\CommentSchema[] $learner_comments learner_comments
      *
      * @return $this
      */
@@ -763,7 +763,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets lms_comments
      *
-     * @return \Swagger\Client\Model\CommentSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\CommentSchema[]
      */
     public function getLmsComments()
     {
@@ -773,7 +773,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets lms_comments
      *
-     * @param \Swagger\Client\Model\CommentSchema[] $lms_comments lms_comments
+     * @param \RusticiSoftware\Engine\V2\Model\CommentSchema[] $lms_comments lms_comments
      *
      * @return $this
      */
@@ -787,7 +787,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets runtime_interactions
      *
-     * @return \Swagger\Client\Model\RuntimeInteractionSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\RuntimeInteractionSchema[]
      */
     public function getRuntimeInteractions()
     {
@@ -797,7 +797,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets runtime_interactions
      *
-     * @param \Swagger\Client\Model\RuntimeInteractionSchema[] $runtime_interactions runtime_interactions
+     * @param \RusticiSoftware\Engine\V2\Model\RuntimeInteractionSchema[] $runtime_interactions runtime_interactions
      *
      * @return $this
      */
@@ -811,7 +811,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets runtime_objectives
      *
-     * @return \Swagger\Client\Model\RuntimeObjectiveSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\RuntimeObjectiveSchema[]
      */
     public function getRuntimeObjectives()
     {
@@ -821,7 +821,7 @@ class RuntimeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets runtime_objectives
      *
-     * @param \Swagger\Client\Model\RuntimeObjectiveSchema[] $runtime_objectives runtime_objectives
+     * @param \RusticiSoftware\Engine\V2\Model\RuntimeObjectiveSchema[] $runtime_objectives runtime_objectives
      *
      * @return $this
      */

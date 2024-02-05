@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RefreshConnectorResultListSchema Class Doc Comment
  *
  * @category Class
  * @description List of connector content refresh job results
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class RefreshConnectorResultListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'results' => '\Swagger\Client\Model\RefreshConnectorResultSchema[]'
+        'results' => '\RusticiSoftware\Engine\V2\Model\RefreshConnectorResultSchema[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class RefreshConnectorResultListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets results
      *
-     * @return \Swagger\Client\Model\RefreshConnectorResultSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\RefreshConnectorResultSchema[]
      */
     public function getResults()
     {
@@ -218,7 +218,7 @@ class RefreshConnectorResultListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets results
      *
-     * @param \Swagger\Client\Model\RefreshConnectorResultSchema[] $results results
+     * @param \RusticiSoftware\Engine\V2\Model\RefreshConnectorResultSchema[] $results results
      *
      * @return $this
      */

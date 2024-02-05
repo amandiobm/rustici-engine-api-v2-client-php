@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ImportFetchRequestSchema Class Doc Comment
  *
  * @category Class
  * @description Request to import a course by fetching it from a url
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ImportFetchRequestSchema implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'url' => 'string',
         'content_type' => 'string',
-        'media_file_metadata' => '\Swagger\Client\Model\MediaFileMetadataSchema'
+        'media_file_metadata' => '\RusticiSoftware\Engine\V2\Model\MediaFileMetadataSchema'
     ];
 
     /**
@@ -271,7 +271,7 @@ class ImportFetchRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets media_file_metadata
      *
-     * @return \Swagger\Client\Model\MediaFileMetadataSchema
+     * @return \RusticiSoftware\Engine\V2\Model\MediaFileMetadataSchema
      */
     public function getMediaFileMetadata()
     {
@@ -281,7 +281,7 @@ class ImportFetchRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets media_file_metadata
      *
-     * @param \Swagger\Client\Model\MediaFileMetadataSchema $media_file_metadata media_file_metadata
+     * @param \RusticiSoftware\Engine\V2\Model\MediaFileMetadataSchema $media_file_metadata media_file_metadata
      *
      * @return $this
      */

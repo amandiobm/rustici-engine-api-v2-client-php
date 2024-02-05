@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * AboutApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class AboutApi
      *
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AboutSchema
+     * @return \RusticiSoftware\Engine\V2\Model\AboutSchema
      */
     public function getAbout($engine_tenant_name = null)
     {
@@ -111,13 +111,13 @@ class AboutApi
      *
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AboutSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\AboutSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAboutWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\AboutSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AboutSchema';
         $request = $this->getAboutRequest($engine_tenant_name);
 
         try {
@@ -169,7 +169,7 @@ class AboutApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AboutSchema',
+                        '\RusticiSoftware\Engine\V2\Model\AboutSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class AboutApi
      */
     public function getAboutAsyncWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\AboutSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AboutSchema';
         $request = $this->getAboutRequest($engine_tenant_name);
 
         return $this->client
@@ -363,9 +363,9 @@ class AboutApi
      * @param  \DateTime $since Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RegistrationCountSummarySchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema
      */
     public function getRegistrationCount($engine_tenant_name = null, $since = null, $until = null)
     {
@@ -382,13 +382,13 @@ class AboutApi
      * @param  \DateTime $since Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RegistrationCountSummarySchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationCountWithHttpInfo($engine_tenant_name = null, $since = null, $until = null)
     {
-        $returnType = '\Swagger\Client\Model\RegistrationCountSummarySchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema';
         $request = $this->getRegistrationCountRequest($engine_tenant_name, $since, $until);
 
         try {
@@ -440,7 +440,7 @@ class AboutApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RegistrationCountSummarySchema',
+                        '\RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -486,7 +486,7 @@ class AboutApi
      */
     public function getRegistrationCountAsyncWithHttpInfo($engine_tenant_name = null, $since = null, $until = null)
     {
-        $returnType = '\Swagger\Client\Model\RegistrationCountSummarySchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema';
         $request = $this->getRegistrationCountRequest($engine_tenant_name, $since, $until);
 
         return $this->client
@@ -649,9 +649,9 @@ class AboutApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  bool $use_usage_statistics use_usage_statistics (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserCountSummarySchema
+     * @return \RusticiSoftware\Engine\V2\Model\UserCountSummarySchema
      */
     public function getUserCount($engine_tenant_name = null, $since = null, $until = null, $use_usage_statistics = 'false')
     {
@@ -669,13 +669,13 @@ class AboutApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  bool $use_usage_statistics (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserCountSummarySchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\UserCountSummarySchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserCountWithHttpInfo($engine_tenant_name = null, $since = null, $until = null, $use_usage_statistics = 'false')
     {
-        $returnType = '\Swagger\Client\Model\UserCountSummarySchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\UserCountSummarySchema';
         $request = $this->getUserCountRequest($engine_tenant_name, $since, $until, $use_usage_statistics);
 
         try {
@@ -727,7 +727,7 @@ class AboutApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserCountSummarySchema',
+                        '\RusticiSoftware\Engine\V2\Model\UserCountSummarySchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -775,7 +775,7 @@ class AboutApi
      */
     public function getUserCountAsyncWithHttpInfo($engine_tenant_name = null, $since = null, $until = null, $use_usage_statistics = 'false')
     {
-        $returnType = '\Swagger\Client\Model\UserCountSummarySchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\UserCountSummarySchema';
         $request = $this->getUserCountRequest($engine_tenant_name, $since, $until, $use_usage_statistics);
 
         return $this->client

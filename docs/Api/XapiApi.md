@@ -1,4 +1,4 @@
-# Swagger\Client\XapiApi
+# RusticiSoftware\Engine\V2\XapiApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **createStatementPipe**
-> \Swagger\Client\Model\StringResultSchema createStatementPipe($engine_tenant_name, $xapi_statement_pipe)
+> \RusticiSoftware\Engine\V2\Model\StringResultSchema createStatementPipe($engine_tenant_name, $xapi_statement_pipe)
 
 Create an xAPI statement pipe.
 
@@ -27,21 +27,21 @@ Create an xAPI statement pipe.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
-$xapi_statement_pipe = new \Swagger\Client\Model\XapiStatementPipePostSchema(); // \Swagger\Client\Model\XapiStatementPipePostSchema | 
+$xapi_statement_pipe = new \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema(); // \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema | 
 
 try {
     $result = $apiInstance->createStatementPipe($engine_tenant_name, $xapi_statement_pipe);
@@ -57,11 +57,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
- **xapi_statement_pipe** | [**\Swagger\Client\Model\XapiStatementPipePostSchema**](../Model/XapiStatementPipePostSchema.md)|  |
+ **xapi_statement_pipe** | [**\RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema**](../Model/XapiStatementPipePostSchema.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createXapiCredential**
-> \Swagger\Client\Model\StringResultSchema createXapiCredential($engine_tenant_name, $xapi_credential)
+> \RusticiSoftware\Engine\V2\Model\StringResultSchema createXapiCredential($engine_tenant_name, $xapi_credential)
 
 Create an xAPI credential
 
@@ -85,21 +85,21 @@ Create an xAPI credential
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
-$xapi_credential = new \Swagger\Client\Model\XapiCredentialPostSchema(); // \Swagger\Client\Model\XapiCredentialPostSchema | 
+$xapi_credential = new \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema(); // \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema | 
 
 try {
     $result = $apiInstance->createXapiCredential($engine_tenant_name, $xapi_credential);
@@ -115,11 +115,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
- **xapi_credential** | [**\Swagger\Client\Model\XapiCredentialPostSchema**](../Model/XapiCredentialPostSchema.md)|  |
+ **xapi_credential** | [**\RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema**](../Model/XapiCredentialPostSchema.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -145,14 +145,14 @@ Caution: avoid re-creating a statement pipe with the same ID quickly after a del
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -202,14 +202,14 @@ Deletes the xAPI credential specified with the id `xapiCredentialId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -249,7 +249,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStatementPipe**
-> \Swagger\Client\Model\XapiStatementPipeSchema getStatementPipe($engine_tenant_name, $statement_pipe_id)
+> \RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema getStatementPipe($engine_tenant_name, $statement_pipe_id)
 
 Retrieves xAPI statement pipe specified by id `statementPipeId.`
 
@@ -259,14 +259,14 @@ Retrieves xAPI statement pipe specified by id `statementPipeId.`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\XapiStatementPipeSchema**](../Model/XapiStatementPipeSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema**](../Model/XapiStatementPipeSchema.md)
 
 ### Authorization
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getStatementPipes**
-> \Swagger\Client\Model\XapiStatementPipeListSchema getStatementPipes($engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema getStatementPipes($engine_tenant_name)
 
 Get a list of all xAPI statement pipes
 
@@ -317,14 +317,14 @@ Get a list of all xAPI statement pipes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -349,7 +349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\XapiStatementPipeListSchema**](../Model/XapiStatementPipeListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema**](../Model/XapiStatementPipeListSchema.md)
 
 ### Authorization
 
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getXapiCredential**
-> \Swagger\Client\Model\XapiCredentialSchema getXapiCredential($engine_tenant_name, $xapi_credential_id)
+> \RusticiSoftware\Engine\V2\Model\XapiCredentialSchema getXapiCredential($engine_tenant_name, $xapi_credential_id)
 
 Retrieves the xAPI credential specified by id `xapiCredentialId`
 
@@ -373,14 +373,14 @@ Retrieves the xAPI credential specified by id `xapiCredentialId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\XapiCredentialSchema**](../Model/XapiCredentialSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\XapiCredentialSchema**](../Model/XapiCredentialSchema.md)
 
 ### Authorization
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getXapiCredentials**
-> \Swagger\Client\Model\XapiCredentialsListSchema getXapiCredentials($engine_tenant_name, $more)
+> \RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema getXapiCredentials($engine_tenant_name, $more)
 
 Get a list of all xAPI credentials
 
@@ -431,14 +431,14 @@ Get a list of all xAPI credentials
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -465,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\XapiCredentialsListSchema**](../Model/XapiCredentialsListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema**](../Model/XapiCredentialsListSchema.md)
 
 ### Authorization
 
@@ -491,14 +491,14 @@ Editing a statement pipe's url will cause it to start over and forward any state
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -506,7 +506,7 @@ $apiInstance = new Swagger\Client\Api\XapiApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $statement_pipe_id = "statement_pipe_id_example"; // string | id for this xAPI statement pipe
-$xapi_statement_pipe = new \Swagger\Client\Model\XapiStatementPipePutSchema(); // \Swagger\Client\Model\XapiStatementPipePutSchema | 
+$xapi_statement_pipe = new \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema(); // \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema | 
 
 try {
     $apiInstance->setStatementPipe($engine_tenant_name, $statement_pipe_id, $xapi_statement_pipe);
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **statement_pipe_id** | **string**| id for this xAPI statement pipe |
- **xapi_statement_pipe** | [**\Swagger\Client\Model\XapiStatementPipePutSchema**](../Model/XapiStatementPipePutSchema.md)|  |
+ **xapi_statement_pipe** | [**\RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema**](../Model/XapiStatementPipePutSchema.md)|  |
 
 ### Return type
 
@@ -550,14 +550,14 @@ Either edits an existing xAPI credential or creates a new one, specified by id `
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\XapiApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\XapiApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -565,7 +565,7 @@ $apiInstance = new Swagger\Client\Api\XapiApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $xapi_credential_id = "xapi_credential_id_example"; // string | id for this xAPI credential
-$xapi_credential = new \Swagger\Client\Model\XapiCredentialPutSchema(); // \Swagger\Client\Model\XapiCredentialPutSchema | 
+$xapi_credential = new \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema(); // \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema | 
 
 try {
     $apiInstance->setXapiCredential($engine_tenant_name, $xapi_credential_id, $xapi_credential);
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **xapi_credential_id** | **string**| id for this xAPI credential |
- **xapi_credential** | [**\Swagger\Client\Model\XapiCredentialPutSchema**](../Model/XapiCredentialPutSchema.md)|  |
+ **xapi_credential** | [**\RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema**](../Model/XapiCredentialPutSchema.md)|  |
 
 ### Return type
 

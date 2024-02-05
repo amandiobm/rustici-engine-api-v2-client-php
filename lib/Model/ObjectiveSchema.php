@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ObjectiveSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class ObjectiveSchema implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'primary' => 'bool',
-        'score' => '\Swagger\Client\Model\ScoreSchema',
+        'score' => '\RusticiSoftware\Engine\V2\Model\ScoreSchema',
         'score_max' => 'double',
         'score_min' => 'double',
         'score_raw' => 'double',
@@ -402,7 +402,7 @@ class ObjectiveSchema implements ModelInterface, ArrayAccess
     /**
      * Gets score
      *
-     * @return \Swagger\Client\Model\ScoreSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ScoreSchema
      */
     public function getScore()
     {
@@ -412,7 +412,7 @@ class ObjectiveSchema implements ModelInterface, ArrayAccess
     /**
      * Sets score
      *
-     * @param \Swagger\Client\Model\ScoreSchema $score score
+     * @param \RusticiSoftware\Engine\V2\Model\ScoreSchema $score score
      *
      * @return $this
      */

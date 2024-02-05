@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **body** | **object** |  | [optional] 
 **body_version** | **string** |  | [optional] 
 **message_version** | **string** |  | [optional] 
-**resources** | [**\Swagger\Client\Model\ResourcesSchema**](ResourcesSchema.md) |  | [optional] 
+**resources** | [**\RusticiSoftware\Engine\V2\Model\ResourcesSchema**](ResourcesSchema.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * PlayerApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class PlayerApi
      * Returns player configuration
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerConfigurationSchema $player_configuration_schema player_configuration_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema $player_configuration_schema player_configuration_schema (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PlayerConfigurationResultsSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PlayerConfigurationResultsSchema
      */
     public function buildPlayerConfiguration($engine_tenant_name, $player_configuration_schema)
     {
@@ -111,15 +111,15 @@ class PlayerApi
      * Returns player configuration
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerConfigurationSchema $player_configuration_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema $player_configuration_schema (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PlayerConfigurationResultsSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\PlayerConfigurationResultsSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function buildPlayerConfigurationWithHttpInfo($engine_tenant_name, $player_configuration_schema)
     {
-        $returnType = '\Swagger\Client\Model\PlayerConfigurationResultsSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PlayerConfigurationResultsSchema';
         $request = $this->buildPlayerConfigurationRequest($engine_tenant_name, $player_configuration_schema);
 
         try {
@@ -171,7 +171,7 @@ class PlayerApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PlayerConfigurationResultsSchema',
+                        '\RusticiSoftware\Engine\V2\Model\PlayerConfigurationResultsSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,7 +179,7 @@ class PlayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -195,7 +195,7 @@ class PlayerApi
      * Returns player configuration
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerConfigurationSchema $player_configuration_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema $player_configuration_schema (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -216,14 +216,14 @@ class PlayerApi
      * Returns player configuration
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerConfigurationSchema $player_configuration_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema $player_configuration_schema (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function buildPlayerConfigurationAsyncWithHttpInfo($engine_tenant_name, $player_configuration_schema)
     {
-        $returnType = '\Swagger\Client\Model\PlayerConfigurationResultsSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PlayerConfigurationResultsSchema';
         $request = $this->buildPlayerConfigurationRequest($engine_tenant_name, $player_configuration_schema);
 
         return $this->client
@@ -267,7 +267,7 @@ class PlayerApi
      * Create request for operation 'buildPlayerConfiguration'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerConfigurationSchema $player_configuration_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema $player_configuration_schema (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -386,7 +386,7 @@ class PlayerApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $player player (optional, default to modern)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -403,7 +403,7 @@ class PlayerApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $player (optional, default to modern)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -447,7 +447,7 @@ class PlayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -629,7 +629,7 @@ class PlayerApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $player player (optional, default to modern)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -647,7 +647,7 @@ class PlayerApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $player (optional, default to modern)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -713,7 +713,7 @@ class PlayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -907,9 +907,9 @@ class PlayerApi
      * Endpoint for player to send results
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerResultsSchema $player_results_schema player_results_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerResultsSchema $player_results_schema player_results_schema (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -924,9 +924,9 @@ class PlayerApi
      * Endpoint for player to send results
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerResultsSchema $player_results_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerResultsSchema $player_results_schema (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -970,7 +970,7 @@ class PlayerApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -986,7 +986,7 @@ class PlayerApi
      * Endpoint for player to send results
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerResultsSchema $player_results_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerResultsSchema $player_results_schema (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1007,7 +1007,7 @@ class PlayerApi
      * Endpoint for player to send results
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerResultsSchema $player_results_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerResultsSchema $player_results_schema (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1044,7 +1044,7 @@ class PlayerApi
      * Create request for operation 'postPlayerResults'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PlayerResultsSchema $player_results_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PlayerResultsSchema $player_results_schema (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

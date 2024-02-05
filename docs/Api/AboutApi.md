@@ -1,4 +1,4 @@
-# Swagger\Client\AboutApi
+# RusticiSoftware\Engine\V2\AboutApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getAbout**
-> \Swagger\Client\Model\AboutSchema getAbout($engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\AboutSchema getAbout($engine_tenant_name)
 
 Get back the version and platform of the running instance of Engine
 
@@ -20,14 +20,14 @@ Get back the version and platform of the running instance of Engine
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AboutApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AboutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AboutSchema**](../Model/AboutSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\AboutSchema**](../Model/AboutSchema.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRegistrationCount**
-> \Swagger\Client\Model\RegistrationCountSummarySchema getRegistrationCount($engine_tenant_name, $since, $until)
+> \RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema getRegistrationCount($engine_tenant_name, $since, $until)
 
 Gets the number of created or launched registrations for the specified tenant or across all tenants when none is specified
 
@@ -76,14 +76,14 @@ Gets the number of created or launched registrations for the specified tenant or
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AboutApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AboutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RegistrationCountSummarySchema**](../Model/RegistrationCountSummarySchema.md)
+[**\RusticiSoftware\Engine\V2\Model\RegistrationCountSummarySchema**](../Model/RegistrationCountSummarySchema.md)
 
 ### Authorization
 
@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserCount**
-> \Swagger\Client\Model\UserCountSummarySchema getUserCount($engine_tenant_name, $since, $until, $use_usage_statistics)
+> \RusticiSoftware\Engine\V2\Model\UserCountSummarySchema getUserCount($engine_tenant_name, $since, $until, $use_usage_statistics)
 
 Gets the number of users for the specified tenant or across all tenants when none is specified
 
@@ -136,14 +136,14 @@ Gets the number of users for the specified tenant or across all tenants when non
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AboutApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AboutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserCountSummarySchema**](../Model/UserCountSummarySchema.md)
+[**\RusticiSoftware\Engine\V2\Model\UserCountSummarySchema**](../Model/UserCountSummarySchema.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * PingApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class PingApi
      *
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PingSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PingSchema
      */
     public function ping($engine_tenant_name = null)
     {
@@ -111,13 +111,13 @@ class PingApi
      *
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PingSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\PingSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function pingWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\PingSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PingSchema';
         $request = $this->pingRequest($engine_tenant_name);
 
         try {
@@ -169,7 +169,7 @@ class PingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PingSchema',
+                        '\RusticiSoftware\Engine\V2\Model\PingSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class PingApi
      */
     public function pingAsyncWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\PingSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PingSchema';
         $request = $this->pingRequest($engine_tenant_name);
 
         return $this->client

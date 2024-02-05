@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CreateDestinationListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class CreateDestinationListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'destinations' => '\Swagger\Client\Model\DestinationIdSchema[]'
+        'destinations' => '\RusticiSoftware\Engine\V2\Model\DestinationIdSchema[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class CreateDestinationListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets destinations
      *
-     * @return \Swagger\Client\Model\DestinationIdSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\DestinationIdSchema[]
      */
     public function getDestinations()
     {
@@ -220,7 +220,7 @@ class CreateDestinationListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets destinations
      *
-     * @param \Swagger\Client\Model\DestinationIdSchema[] $destinations destinations
+     * @param \RusticiSoftware\Engine\V2\Model\DestinationIdSchema[] $destinations destinations
      *
      * @return $this
      */

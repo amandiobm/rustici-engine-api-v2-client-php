@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ImportLti13LinkReferenceRequestSchema Class Doc Comment
  *
  * @category Class
  * @description Request to import an LTI 1.3 link
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ImportLti13LinkReferenceRequestSchema implements ModelInterface, ArrayAcce
     protected static $swaggerTypes = [
         'url' => 'string',
         'title' => 'string',
-        'lti_link_metadata' => '\Swagger\Client\Model\LtiLinkMetadataSchema'
+        'lti_link_metadata' => '\RusticiSoftware\Engine\V2\Model\LtiLinkMetadataSchema'
     ];
 
     /**
@@ -274,7 +274,7 @@ class ImportLti13LinkReferenceRequestSchema implements ModelInterface, ArrayAcce
     /**
      * Gets lti_link_metadata
      *
-     * @return \Swagger\Client\Model\LtiLinkMetadataSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LtiLinkMetadataSchema
      */
     public function getLtiLinkMetadata()
     {
@@ -284,7 +284,7 @@ class ImportLti13LinkReferenceRequestSchema implements ModelInterface, ArrayAcce
     /**
      * Sets lti_link_metadata
      *
-     * @param \Swagger\Client\Model\LtiLinkMetadataSchema $lti_link_metadata lti_link_metadata
+     * @param \RusticiSoftware\Engine\V2\Model\LtiLinkMetadataSchema $lti_link_metadata lti_link_metadata
      *
      * @return $this
      */

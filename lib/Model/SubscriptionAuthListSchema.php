@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SubscriptionAuthListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class SubscriptionAuthListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'auth_entries' => '\Swagger\Client\Model\SubscriptionAuthEntrySchema[]',
+        'auth_entries' => '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthEntrySchema[]',
         'more' => 'string'
     ];
 
@@ -213,7 +213,7 @@ class SubscriptionAuthListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets auth_entries
      *
-     * @return \Swagger\Client\Model\SubscriptionAuthEntrySchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionAuthEntrySchema[]
      */
     public function getAuthEntries()
     {
@@ -223,7 +223,7 @@ class SubscriptionAuthListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets auth_entries
      *
-     * @param \Swagger\Client\Model\SubscriptionAuthEntrySchema[] $auth_entries auth_entries
+     * @param \RusticiSoftware\Engine\V2\Model\SubscriptionAuthEntrySchema[] $auth_entries auth_entries
      *
      * @return $this
      */

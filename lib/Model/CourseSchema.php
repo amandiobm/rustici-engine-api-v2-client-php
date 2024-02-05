@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CourseSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,9 +67,9 @@ class CourseSchema implements ModelInterface, ArrayAccess
         'activity_id' => 'string',
         'course_learning_standard' => 'string',
         'launchable' => 'bool',
-        'connector' => '\Swagger\Client\Model\CourseConnectorSchema',
-        'metadata' => '\Swagger\Client\Model\MetadataSchema',
-        'root_activity' => '\Swagger\Client\Model\CourseActivitySchema'
+        'connector' => '\RusticiSoftware\Engine\V2\Model\CourseConnectorSchema',
+        'metadata' => '\RusticiSoftware\Engine\V2\Model\MetadataSchema',
+        'root_activity' => '\RusticiSoftware\Engine\V2\Model\CourseActivitySchema'
     ];
 
     /**
@@ -567,7 +567,7 @@ class CourseSchema implements ModelInterface, ArrayAccess
     /**
      * Gets connector
      *
-     * @return \Swagger\Client\Model\CourseConnectorSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseConnectorSchema
      */
     public function getConnector()
     {
@@ -577,7 +577,7 @@ class CourseSchema implements ModelInterface, ArrayAccess
     /**
      * Sets connector
      *
-     * @param \Swagger\Client\Model\CourseConnectorSchema $connector connector
+     * @param \RusticiSoftware\Engine\V2\Model\CourseConnectorSchema $connector connector
      *
      * @return $this
      */
@@ -591,7 +591,7 @@ class CourseSchema implements ModelInterface, ArrayAccess
     /**
      * Gets metadata
      *
-     * @return \Swagger\Client\Model\MetadataSchema
+     * @return \RusticiSoftware\Engine\V2\Model\MetadataSchema
      */
     public function getMetadata()
     {
@@ -601,7 +601,7 @@ class CourseSchema implements ModelInterface, ArrayAccess
     /**
      * Sets metadata
      *
-     * @param \Swagger\Client\Model\MetadataSchema $metadata metadata
+     * @param \RusticiSoftware\Engine\V2\Model\MetadataSchema $metadata metadata
      *
      * @return $this
      */
@@ -615,7 +615,7 @@ class CourseSchema implements ModelInterface, ArrayAccess
     /**
      * Gets root_activity
      *
-     * @return \Swagger\Client\Model\CourseActivitySchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseActivitySchema
      */
     public function getRootActivity()
     {
@@ -625,7 +625,7 @@ class CourseSchema implements ModelInterface, ArrayAccess
     /**
      * Sets root_activity
      *
-     * @param \Swagger\Client\Model\CourseActivitySchema $root_activity root_activity
+     * @param \RusticiSoftware\Engine\V2\Model\CourseActivitySchema $root_activity root_activity
      *
      * @return $this
      */

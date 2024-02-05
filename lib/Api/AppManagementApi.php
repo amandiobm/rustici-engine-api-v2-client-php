@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * AppManagementApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,12 +92,12 @@ class AppManagementApi
      *
      * Create credential
      *
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_request credential_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_request credential_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CredentialCreatedSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema
      */
     public function createCredential($credential_request, $engine_tenant_name = null)
     {
@@ -110,16 +110,16 @@ class AppManagementApi
      *
      * Create credential
      *
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CredentialCreatedSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCredentialWithHttpInfo($credential_request, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialCreatedSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema';
         $request = $this->createCredentialRequest($credential_request, $engine_tenant_name);
 
         try {
@@ -171,7 +171,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CredentialCreatedSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,7 +179,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class AppManagementApi
      *
      * Create credential
      *
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -215,7 +215,7 @@ class AppManagementApi
      *
      * Create credential
      *
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -223,7 +223,7 @@ class AppManagementApi
      */
     public function createCredentialAsyncWithHttpInfo($credential_request, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialCreatedSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema';
         $request = $this->createCredentialRequest($credential_request, $engine_tenant_name);
 
         return $this->client
@@ -266,7 +266,7 @@ class AppManagementApi
     /**
      * Create request for operation 'createCredential'
      *
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -382,9 +382,9 @@ class AppManagementApi
      * Create or update tenant
      *
      * @param  string $tenant_name tenant_name (required)
-     * @param  \Swagger\Client\Model\TenantProperties $tenant_properties tenant_properties (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TenantProperties $tenant_properties tenant_properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -399,9 +399,9 @@ class AppManagementApi
      * Create or update tenant
      *
      * @param  string $tenant_name (required)
-     * @param  \Swagger\Client\Model\TenantProperties $tenant_properties (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TenantProperties $tenant_properties (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -445,7 +445,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -461,7 +461,7 @@ class AppManagementApi
      * Create or update tenant
      *
      * @param  string $tenant_name (required)
-     * @param  \Swagger\Client\Model\TenantProperties $tenant_properties (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TenantProperties $tenant_properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -482,7 +482,7 @@ class AppManagementApi
      * Create or update tenant
      *
      * @param  string $tenant_name (required)
-     * @param  \Swagger\Client\Model\TenantProperties $tenant_properties (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TenantProperties $tenant_properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -519,7 +519,7 @@ class AppManagementApi
      * Create request for operation 'createOrUpdateTenant'
      *
      * @param  string $tenant_name (required)
-     * @param  \Swagger\Client\Model\TenantProperties $tenant_properties (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TenantProperties $tenant_properties (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -643,12 +643,12 @@ class AppManagementApi
      *
      * Create subscription
      *
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createSubscription($subscription_definition, $engine_tenant_name = null)
     {
@@ -661,16 +661,16 @@ class AppManagementApi
      *
      * Create subscription
      *
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionWithHttpInfo($subscription_definition, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createSubscriptionRequest($subscription_definition, $engine_tenant_name);
 
         try {
@@ -722,7 +722,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -730,7 +730,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -745,7 +745,7 @@ class AppManagementApi
      *
      * Create subscription
      *
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -766,7 +766,7 @@ class AppManagementApi
      *
      * Create subscription
      *
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -774,7 +774,7 @@ class AppManagementApi
      */
     public function createSubscriptionAsyncWithHttpInfo($subscription_definition, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createSubscriptionRequest($subscription_definition, $engine_tenant_name);
 
         return $this->client
@@ -817,7 +817,7 @@ class AppManagementApi
     /**
      * Create request for operation 'createSubscription'
      *
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -932,12 +932,12 @@ class AppManagementApi
      *
      * Create subscription authentication configurations
      *
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createSubscriptionAuth($subscription_auth_definition, $engine_tenant_name = null)
     {
@@ -950,16 +950,16 @@ class AppManagementApi
      *
      * Create subscription authentication configurations
      *
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createSubscriptionAuthWithHttpInfo($subscription_auth_definition, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createSubscriptionAuthRequest($subscription_auth_definition, $engine_tenant_name);
 
         try {
@@ -1011,7 +1011,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1019,7 +1019,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1034,7 +1034,7 @@ class AppManagementApi
      *
      * Create subscription authentication configurations
      *
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1055,7 +1055,7 @@ class AppManagementApi
      *
      * Create subscription authentication configurations
      *
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1063,7 +1063,7 @@ class AppManagementApi
      */
     public function createSubscriptionAuthAsyncWithHttpInfo($subscription_auth_definition, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createSubscriptionAuthRequest($subscription_auth_definition, $engine_tenant_name);
 
         return $this->client
@@ -1106,7 +1106,7 @@ class AppManagementApi
     /**
      * Create request for operation 'createSubscriptionAuth'
      *
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1221,12 +1221,12 @@ class AppManagementApi
      *
      * Create token
      *
-     * @param  \Swagger\Client\Model\TokenRequestSchema $token_request token_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TokenRequestSchema $token_request token_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createToken($token_request, $engine_tenant_name = null)
     {
@@ -1239,16 +1239,16 @@ class AppManagementApi
      *
      * Create token
      *
-     * @param  \Swagger\Client\Model\TokenRequestSchema $token_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TokenRequestSchema $token_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTokenWithHttpInfo($token_request, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createTokenRequest($token_request, $engine_tenant_name);
 
         try {
@@ -1300,7 +1300,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1308,7 +1308,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1323,7 +1323,7 @@ class AppManagementApi
      *
      * Create token
      *
-     * @param  \Swagger\Client\Model\TokenRequestSchema $token_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TokenRequestSchema $token_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1344,7 +1344,7 @@ class AppManagementApi
      *
      * Create token
      *
-     * @param  \Swagger\Client\Model\TokenRequestSchema $token_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TokenRequestSchema $token_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1352,7 +1352,7 @@ class AppManagementApi
      */
     public function createTokenAsyncWithHttpInfo($token_request, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createTokenRequest($token_request, $engine_tenant_name);
 
         return $this->client
@@ -1395,7 +1395,7 @@ class AppManagementApi
     /**
      * Create request for operation 'createToken'
      *
-     * @param  \Swagger\Client\Model\TokenRequestSchema $token_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TokenRequestSchema $token_request (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1515,7 +1515,7 @@ class AppManagementApi
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1534,7 +1534,7 @@ class AppManagementApi
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1578,7 +1578,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1788,7 +1788,7 @@ class AppManagementApi
      * @param  string $credential_id credential_id (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1805,7 +1805,7 @@ class AppManagementApi
      * @param  string $credential_id (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1849,7 +1849,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1857,7 +1857,7 @@ class AppManagementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2053,7 +2053,7 @@ class AppManagementApi
      * @param  string $subscription_id subscription_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2070,7 +2070,7 @@ class AppManagementApi
      * @param  string $subscription_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2114,7 +2114,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2310,7 +2310,7 @@ class AppManagementApi
      * @param  string $subscription_auth_id subscription_auth_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2327,7 +2327,7 @@ class AppManagementApi
      * @param  string $subscription_auth_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2371,7 +2371,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2566,7 +2566,7 @@ class AppManagementApi
      *
      * @param  string $tenant_name tenant_name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2582,7 +2582,7 @@ class AppManagementApi
      *
      * @param  string $tenant_name (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2626,7 +2626,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2815,7 +2815,7 @@ class AppManagementApi
      * @param  string $tenant_name tenant_name (required)
      * @param  bool $system_schema_only Deletes tenant data from the system schema only. This does not remove the mapping between the tenant name and key. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2832,7 +2832,7 @@ class AppManagementApi
      * @param  string $tenant_name (required)
      * @param  bool $system_schema_only Deletes tenant data from the system schema only. This does not remove the mapping between the tenant name and key. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2876,7 +2876,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3077,9 +3077,9 @@ class AppManagementApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SettingListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SettingListSchema
      */
     public function getApplicationConfiguration($engine_tenant_name = null, $learning_standard = null, $single_sco = null, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
@@ -3100,13 +3100,13 @@ class AppManagementApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getApplicationConfigurationWithHttpInfo($engine_tenant_name = null, $learning_standard = null, $single_sco = null, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getApplicationConfigurationRequest($engine_tenant_name, $learning_standard, $single_sco, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         try {
@@ -3158,7 +3158,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SettingListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SettingListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3166,7 +3166,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3220,7 +3220,7 @@ class AppManagementApi
      */
     public function getApplicationConfigurationAsyncWithHttpInfo($engine_tenant_name = null, $learning_standard = null, $single_sco = null, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getApplicationConfigurationRequest($engine_tenant_name, $learning_standard, $single_sco, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         return $this->client
@@ -3400,9 +3400,9 @@ class AppManagementApi
      *
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CredentialSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CredentialSchema
      */
     public function getAuthenticatedCredential($engine_tenant_name = null)
     {
@@ -3417,13 +3417,13 @@ class AppManagementApi
      *
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CredentialSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CredentialSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAuthenticatedCredentialWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialSchema';
         $request = $this->getAuthenticatedCredentialRequest($engine_tenant_name);
 
         try {
@@ -3475,7 +3475,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CredentialSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CredentialSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3483,7 +3483,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3525,7 +3525,7 @@ class AppManagementApi
      */
     public function getAuthenticatedCredentialAsyncWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialSchema';
         $request = $this->getAuthenticatedCredentialRequest($engine_tenant_name);
 
         return $this->client
@@ -3676,9 +3676,9 @@ class AppManagementApi
      * @param  string $credential_id credential_id (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CredentialSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CredentialSchema
      */
     public function getCredential($credential_id, $engine_tenant_name = null)
     {
@@ -3694,13 +3694,13 @@ class AppManagementApi
      * @param  string $credential_id (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CredentialSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CredentialSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCredentialWithHttpInfo($credential_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialSchema';
         $request = $this->getCredentialRequest($credential_id, $engine_tenant_name);
 
         try {
@@ -3752,7 +3752,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CredentialSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CredentialSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3760,7 +3760,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3768,7 +3768,7 @@ class AppManagementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3812,7 +3812,7 @@ class AppManagementApi
      */
     public function getCredentialAsyncWithHttpInfo($credential_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialSchema';
         $request = $this->getCredentialRequest($credential_id, $engine_tenant_name);
 
         return $this->client
@@ -3977,9 +3977,9 @@ class AppManagementApi
      *
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CredentialListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CredentialListSchema
      */
     public function getCredentials($engine_tenant_name = null)
     {
@@ -3994,13 +3994,13 @@ class AppManagementApi
      *
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CredentialListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CredentialListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCredentialsWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialListSchema';
         $request = $this->getCredentialsRequest($engine_tenant_name);
 
         try {
@@ -4052,7 +4052,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CredentialListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CredentialListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4060,7 +4060,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4102,7 +4102,7 @@ class AppManagementApi
      */
     public function getCredentialsAsyncWithHttpInfo($engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\CredentialListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CredentialListSchema';
         $request = $this->getCredentialsRequest($engine_tenant_name);
 
         return $this->client
@@ -4253,9 +4253,9 @@ class AppManagementApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $job_id job_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PIIDeletionResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema
      */
     public function getPIIDeletionJob($engine_tenant_name, $job_id)
     {
@@ -4271,13 +4271,13 @@ class AppManagementApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $job_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PIIDeletionResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPIIDeletionJobWithHttpInfo($engine_tenant_name, $job_id)
     {
-        $returnType = '\Swagger\Client\Model\PIIDeletionResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema';
         $request = $this->getPIIDeletionJobRequest($engine_tenant_name, $job_id);
 
         try {
@@ -4329,7 +4329,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PIIDeletionResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4337,7 +4337,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4345,7 +4345,7 @@ class AppManagementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4389,7 +4389,7 @@ class AppManagementApi
      */
     public function getPIIDeletionJobAsyncWithHttpInfo($engine_tenant_name, $job_id)
     {
-        $returnType = '\Swagger\Client\Model\PIIDeletionResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema';
         $request = $this->getPIIDeletionJobRequest($engine_tenant_name, $job_id);
 
         return $this->client
@@ -4561,9 +4561,9 @@ class AppManagementApi
      * @param  string $subscription_id subscription_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionEntrySchema
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema
      */
     public function getSubscription($subscription_id, $engine_tenant_name = null)
     {
@@ -4579,13 +4579,13 @@ class AppManagementApi
      * @param  string $subscription_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionEntrySchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionWithHttpInfo($subscription_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionEntrySchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema';
         $request = $this->getSubscriptionRequest($subscription_id, $engine_tenant_name);
 
         try {
@@ -4637,7 +4637,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionEntrySchema',
+                        '\RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4645,7 +4645,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4689,7 +4689,7 @@ class AppManagementApi
      */
     public function getSubscriptionAsyncWithHttpInfo($subscription_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionEntrySchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema';
         $request = $this->getSubscriptionRequest($subscription_id, $engine_tenant_name);
 
         return $this->client
@@ -4855,9 +4855,9 @@ class AppManagementApi
      * @param  string $subscription_auth_id subscription_auth_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionAuthDefinitionSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema
      */
     public function getSubscriptionAuth($subscription_auth_id, $engine_tenant_name = null)
     {
@@ -4873,13 +4873,13 @@ class AppManagementApi
      * @param  string $subscription_auth_id (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionAuthDefinitionSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionAuthWithHttpInfo($subscription_auth_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionAuthDefinitionSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema';
         $request = $this->getSubscriptionAuthRequest($subscription_auth_id, $engine_tenant_name);
 
         try {
@@ -4931,7 +4931,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionAuthDefinitionSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4939,7 +4939,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4983,7 +4983,7 @@ class AppManagementApi
      */
     public function getSubscriptionAuthAsyncWithHttpInfo($subscription_auth_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionAuthDefinitionSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema';
         $request = $this->getSubscriptionAuthRequest($subscription_auth_id, $engine_tenant_name);
 
         return $this->client
@@ -5149,9 +5149,9 @@ class AppManagementApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionAuthListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema
      */
     public function getSubscriptionAuths($engine_tenant_name = null, $more = null)
     {
@@ -5167,13 +5167,13 @@ class AppManagementApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionAuthListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionAuthsWithHttpInfo($engine_tenant_name = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionAuthListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema';
         $request = $this->getSubscriptionAuthsRequest($engine_tenant_name, $more);
 
         try {
@@ -5225,7 +5225,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionAuthListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5233,7 +5233,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5277,7 +5277,7 @@ class AppManagementApi
      */
     public function getSubscriptionAuthsAsyncWithHttpInfo($engine_tenant_name = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionAuthListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema';
         $request = $this->getSubscriptionAuthsRequest($engine_tenant_name, $more);
 
         return $this->client
@@ -5435,9 +5435,9 @@ class AppManagementApi
      * @param  string $topic Only subscriptions for the provided topic will be included (optional)
      * @param  string $subtopic Only subscriptions which specify the provided sub-topic will be included (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SubscriptionListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionListSchema
      */
     public function getSubscriptions($engine_tenant_name = null, $more = null, $topic = null, $subtopic = null)
     {
@@ -5455,13 +5455,13 @@ class AppManagementApi
      * @param  string $topic Only subscriptions for the provided topic will be included (optional)
      * @param  string $subtopic Only subscriptions which specify the provided sub-topic will be included (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SubscriptionListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SubscriptionListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubscriptionsWithHttpInfo($engine_tenant_name = null, $more = null, $topic = null, $subtopic = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionListSchema';
         $request = $this->getSubscriptionsRequest($engine_tenant_name, $more, $topic, $subtopic);
 
         try {
@@ -5513,7 +5513,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SubscriptionListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SubscriptionListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5521,7 +5521,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5569,7 +5569,7 @@ class AppManagementApi
      */
     public function getSubscriptionsAsyncWithHttpInfo($engine_tenant_name = null, $more = null, $topic = null, $subtopic = null)
     {
-        $returnType = '\Swagger\Client\Model\SubscriptionListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SubscriptionListSchema';
         $request = $this->getSubscriptionsRequest($engine_tenant_name, $more, $topic, $subtopic);
 
         return $this->client
@@ -5734,9 +5734,9 @@ class AppManagementApi
      *
      * @param  bool $include_deactivated include_deactivated (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TenantListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\TenantListSchema
      */
     public function getTenantList($include_deactivated = 'false')
     {
@@ -5751,13 +5751,13 @@ class AppManagementApi
      *
      * @param  bool $include_deactivated (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TenantListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\TenantListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTenantListWithHttpInfo($include_deactivated = 'false')
     {
-        $returnType = '\Swagger\Client\Model\TenantListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\TenantListSchema';
         $request = $this->getTenantListRequest($include_deactivated);
 
         try {
@@ -5809,7 +5809,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TenantListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\TenantListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5817,7 +5817,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5859,7 +5859,7 @@ class AppManagementApi
      */
     public function getTenantListAsyncWithHttpInfo($include_deactivated = 'false')
     {
-        $returnType = '\Swagger\Client\Model\TenantListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\TenantListSchema';
         $request = $this->getTenantListRequest($include_deactivated);
 
         return $this->client
@@ -6010,9 +6010,9 @@ class AppManagementApi
      * @param  string $token token (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TokenInfoSchema
+     * @return \RusticiSoftware\Engine\V2\Model\TokenInfoSchema
      */
     public function inspectToken($token, $engine_tenant_name = null)
     {
@@ -6028,13 +6028,13 @@ class AppManagementApi
      * @param  string $token (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TokenInfoSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\TokenInfoSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function inspectTokenWithHttpInfo($token, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\TokenInfoSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\TokenInfoSchema';
         $request = $this->inspectTokenRequest($token, $engine_tenant_name);
 
         try {
@@ -6086,7 +6086,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TokenInfoSchema',
+                        '\RusticiSoftware\Engine\V2\Model\TokenInfoSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6094,7 +6094,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6138,7 +6138,7 @@ class AppManagementApi
      */
     public function inspectTokenAsyncWithHttpInfo($token, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\TokenInfoSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\TokenInfoSchema';
         $request = $this->inspectTokenRequest($token, $engine_tenant_name);
 
         return $this->client
@@ -6298,11 +6298,11 @@ class AppManagementApi
      * Initiate a job to delete a user's Personal Identifying Information from the system.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PIIDeletionRequestSchema $entities entities (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema $entities entities (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\PIIDeletionRequestResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema
      */
     public function postPIIDeletionJob($engine_tenant_name, $entities)
     {
@@ -6316,15 +6316,15 @@ class AppManagementApi
      * Initiate a job to delete a user's Personal Identifying Information from the system.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PIIDeletionRequestSchema $entities (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema $entities (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\PIIDeletionRequestResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPIIDeletionJobWithHttpInfo($engine_tenant_name, $entities)
     {
-        $returnType = '\Swagger\Client\Model\PIIDeletionRequestResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema';
         $request = $this->postPIIDeletionJobRequest($engine_tenant_name, $entities);
 
         try {
@@ -6376,7 +6376,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\PIIDeletionRequestResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6384,7 +6384,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6400,7 +6400,7 @@ class AppManagementApi
      * Initiate a job to delete a user's Personal Identifying Information from the system.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PIIDeletionRequestSchema $entities (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema $entities (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6421,14 +6421,14 @@ class AppManagementApi
      * Initiate a job to delete a user's Personal Identifying Information from the system.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PIIDeletionRequestSchema $entities (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema $entities (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postPIIDeletionJobAsyncWithHttpInfo($engine_tenant_name, $entities)
     {
-        $returnType = '\Swagger\Client\Model\PIIDeletionRequestResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema';
         $request = $this->postPIIDeletionJobRequest($engine_tenant_name, $entities);
 
         return $this->client
@@ -6472,7 +6472,7 @@ class AppManagementApi
      * Create request for operation 'postPIIDeletionJob'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\PIIDeletionRequestSchema $entities (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema $entities (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6594,7 +6594,7 @@ class AppManagementApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6610,7 +6610,7 @@ class AppManagementApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6654,7 +6654,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6839,9 +6839,9 @@ class AppManagementApi
      * @param  string $credential_id credential_id (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function resetCredentialSecret($credential_id, $engine_tenant_name = null)
     {
@@ -6857,13 +6857,13 @@ class AppManagementApi
      * @param  string $credential_id (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function resetCredentialSecretWithHttpInfo($credential_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->resetCredentialSecretRequest($credential_id, $engine_tenant_name);
 
         try {
@@ -6915,7 +6915,7 @@ class AppManagementApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6923,7 +6923,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6931,7 +6931,7 @@ class AppManagementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6975,7 +6975,7 @@ class AppManagementApi
      */
     public function resetCredentialSecretAsyncWithHttpInfo($credential_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->resetCredentialSecretRequest($credential_id, $engine_tenant_name);
 
         return $this->client
@@ -7138,12 +7138,12 @@ class AppManagementApi
      *
      * Set configuration settings for this level.
      *
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7157,12 +7157,12 @@ class AppManagementApi
      *
      * Set configuration settings for this level.
      *
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7206,7 +7206,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7221,7 +7221,7 @@ class AppManagementApi
      *
      * Set configuration settings for this level.
      *
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
@@ -7244,7 +7244,7 @@ class AppManagementApi
      *
      * Set configuration settings for this level.
      *
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
@@ -7283,7 +7283,7 @@ class AppManagementApi
     /**
      * Create request for operation 'setApplicationConfiguration'
      *
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $learning_standard Required if singleSco is specified. Scopes the request to the provided learning standard. (optional)
      * @param  bool $single_sco Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. (optional)
@@ -7409,10 +7409,10 @@ class AppManagementApi
      * Update `credentialId` credentials
      *
      * @param  string $credential_id credential_id (required)
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_update credential_update (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_update credential_update (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7427,10 +7427,10 @@ class AppManagementApi
      * Update `credentialId` credentials
      *
      * @param  string $credential_id (required)
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_update (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_update (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7474,7 +7474,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7482,7 +7482,7 @@ class AppManagementApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7498,7 +7498,7 @@ class AppManagementApi
      * Update `credentialId` credentials
      *
      * @param  string $credential_id (required)
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_update (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_update (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -7520,7 +7520,7 @@ class AppManagementApi
      * Update `credentialId` credentials
      *
      * @param  string $credential_id (required)
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_update (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_update (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -7558,7 +7558,7 @@ class AppManagementApi
      * Create request for operation 'updateCredential'
      *
      * @param  string $credential_id (required)
-     * @param  \Swagger\Client\Model\CredentialRequestSchema $credential_update (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema $credential_update (required)
      * @param  string $engine_tenant_name If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. (optional)
      *
      * @throws \InvalidArgumentException
@@ -7688,10 +7688,10 @@ class AppManagementApi
      * Update subscription. Partial updates not supported.
      *
      * @param  string $subscription_id subscription_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7706,10 +7706,10 @@ class AppManagementApi
      * Update subscription. Partial updates not supported.
      *
      * @param  string $subscription_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7753,7 +7753,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7769,7 +7769,7 @@ class AppManagementApi
      * Update subscription. Partial updates not supported.
      *
      * @param  string $subscription_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -7791,7 +7791,7 @@ class AppManagementApi
      * Update subscription. Partial updates not supported.
      *
      * @param  string $subscription_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -7829,7 +7829,7 @@ class AppManagementApi
      * Create request for operation 'updateSubscription'
      *
      * @param  string $subscription_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -7959,10 +7959,10 @@ class AppManagementApi
      * Update subscription authentication configuration. Partial updates not supported.
      *
      * @param  string $subscription_auth_id subscription_auth_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7977,10 +7977,10 @@ class AppManagementApi
      * Update subscription authentication configuration. Partial updates not supported.
      *
      * @param  string $subscription_auth_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8024,7 +8024,7 @@ class AppManagementApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8040,7 +8040,7 @@ class AppManagementApi
      * Update subscription authentication configuration. Partial updates not supported.
      *
      * @param  string $subscription_auth_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -8062,7 +8062,7 @@ class AppManagementApi
      * Update subscription authentication configuration. Partial updates not supported.
      *
      * @param  string $subscription_auth_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -8100,7 +8100,7 @@ class AppManagementApi
      * Create request for operation 'updateSubscriptionAuth'
      *
      * @param  string $subscription_auth_id (required)
-     * @param  \Swagger\Client\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema $subscription_auth_definition (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException

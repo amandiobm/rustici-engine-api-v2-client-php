@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **plugin_type** | **string** | type of plugin | 
-**version** | [**\Swagger\Client\Model\PluginVersionSchema**](PluginVersionSchema.md) |  | [optional] 
+**version** | [**\RusticiSoftware\Engine\V2\Model\PluginVersionSchema**](PluginVersionSchema.md) |  | [optional] 
 **installed** | **bool** |  | [optional] 
 **info** | **object** |  | [optional] 
 

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **credit** | **string** |  | [optional] 
 **entry** | **string** |  | [optional] 
 **exit** | **string** |  | [optional] 
-**learner_preference** | [**\Swagger\Client\Model\LearnerPreferenceSchema**](LearnerPreferenceSchema.md) |  | [optional] 
+**learner_preference** | [**\RusticiSoftware\Engine\V2\Model\LearnerPreferenceSchema**](LearnerPreferenceSchema.md) |  | [optional] 
 **location** | **string** |  | [optional] 
 **mode** | **string** |  | [optional] 
 **progress_measure** | **string** |  | [optional] 
@@ -19,10 +19,10 @@ Name | Type | Description | Notes
 **time_tracked** | **string** |  | [optional] 
 **runtime_success_status** | **string** |  | [optional] [default to 'UNKNOWN']
 **suspend_data** | **string** |  | [optional] 
-**learner_comments** | [**\Swagger\Client\Model\CommentSchema[]**](CommentSchema.md) |  | [optional] 
-**lms_comments** | [**\Swagger\Client\Model\CommentSchema[]**](CommentSchema.md) |  | [optional] 
-**runtime_interactions** | [**\Swagger\Client\Model\RuntimeInteractionSchema[]**](RuntimeInteractionSchema.md) |  | [optional] 
-**runtime_objectives** | [**\Swagger\Client\Model\RuntimeObjectiveSchema[]**](RuntimeObjectiveSchema.md) |  | [optional] 
+**learner_comments** | [**\RusticiSoftware\Engine\V2\Model\CommentSchema[]**](CommentSchema.md) |  | [optional] 
+**lms_comments** | [**\RusticiSoftware\Engine\V2\Model\CommentSchema[]**](CommentSchema.md) |  | [optional] 
+**runtime_interactions** | [**\RusticiSoftware\Engine\V2\Model\RuntimeInteractionSchema[]**](RuntimeInteractionSchema.md) |  | [optional] 
+**runtime_objectives** | [**\RusticiSoftware\Engine\V2\Model\RuntimeObjectiveSchema[]**](RuntimeObjectiveSchema.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiStatement Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#41-statement-properties
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,18 +59,18 @@ class XapiStatement implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'actor' => '\Swagger\Client\Model\XapiAgentGroup',
-        'verb' => '\Swagger\Client\Model\XapiVerb',
-        'object_activity' => '\Swagger\Client\Model\XapiActivity',
-        'object_agent_group' => '\Swagger\Client\Model\XapiAgentGroup',
-        'object_statement_reference' => '\Swagger\Client\Model\XapiStatementReference',
-        'object_sub_statement' => '\Swagger\Client\Model\XapiStatement',
-        'result' => '\Swagger\Client\Model\XapiResult',
-        'context' => '\Swagger\Client\Model\XapiContext',
+        'actor' => '\RusticiSoftware\Engine\V2\Model\XapiAgentGroup',
+        'verb' => '\RusticiSoftware\Engine\V2\Model\XapiVerb',
+        'object_activity' => '\RusticiSoftware\Engine\V2\Model\XapiActivity',
+        'object_agent_group' => '\RusticiSoftware\Engine\V2\Model\XapiAgentGroup',
+        'object_statement_reference' => '\RusticiSoftware\Engine\V2\Model\XapiStatementReference',
+        'object_sub_statement' => '\RusticiSoftware\Engine\V2\Model\XapiStatement',
+        'result' => '\RusticiSoftware\Engine\V2\Model\XapiResult',
+        'context' => '\RusticiSoftware\Engine\V2\Model\XapiContext',
         'timestamp' => '\DateTime',
         'stored' => '\DateTime',
-        'authority' => '\Swagger\Client\Model\XapiAgentGroup',
-        'attachments' => '\Swagger\Client\Model\XapiAttachment[]'
+        'authority' => '\RusticiSoftware\Engine\V2\Model\XapiAgentGroup',
+        'attachments' => '\RusticiSoftware\Engine\V2\Model\XapiAttachment[]'
     ];
 
     /**
@@ -304,7 +304,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets actor
      *
-     * @return \Swagger\Client\Model\XapiAgentGroup
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAgentGroup
      */
     public function getActor()
     {
@@ -314,7 +314,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets actor
      *
-     * @param \Swagger\Client\Model\XapiAgentGroup $actor actor
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAgentGroup $actor actor
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets verb
      *
-     * @return \Swagger\Client\Model\XapiVerb
+     * @return \RusticiSoftware\Engine\V2\Model\XapiVerb
      */
     public function getVerb()
     {
@@ -338,7 +338,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets verb
      *
-     * @param \Swagger\Client\Model\XapiVerb $verb verb
+     * @param \RusticiSoftware\Engine\V2\Model\XapiVerb $verb verb
      *
      * @return $this
      */
@@ -352,7 +352,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets object_activity
      *
-     * @return \Swagger\Client\Model\XapiActivity
+     * @return \RusticiSoftware\Engine\V2\Model\XapiActivity
      */
     public function getObjectActivity()
     {
@@ -362,7 +362,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets object_activity
      *
-     * @param \Swagger\Client\Model\XapiActivity $object_activity object_activity
+     * @param \RusticiSoftware\Engine\V2\Model\XapiActivity $object_activity object_activity
      *
      * @return $this
      */
@@ -376,7 +376,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets object_agent_group
      *
-     * @return \Swagger\Client\Model\XapiAgentGroup
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAgentGroup
      */
     public function getObjectAgentGroup()
     {
@@ -386,7 +386,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets object_agent_group
      *
-     * @param \Swagger\Client\Model\XapiAgentGroup $object_agent_group object_agent_group
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAgentGroup $object_agent_group object_agent_group
      *
      * @return $this
      */
@@ -400,7 +400,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets object_statement_reference
      *
-     * @return \Swagger\Client\Model\XapiStatementReference
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementReference
      */
     public function getObjectStatementReference()
     {
@@ -410,7 +410,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets object_statement_reference
      *
-     * @param \Swagger\Client\Model\XapiStatementReference $object_statement_reference object_statement_reference
+     * @param \RusticiSoftware\Engine\V2\Model\XapiStatementReference $object_statement_reference object_statement_reference
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets object_sub_statement
      *
-     * @return \Swagger\Client\Model\XapiStatement
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatement
      */
     public function getObjectSubStatement()
     {
@@ -434,7 +434,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets object_sub_statement
      *
-     * @param \Swagger\Client\Model\XapiStatement $object_sub_statement object_sub_statement
+     * @param \RusticiSoftware\Engine\V2\Model\XapiStatement $object_sub_statement object_sub_statement
      *
      * @return $this
      */
@@ -448,7 +448,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets result
      *
-     * @return \Swagger\Client\Model\XapiResult
+     * @return \RusticiSoftware\Engine\V2\Model\XapiResult
      */
     public function getResult()
     {
@@ -458,7 +458,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets result
      *
-     * @param \Swagger\Client\Model\XapiResult $result result
+     * @param \RusticiSoftware\Engine\V2\Model\XapiResult $result result
      *
      * @return $this
      */
@@ -472,7 +472,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \Swagger\Client\Model\XapiContext
+     * @return \RusticiSoftware\Engine\V2\Model\XapiContext
      */
     public function getContext()
     {
@@ -482,7 +482,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \Swagger\Client\Model\XapiContext $context context
+     * @param \RusticiSoftware\Engine\V2\Model\XapiContext $context context
      *
      * @return $this
      */
@@ -544,7 +544,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets authority
      *
-     * @return \Swagger\Client\Model\XapiAgentGroup
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAgentGroup
      */
     public function getAuthority()
     {
@@ -554,7 +554,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets authority
      *
-     * @param \Swagger\Client\Model\XapiAgentGroup $authority authority
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAgentGroup $authority authority
      *
      * @return $this
      */
@@ -568,7 +568,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Gets attachments
      *
-     * @return \Swagger\Client\Model\XapiAttachment[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAttachment[]
      */
     public function getAttachments()
     {
@@ -578,7 +578,7 @@ class XapiStatement implements ModelInterface, ArrayAccess
     /**
      * Sets attachments
      *
-     * @param \Swagger\Client\Model\XapiAttachment[] $attachments attachments
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAttachment[] $attachments attachments
      *
      * @return $this
      */

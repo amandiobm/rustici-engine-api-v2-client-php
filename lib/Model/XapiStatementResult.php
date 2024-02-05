@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiStatementResult Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#42-retrieval-of-statements
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class XapiStatementResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'statements' => '\Swagger\Client\Model\XapiStatement[]',
+        'statements' => '\RusticiSoftware\Engine\V2\Model\XapiStatement[]',
         'more' => 'string'
     ];
 
@@ -217,7 +217,7 @@ class XapiStatementResult implements ModelInterface, ArrayAccess
     /**
      * Gets statements
      *
-     * @return \Swagger\Client\Model\XapiStatement[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatement[]
      */
     public function getStatements()
     {
@@ -227,7 +227,7 @@ class XapiStatementResult implements ModelInterface, ArrayAccess
     /**
      * Sets statements
      *
-     * @param \Swagger\Client\Model\XapiStatement[] $statements statements
+     * @param \RusticiSoftware\Engine\V2\Model\XapiStatement[] $statements statements
      *
      * @return $this
      */

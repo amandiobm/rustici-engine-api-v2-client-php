@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class XapiApi
      * Create an xAPI statement pipe.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePostSchema $xapi_statement_pipe xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema $xapi_statement_pipe xapi_statement_pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createStatementPipe($engine_tenant_name, $xapi_statement_pipe)
     {
@@ -111,15 +111,15 @@ class XapiApi
      * Create an xAPI statement pipe.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createStatementPipeWithHttpInfo($engine_tenant_name, $xapi_statement_pipe)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createStatementPipeRequest($engine_tenant_name, $xapi_statement_pipe);
 
         try {
@@ -171,7 +171,7 @@ class XapiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,7 +179,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -195,7 +195,7 @@ class XapiApi
      * Create an xAPI statement pipe.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -216,14 +216,14 @@ class XapiApi
      * Create an xAPI statement pipe.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createStatementPipeAsyncWithHttpInfo($engine_tenant_name, $xapi_statement_pipe)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createStatementPipeRequest($engine_tenant_name, $xapi_statement_pipe);
 
         return $this->client
@@ -267,7 +267,7 @@ class XapiApi
      * Create request for operation 'createStatementPipe'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema $xapi_statement_pipe (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -388,11 +388,11 @@ class XapiApi
      * Create an xAPI credential
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPostSchema $xapi_credential xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema $xapi_credential xapi_credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createXapiCredential($engine_tenant_name, $xapi_credential)
     {
@@ -406,15 +406,15 @@ class XapiApi
      * Create an xAPI credential
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPostSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema $xapi_credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createXapiCredentialWithHttpInfo($engine_tenant_name, $xapi_credential)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createXapiCredentialRequest($engine_tenant_name, $xapi_credential);
 
         try {
@@ -466,7 +466,7 @@ class XapiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -474,7 +474,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -490,7 +490,7 @@ class XapiApi
      * Create an xAPI credential
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPostSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema $xapi_credential (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -511,14 +511,14 @@ class XapiApi
      * Create an xAPI credential
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPostSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema $xapi_credential (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createXapiCredentialAsyncWithHttpInfo($engine_tenant_name, $xapi_credential)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createXapiCredentialRequest($engine_tenant_name, $xapi_credential);
 
         return $this->client
@@ -562,7 +562,7 @@ class XapiApi
      * Create request for operation 'createXapiCredential'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPostSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema $xapi_credential (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -685,7 +685,7 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -702,7 +702,7 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -746,7 +746,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,7 +754,7 @@ class XapiApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -956,7 +956,7 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -973,7 +973,7 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1017,7 +1017,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1025,7 +1025,7 @@ class XapiApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1227,9 +1227,9 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiStatementPipeSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema
      */
     public function getStatementPipe($engine_tenant_name, $statement_pipe_id)
     {
@@ -1245,13 +1245,13 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiStatementPipeSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStatementPipeWithHttpInfo($engine_tenant_name, $statement_pipe_id)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementPipeSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema';
         $request = $this->getStatementPipeRequest($engine_tenant_name, $statement_pipe_id);
 
         try {
@@ -1303,7 +1303,7 @@ class XapiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiStatementPipeSchema',
+                        '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1311,7 +1311,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1319,7 +1319,7 @@ class XapiApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1363,7 +1363,7 @@ class XapiApi
      */
     public function getStatementPipeAsyncWithHttpInfo($engine_tenant_name, $statement_pipe_id)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementPipeSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema';
         $request = $this->getStatementPipeRequest($engine_tenant_name, $statement_pipe_id);
 
         return $this->client
@@ -1534,9 +1534,9 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiStatementPipeListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema
      */
     public function getStatementPipes($engine_tenant_name)
     {
@@ -1551,13 +1551,13 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiStatementPipeListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getStatementPipesWithHttpInfo($engine_tenant_name)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementPipeListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema';
         $request = $this->getStatementPipesRequest($engine_tenant_name);
 
         try {
@@ -1609,7 +1609,7 @@ class XapiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiStatementPipeListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1617,7 +1617,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1659,7 +1659,7 @@ class XapiApi
      */
     public function getStatementPipesAsyncWithHttpInfo($engine_tenant_name)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementPipeListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeListSchema';
         $request = $this->getStatementPipesRequest($engine_tenant_name);
 
         return $this->client
@@ -1816,9 +1816,9 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiCredentialSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiCredentialSchema
      */
     public function getXapiCredential($engine_tenant_name, $xapi_credential_id)
     {
@@ -1834,13 +1834,13 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiCredentialSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiCredentialSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getXapiCredentialWithHttpInfo($engine_tenant_name, $xapi_credential_id)
     {
-        $returnType = '\Swagger\Client\Model\XapiCredentialSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiCredentialSchema';
         $request = $this->getXapiCredentialRequest($engine_tenant_name, $xapi_credential_id);
 
         try {
@@ -1892,7 +1892,7 @@ class XapiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiCredentialSchema',
+                        '\RusticiSoftware\Engine\V2\Model\XapiCredentialSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1900,7 +1900,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1908,7 +1908,7 @@ class XapiApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1952,7 +1952,7 @@ class XapiApi
      */
     public function getXapiCredentialAsyncWithHttpInfo($engine_tenant_name, $xapi_credential_id)
     {
-        $returnType = '\Swagger\Client\Model\XapiCredentialSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiCredentialSchema';
         $request = $this->getXapiCredentialRequest($engine_tenant_name, $xapi_credential_id);
 
         return $this->client
@@ -2124,9 +2124,9 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiCredentialsListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema
      */
     public function getXapiCredentials($engine_tenant_name, $more = null)
     {
@@ -2142,13 +2142,13 @@ class XapiApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiCredentialsListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getXapiCredentialsWithHttpInfo($engine_tenant_name, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiCredentialsListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema';
         $request = $this->getXapiCredentialsRequest($engine_tenant_name, $more);
 
         try {
@@ -2200,7 +2200,7 @@ class XapiApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiCredentialsListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2208,7 +2208,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2252,7 +2252,7 @@ class XapiApi
      */
     public function getXapiCredentialsAsyncWithHttpInfo($engine_tenant_name, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiCredentialsListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiCredentialsListSchema';
         $request = $this->getXapiCredentialsRequest($engine_tenant_name, $more);
 
         return $this->client
@@ -2413,9 +2413,9 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePutSchema $xapi_statement_pipe xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema $xapi_statement_pipe xapi_statement_pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2431,9 +2431,9 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2477,7 +2477,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2485,7 +2485,7 @@ class XapiApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2493,7 +2493,7 @@ class XapiApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2510,7 +2510,7 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2532,7 +2532,7 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2570,7 +2570,7 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $statement_pipe_id id for this xAPI statement pipe (required)
-     * @param  \Swagger\Client\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema $xapi_statement_pipe (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2706,9 +2706,9 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPutSchema $xapi_credential xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema $xapi_credential xapi_credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2724,9 +2724,9 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPutSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema $xapi_credential (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2770,7 +2770,7 @@ class XapiApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2778,7 +2778,7 @@ class XapiApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2795,7 +2795,7 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPutSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema $xapi_credential (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2817,7 +2817,7 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPutSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema $xapi_credential (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2855,7 +2855,7 @@ class XapiApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $xapi_credential_id id for this xAPI credential (required)
-     * @param  \Swagger\Client\Model\XapiCredentialPutSchema $xapi_credential (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema $xapi_credential (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

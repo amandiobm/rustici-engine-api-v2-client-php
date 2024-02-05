@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SubscriptionDefinitionSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -69,7 +69,7 @@ class SubscriptionDefinitionSchema implements ModelInterface, ArrayAccess
         'retry_attempts' => 'int',
         'retry_delay_seconds' => 'int',
         'ignore_before_date' => '\DateTime',
-        'filters' => '\Swagger\Client\Model\SubscriptionDefinitionSchemaFilters[]'
+        'filters' => '\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchemaFilters[]'
     ];
 
     /**
@@ -646,7 +646,7 @@ class SubscriptionDefinitionSchema implements ModelInterface, ArrayAccess
     /**
      * Gets filters
      *
-     * @return \Swagger\Client\Model\SubscriptionDefinitionSchemaFilters[]
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchemaFilters[]
      */
     public function getFilters()
     {
@@ -656,7 +656,7 @@ class SubscriptionDefinitionSchema implements ModelInterface, ArrayAccess
     /**
      * Sets filters
      *
-     * @param \Swagger\Client\Model\SubscriptionDefinitionSchemaFilters[] $filters Filters on resources such as course, registration, or tenant for which this subscriber should be notified. If multiple filters are defined, only events that match all the filters will trigger a notification.
+     * @param \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchemaFilters[] $filters Filters on resources such as course, registration, or tenant for which this subscriber should be notified. If multiple filters are defined, only events that match all the filters will trigger a notification.
      *
      * @return $this
      */

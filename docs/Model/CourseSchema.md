@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **activity_id** | **string** |  | [optional] 
 **course_learning_standard** | **string** |  | [optional] 
 **launchable** | **bool** | Always &#39;true&#39; except for courses created by the xAPI On-Demand Registrations process which are only there as a placeholder. If &#39;false&#39;, this course does not have the necessary information to be launched. | [optional] [default to true]
-**connector** | [**\Swagger\Client\Model\CourseConnectorSchema**](CourseConnectorSchema.md) |  | [optional] 
-**metadata** | [**\Swagger\Client\Model\MetadataSchema**](MetadataSchema.md) |  | [optional] 
-**root_activity** | [**\Swagger\Client\Model\CourseActivitySchema**](CourseActivitySchema.md) |  | [optional] 
+**connector** | [**\RusticiSoftware\Engine\V2\Model\CourseConnectorSchema**](CourseConnectorSchema.md) |  | [optional] 
+**metadata** | [**\RusticiSoftware\Engine\V2\Model\MetadataSchema**](MetadataSchema.md) |  | [optional] 
+**root_activity** | [**\RusticiSoftware\Engine\V2\Model\CourseActivitySchema**](CourseActivitySchema.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,4 +1,4 @@
-# Swagger\Client\PingApi
+# RusticiSoftware\Engine\V2\PingApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **ping**
-> \Swagger\Client\Model\PingSchema ping($engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\PingSchema ping($engine_tenant_name)
 
 Get back a message indicating that the API is working.
 
@@ -18,14 +18,14 @@ Get back a message indicating that the API is working.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PingApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\PingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PingSchema**](../Model/PingSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\PingSchema**](../Model/PingSchema.md)
 
 ### Authorization
 

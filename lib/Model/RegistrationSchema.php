@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RegistrationSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,17 +66,17 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
         'updated' => '\DateTime',
         'registration_completion' => 'string',
         'registration_success' => 'string',
-        'score' => '\Swagger\Client\Model\ScoreSchema',
+        'score' => '\RusticiSoftware\Engine\V2\Model\ScoreSchema',
         'total_seconds_tracked' => 'double',
         'first_access_date' => '\DateTime',
         'last_access_date' => '\DateTime',
         'completed_date' => '\DateTime',
         'created_date' => '\DateTime',
-        'course' => '\Swagger\Client\Model\CourseReferenceSchema',
-        'learner' => '\Swagger\Client\Model\LearnerSchema',
-        'global_objectives' => '\Swagger\Client\Model\ObjectiveSchema[]',
-        'activity_details' => '\Swagger\Client\Model\ActivityResultSchema',
-        'shared_data' => '\Swagger\Client\Model\SharedDataEntrySchema[]',
+        'course' => '\RusticiSoftware\Engine\V2\Model\CourseReferenceSchema',
+        'learner' => '\RusticiSoftware\Engine\V2\Model\LearnerSchema',
+        'global_objectives' => '\RusticiSoftware\Engine\V2\Model\ObjectiveSchema[]',
+        'activity_details' => '\RusticiSoftware\Engine\V2\Model\ActivityResultSchema',
+        'shared_data' => '\RusticiSoftware\Engine\V2\Model\SharedDataEntrySchema[]',
         'suspended_activity_id' => 'string',
         'registration_completion_amount' => 'double'
     ];
@@ -617,7 +617,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets score
      *
-     * @return \Swagger\Client\Model\ScoreSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ScoreSchema
      */
     public function getScore()
     {
@@ -627,7 +627,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets score
      *
-     * @param \Swagger\Client\Model\ScoreSchema $score score
+     * @param \RusticiSoftware\Engine\V2\Model\ScoreSchema $score score
      *
      * @return $this
      */
@@ -761,7 +761,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets course
      *
-     * @return \Swagger\Client\Model\CourseReferenceSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseReferenceSchema
      */
     public function getCourse()
     {
@@ -771,7 +771,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets course
      *
-     * @param \Swagger\Client\Model\CourseReferenceSchema $course course
+     * @param \RusticiSoftware\Engine\V2\Model\CourseReferenceSchema $course course
      *
      * @return $this
      */
@@ -785,7 +785,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets learner
      *
-     * @return \Swagger\Client\Model\LearnerSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LearnerSchema
      */
     public function getLearner()
     {
@@ -795,7 +795,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets learner
      *
-     * @param \Swagger\Client\Model\LearnerSchema $learner learner
+     * @param \RusticiSoftware\Engine\V2\Model\LearnerSchema $learner learner
      *
      * @return $this
      */
@@ -809,7 +809,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets global_objectives
      *
-     * @return \Swagger\Client\Model\ObjectiveSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ObjectiveSchema[]
      */
     public function getGlobalObjectives()
     {
@@ -819,7 +819,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets global_objectives
      *
-     * @param \Swagger\Client\Model\ObjectiveSchema[] $global_objectives global_objectives
+     * @param \RusticiSoftware\Engine\V2\Model\ObjectiveSchema[] $global_objectives global_objectives
      *
      * @return $this
      */
@@ -833,7 +833,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets activity_details
      *
-     * @return \Swagger\Client\Model\ActivityResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ActivityResultSchema
      */
     public function getActivityDetails()
     {
@@ -843,7 +843,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets activity_details
      *
-     * @param \Swagger\Client\Model\ActivityResultSchema $activity_details activity_details
+     * @param \RusticiSoftware\Engine\V2\Model\ActivityResultSchema $activity_details activity_details
      *
      * @return $this
      */
@@ -857,7 +857,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets shared_data
      *
-     * @return \Swagger\Client\Model\SharedDataEntrySchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\SharedDataEntrySchema[]
      */
     public function getSharedData()
     {
@@ -867,7 +867,7 @@ class RegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets shared_data
      *
-     * @param \Swagger\Client\Model\SharedDataEntrySchema[] $shared_data shared_data
+     * @param \RusticiSoftware\Engine\V2\Model\SharedDataEntrySchema[] $shared_data shared_data
      *
      * @return $this
      */

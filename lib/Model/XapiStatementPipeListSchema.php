@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiStatementPipeListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class XapiStatementPipeListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'xapi_statement_pipes' => '\Swagger\Client\Model\XapiStatementPipeSchema[]'
+        'xapi_statement_pipes' => '\RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class XapiStatementPipeListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets xapi_statement_pipes
      *
-     * @return \Swagger\Client\Model\XapiStatementPipeSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema[]
      */
     public function getXapiStatementPipes()
     {
@@ -220,7 +220,7 @@ class XapiStatementPipeListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets xapi_statement_pipes
      *
-     * @param \Swagger\Client\Model\XapiStatementPipeSchema[] $xapi_statement_pipes xapi_statement_pipes
+     * @param \RusticiSoftware\Engine\V2\Model\XapiStatementPipeSchema[] $xapi_statement_pipes xapi_statement_pipes
      *
      * @return $this
      */

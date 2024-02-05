@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ConnectorContentSearchSchema Class Doc Comment
  *
  * @category Class
  * @description Search options for remote connector content
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class ConnectorContentSearchSchema implements ModelInterface, ArrayAccess
         'connector_id' => 'string',
         'search' => 'string',
         'since' => '\DateTime',
-        'context' => '\Swagger\Client\Model\ConnectorContentSearchContextSchema',
+        'context' => '\RusticiSoftware\Engine\V2\Model\ConnectorContentSearchContextSchema',
         'more' => 'string'
     ];
 
@@ -304,7 +304,7 @@ class ConnectorContentSearchSchema implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \Swagger\Client\Model\ConnectorContentSearchContextSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchContextSchema
      */
     public function getContext()
     {
@@ -314,7 +314,7 @@ class ConnectorContentSearchSchema implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \Swagger\Client\Model\ConnectorContentSearchContextSchema $context context
+     * @param \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchContextSchema $context context
      *
      * @return $this
      */

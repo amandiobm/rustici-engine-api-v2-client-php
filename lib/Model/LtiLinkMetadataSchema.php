@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * LtiLinkMetadataSchema Class Doc Comment
  *
  * @category Class
  * @description Schema that defines optional metadata values for LTI 1.1 and 1.3 link content
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,8 +59,8 @@ class LtiLinkMetadataSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'description' => 'string',
-        'context' => '\Swagger\Client\Model\LtiLinkMetadataSchemaContext',
-        'custom_parameters' => '\Swagger\Client\Model\ItemValuePairSchema[]'
+        'context' => '\RusticiSoftware\Engine\V2\Model\LtiLinkMetadataSchemaContext',
+        'custom_parameters' => '\RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]'
     ];
 
     /**
@@ -244,7 +244,7 @@ class LtiLinkMetadataSchema implements ModelInterface, ArrayAccess
     /**
      * Gets context
      *
-     * @return \Swagger\Client\Model\LtiLinkMetadataSchemaContext
+     * @return \RusticiSoftware\Engine\V2\Model\LtiLinkMetadataSchemaContext
      */
     public function getContext()
     {
@@ -254,7 +254,7 @@ class LtiLinkMetadataSchema implements ModelInterface, ArrayAccess
     /**
      * Sets context
      *
-     * @param \Swagger\Client\Model\LtiLinkMetadataSchemaContext $context context
+     * @param \RusticiSoftware\Engine\V2\Model\LtiLinkMetadataSchemaContext $context context
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class LtiLinkMetadataSchema implements ModelInterface, ArrayAccess
     /**
      * Gets custom_parameters
      *
-     * @return \Swagger\Client\Model\ItemValuePairSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]
      */
     public function getCustomParameters()
     {
@@ -278,7 +278,7 @@ class LtiLinkMetadataSchema implements ModelInterface, ArrayAccess
     /**
      * Sets custom_parameters
      *
-     * @param \Swagger\Client\Model\ItemValuePairSchema[] $custom_parameters Custom parameters that will be included with the launch of the link. Per LTI specifications, if importing a version 1.1 link, the keys will be mapped to lowercase and all non-alphanumeric characters will be replaced with `_`
+     * @param \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[] $custom_parameters Custom parameters that will be included with the launch of the link. Per LTI specifications, if importing a version 1.1 link, the keys will be mapped to lowercase and all non-alphanumeric characters will be replaced with `_`
      *
      * @return $this
      */

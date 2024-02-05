@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * LaunchHistoryListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class LaunchHistoryListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'launch_history' => '\Swagger\Client\Model\LaunchHistorySchema[]'
+        'launch_history' => '\RusticiSoftware\Engine\V2\Model\LaunchHistorySchema[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class LaunchHistoryListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets launch_history
      *
-     * @return \Swagger\Client\Model\LaunchHistorySchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchHistorySchema[]
      */
     public function getLaunchHistory()
     {
@@ -217,7 +217,7 @@ class LaunchHistoryListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets launch_history
      *
-     * @param \Swagger\Client\Model\LaunchHistorySchema[] $launch_history launch_history
+     * @param \RusticiSoftware\Engine\V2\Model\LaunchHistorySchema[] $launch_history launch_history
      *
      * @return $this
      */

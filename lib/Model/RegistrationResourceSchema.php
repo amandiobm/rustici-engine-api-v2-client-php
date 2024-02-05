@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RegistrationResourceSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class RegistrationResourceSchema implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'instance' => 'int',
-        'learner' => '\Swagger\Client\Model\LearnerSchema',
+        'learner' => '\RusticiSoftware\Engine\V2\Model\LearnerSchema',
         'is_dispatch' => 'bool'
     ];
 
@@ -273,7 +273,7 @@ class RegistrationResourceSchema implements ModelInterface, ArrayAccess
     /**
      * Gets learner
      *
-     * @return \Swagger\Client\Model\LearnerSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LearnerSchema
      */
     public function getLearner()
     {
@@ -283,7 +283,7 @@ class RegistrationResourceSchema implements ModelInterface, ArrayAccess
     /**
      * Sets learner
      *
-     * @param \Swagger\Client\Model\LearnerSchema $learner learner
+     * @param \RusticiSoftware\Engine\V2\Model\LearnerSchema $learner learner
      *
      * @return $this
      */

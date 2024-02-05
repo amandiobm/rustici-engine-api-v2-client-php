@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * PluginInformationSchema Class Doc Comment
  *
  * @category Class
  * @description Describes the installed plugin.
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class PluginInformationSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'plugin_type' => 'string',
-        'version' => '\Swagger\Client\Model\PluginVersionSchema',
+        'version' => '\RusticiSoftware\Engine\V2\Model\PluginVersionSchema',
         'installed' => 'bool',
         'info' => 'object'
     ];
@@ -253,7 +253,7 @@ class PluginInformationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets version
      *
-     * @return \Swagger\Client\Model\PluginVersionSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PluginVersionSchema
      */
     public function getVersion()
     {
@@ -263,7 +263,7 @@ class PluginInformationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets version
      *
-     * @param \Swagger\Client\Model\PluginVersionSchema $version version
+     * @param \RusticiSoftware\Engine\V2\Model\PluginVersionSchema $version version
      *
      * @return $this
      */

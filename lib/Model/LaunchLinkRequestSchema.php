@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * LaunchLinkRequestSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class LaunchLinkRequestSchema implements ModelInterface, ArrayAccess
         'redirect_on_exit_url' => 'string',
         'tracking' => 'bool',
         'start_sco' => 'string',
-        'additional_values' => '\Swagger\Client\Model\ItemValuePairSchema[]'
+        'additional_values' => '\RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class LaunchLinkRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets additional_values
      *
-     * @return \Swagger\Client\Model\ItemValuePairSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]
      */
     public function getAdditionalValues()
     {
@@ -337,7 +337,7 @@ class LaunchLinkRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets additional_values
      *
-     * @param \Swagger\Client\Model\ItemValuePairSchema[] $additional_values additional_values
+     * @param \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[] $additional_values additional_values
      *
      * @return $this
      */

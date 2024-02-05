@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * DispatchIdSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class DispatchIdSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'data' => '\Swagger\Client\Model\DispatchSchema'
+        'data' => '\RusticiSoftware\Engine\V2\Model\DispatchSchema'
     ];
 
     /**
@@ -243,7 +243,7 @@ class DispatchIdSchema implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\DispatchSchema
+     * @return \RusticiSoftware\Engine\V2\Model\DispatchSchema
      */
     public function getData()
     {
@@ -253,7 +253,7 @@ class DispatchIdSchema implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\DispatchSchema $data data
+     * @param \RusticiSoftware\Engine\V2\Model\DispatchSchema $data data
      *
      * @return $this
      */

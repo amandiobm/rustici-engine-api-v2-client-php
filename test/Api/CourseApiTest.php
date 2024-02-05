@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -28,15 +28,15 @@
 
 namespace RusticiSoftware\Engine\V2;
 
-use \Swagger\Client\Configuration;
-use \Swagger\Client\ApiException;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\Configuration;
+use \RusticiSoftware\Engine\V2\ApiException;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CourseApiTest Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */

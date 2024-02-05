@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiActivity Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#4141-when-the-objecttype-is-activity
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class XapiActivity implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'object_type' => 'string',
         'id' => 'string',
-        'definition' => '\Swagger\Client\Model\XapiActivityDefinition'
+        'definition' => '\RusticiSoftware\Engine\V2\Model\XapiActivityDefinition'
     ];
 
     /**
@@ -271,7 +271,7 @@ class XapiActivity implements ModelInterface, ArrayAccess
     /**
      * Gets definition
      *
-     * @return \Swagger\Client\Model\XapiActivityDefinition
+     * @return \RusticiSoftware\Engine\V2\Model\XapiActivityDefinition
      */
     public function getDefinition()
     {
@@ -281,7 +281,7 @@ class XapiActivity implements ModelInterface, ArrayAccess
     /**
      * Sets definition
      *
-     * @param \Swagger\Client\Model\XapiActivityDefinition $definition definition
+     * @param \RusticiSoftware\Engine\V2\Model\XapiActivityDefinition $definition definition
      *
      * @return $this
      */

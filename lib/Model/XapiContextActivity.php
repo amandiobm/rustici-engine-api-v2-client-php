@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiContextActivity Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#4162-contextactivities-property
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,10 +58,10 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'parent' => '\Swagger\Client\Model\XapiActivity[]',
-        'grouping' => '\Swagger\Client\Model\XapiActivity[]',
-        'category' => '\Swagger\Client\Model\XapiActivity[]',
-        'other' => '\Swagger\Client\Model\XapiActivity[]'
+        'parent' => '\RusticiSoftware\Engine\V2\Model\XapiActivity[]',
+        'grouping' => '\RusticiSoftware\Engine\V2\Model\XapiActivity[]',
+        'category' => '\RusticiSoftware\Engine\V2\Model\XapiActivity[]',
+        'other' => '\RusticiSoftware\Engine\V2\Model\XapiActivity[]'
     ];
 
     /**
@@ -226,7 +226,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Gets parent
      *
-     * @return \Swagger\Client\Model\XapiActivity[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiActivity[]
      */
     public function getParent()
     {
@@ -236,7 +236,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Sets parent
      *
-     * @param \Swagger\Client\Model\XapiActivity[] $parent parent
+     * @param \RusticiSoftware\Engine\V2\Model\XapiActivity[] $parent parent
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Gets grouping
      *
-     * @return \Swagger\Client\Model\XapiActivity[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiActivity[]
      */
     public function getGrouping()
     {
@@ -260,7 +260,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Sets grouping
      *
-     * @param \Swagger\Client\Model\XapiActivity[] $grouping grouping
+     * @param \RusticiSoftware\Engine\V2\Model\XapiActivity[] $grouping grouping
      *
      * @return $this
      */
@@ -274,7 +274,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Gets category
      *
-     * @return \Swagger\Client\Model\XapiActivity[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiActivity[]
      */
     public function getCategory()
     {
@@ -284,7 +284,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Sets category
      *
-     * @param \Swagger\Client\Model\XapiActivity[] $category category
+     * @param \RusticiSoftware\Engine\V2\Model\XapiActivity[] $category category
      *
      * @return $this
      */
@@ -298,7 +298,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Gets other
      *
-     * @return \Swagger\Client\Model\XapiActivity[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiActivity[]
      */
     public function getOther()
     {
@@ -308,7 +308,7 @@ class XapiContextActivity implements ModelInterface, ArrayAccess
     /**
      * Sets other
      *
-     * @param \Swagger\Client\Model\XapiActivity[] $other other
+     * @param \RusticiSoftware\Engine\V2\Model\XapiActivity[] $other other
      *
      * @return $this
      */

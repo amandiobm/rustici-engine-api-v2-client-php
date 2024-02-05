@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * DestinationIdSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class DestinationIdSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'id' => 'string',
-        'data' => '\Swagger\Client\Model\DestinationSchema'
+        'data' => '\RusticiSoftware\Engine\V2\Model\DestinationSchema'
     ];
 
     /**
@@ -243,7 +243,7 @@ class DestinationIdSchema implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\DestinationSchema
+     * @return \RusticiSoftware\Engine\V2\Model\DestinationSchema
      */
     public function getData()
     {
@@ -253,7 +253,7 @@ class DestinationIdSchema implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\DestinationSchema $data data
+     * @param \RusticiSoftware\Engine\V2\Model\DestinationSchema $data data
      *
      * @return $this
      */

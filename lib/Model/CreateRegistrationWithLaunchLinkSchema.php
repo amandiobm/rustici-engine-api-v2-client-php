@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CreateRegistrationWithLaunchLinkSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class CreateRegistrationWithLaunchLinkSchema implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'registration' => '\Swagger\Client\Model\CreateRegistrationSchema',
-        'launch_link' => '\Swagger\Client\Model\LaunchLinkRequestSchema'
+        'registration' => '\RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema',
+        'launch_link' => '\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema'
     ];
 
     /**
@@ -213,7 +213,7 @@ class CreateRegistrationWithLaunchLinkSchema implements ModelInterface, ArrayAcc
     /**
      * Gets registration
      *
-     * @return \Swagger\Client\Model\CreateRegistrationSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema
      */
     public function getRegistration()
     {
@@ -223,7 +223,7 @@ class CreateRegistrationWithLaunchLinkSchema implements ModelInterface, ArrayAcc
     /**
      * Sets registration
      *
-     * @param \Swagger\Client\Model\CreateRegistrationSchema $registration New registration for this launch link.
+     * @param \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema $registration New registration for this launch link.
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class CreateRegistrationWithLaunchLinkSchema implements ModelInterface, ArrayAcc
     /**
      * Gets launch_link
      *
-     * @return \Swagger\Client\Model\LaunchLinkRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema
      */
     public function getLaunchLink()
     {
@@ -247,7 +247,7 @@ class CreateRegistrationWithLaunchLinkSchema implements ModelInterface, ArrayAcc
     /**
      * Sets launch_link
      *
-     * @param \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link Launch link request.
+     * @param \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link Launch link request.
      *
      * @return $this
      */

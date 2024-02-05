@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiActivityDefinition Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#activity-definition
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,11 +64,11 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
         'more_info' => 'string',
         'interaction_type' => 'string',
         'correct_responses_pattern' => 'string[]',
-        'choices' => '\Swagger\Client\Model\XapiInteractionComponent[]',
-        'scale' => '\Swagger\Client\Model\XapiInteractionComponent[]',
-        'source' => '\Swagger\Client\Model\XapiInteractionComponent[]',
-        'target' => '\Swagger\Client\Model\XapiInteractionComponent[]',
-        'steps' => '\Swagger\Client\Model\XapiInteractionComponent[]',
+        'choices' => '\RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]',
+        'scale' => '\RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]',
+        'source' => '\RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]',
+        'target' => '\RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]',
+        'steps' => '\RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]',
         'extensions' => 'map[string,object]'
     ];
 
@@ -418,7 +418,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets choices
      *
-     * @return \Swagger\Client\Model\XapiInteractionComponent[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]
      */
     public function getChoices()
     {
@@ -428,7 +428,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets choices
      *
-     * @param \Swagger\Client\Model\XapiInteractionComponent[] $choices choices
+     * @param \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[] $choices choices
      *
      * @return $this
      */
@@ -442,7 +442,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets scale
      *
-     * @return \Swagger\Client\Model\XapiInteractionComponent[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]
      */
     public function getScale()
     {
@@ -452,7 +452,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets scale
      *
-     * @param \Swagger\Client\Model\XapiInteractionComponent[] $scale scale
+     * @param \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[] $scale scale
      *
      * @return $this
      */
@@ -466,7 +466,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Swagger\Client\Model\XapiInteractionComponent[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]
      */
     public function getSource()
     {
@@ -476,7 +476,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Swagger\Client\Model\XapiInteractionComponent[] $source source
+     * @param \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[] $source source
      *
      * @return $this
      */
@@ -490,7 +490,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets target
      *
-     * @return \Swagger\Client\Model\XapiInteractionComponent[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]
      */
     public function getTarget()
     {
@@ -500,7 +500,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets target
      *
-     * @param \Swagger\Client\Model\XapiInteractionComponent[] $target target
+     * @param \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[] $target target
      *
      * @return $this
      */
@@ -514,7 +514,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Gets steps
      *
-     * @return \Swagger\Client\Model\XapiInteractionComponent[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[]
      */
     public function getSteps()
     {
@@ -524,7 +524,7 @@ class XapiActivityDefinition implements ModelInterface, ArrayAccess
     /**
      * Sets steps
      *
-     * @param \Swagger\Client\Model\XapiInteractionComponent[] $steps steps
+     * @param \RusticiSoftware\Engine\V2\Model\XapiInteractionComponent[] $steps steps
      *
      * @return $this
      */

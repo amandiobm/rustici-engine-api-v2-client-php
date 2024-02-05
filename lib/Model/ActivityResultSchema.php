@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ActivityResultSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,14 +62,14 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
         'attempts' => 'int',
         'activity_completion' => 'string',
         'activity_success' => 'string',
-        'score' => '\Swagger\Client\Model\ScoreSchema',
+        'score' => '\RusticiSoftware\Engine\V2\Model\ScoreSchema',
         'time_tracked' => 'string',
-        'completion_amount' => '\Swagger\Client\Model\CompletionAmountSchema',
+        'completion_amount' => '\RusticiSoftware\Engine\V2\Model\CompletionAmountSchema',
         'suspended' => 'bool',
-        'children' => '\Swagger\Client\Model\ActivityResultSchema[]',
-        'objectives' => '\Swagger\Client\Model\ObjectiveSchema[]',
-        'static_properties' => '\Swagger\Client\Model\StaticPropertiesSchema',
-        'runtime' => '\Swagger\Client\Model\RuntimeSchema'
+        'children' => '\RusticiSoftware\Engine\V2\Model\ActivityResultSchema[]',
+        'objectives' => '\RusticiSoftware\Engine\V2\Model\ObjectiveSchema[]',
+        'static_properties' => '\RusticiSoftware\Engine\V2\Model\StaticPropertiesSchema',
+        'runtime' => '\RusticiSoftware\Engine\V2\Model\RuntimeSchema'
     ];
 
     /**
@@ -467,7 +467,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets score
      *
-     * @return \Swagger\Client\Model\ScoreSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ScoreSchema
      */
     public function getScore()
     {
@@ -477,7 +477,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets score
      *
-     * @param \Swagger\Client\Model\ScoreSchema $score score
+     * @param \RusticiSoftware\Engine\V2\Model\ScoreSchema $score score
      *
      * @return $this
      */
@@ -515,7 +515,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets completion_amount
      *
-     * @return \Swagger\Client\Model\CompletionAmountSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CompletionAmountSchema
      */
     public function getCompletionAmount()
     {
@@ -525,7 +525,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets completion_amount
      *
-     * @param \Swagger\Client\Model\CompletionAmountSchema $completion_amount completion_amount
+     * @param \RusticiSoftware\Engine\V2\Model\CompletionAmountSchema $completion_amount completion_amount
      *
      * @return $this
      */
@@ -563,7 +563,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets children
      *
-     * @return \Swagger\Client\Model\ActivityResultSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ActivityResultSchema[]
      */
     public function getChildren()
     {
@@ -573,7 +573,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets children
      *
-     * @param \Swagger\Client\Model\ActivityResultSchema[] $children children
+     * @param \RusticiSoftware\Engine\V2\Model\ActivityResultSchema[] $children children
      *
      * @return $this
      */
@@ -587,7 +587,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets objectives
      *
-     * @return \Swagger\Client\Model\ObjectiveSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ObjectiveSchema[]
      */
     public function getObjectives()
     {
@@ -597,7 +597,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets objectives
      *
-     * @param \Swagger\Client\Model\ObjectiveSchema[] $objectives objectives
+     * @param \RusticiSoftware\Engine\V2\Model\ObjectiveSchema[] $objectives objectives
      *
      * @return $this
      */
@@ -611,7 +611,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets static_properties
      *
-     * @return \Swagger\Client\Model\StaticPropertiesSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StaticPropertiesSchema
      */
     public function getStaticProperties()
     {
@@ -621,7 +621,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets static_properties
      *
-     * @param \Swagger\Client\Model\StaticPropertiesSchema $static_properties static_properties
+     * @param \RusticiSoftware\Engine\V2\Model\StaticPropertiesSchema $static_properties static_properties
      *
      * @return $this
      */
@@ -635,7 +635,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets runtime
      *
-     * @return \Swagger\Client\Model\RuntimeSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RuntimeSchema
      */
     public function getRuntime()
     {
@@ -645,7 +645,7 @@ class ActivityResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets runtime
      *
-     * @param \Swagger\Client\Model\RuntimeSchema $runtime runtime
+     * @param \RusticiSoftware\Engine\V2\Model\RuntimeSchema $runtime runtime
      *
      * @return $this
      */
