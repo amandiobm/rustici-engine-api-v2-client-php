@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * TenantListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class TenantListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tenants' => '\Swagger\Client\Model\TenantSchema[]'
+        'tenants' => '\RusticiSoftware\Engine\V2\Model\TenantSchema[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class TenantListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets tenants
      *
-     * @return \Swagger\Client\Model\TenantSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\TenantSchema[]
      */
     public function getTenants()
     {
@@ -217,7 +217,7 @@ class TenantListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets tenants
      *
-     * @param \Swagger\Client\Model\TenantSchema[] $tenants tenants
+     * @param \RusticiSoftware\Engine\V2\Model\TenantSchema[] $tenants tenants
      *
      * @return $this
      */

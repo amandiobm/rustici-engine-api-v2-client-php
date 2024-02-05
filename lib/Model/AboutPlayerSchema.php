@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * AboutPlayerSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class AboutPlayerSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'modern' => '\Swagger\Client\Model\PlayerInfoSchema'
+        'modern' => '\RusticiSoftware\Engine\V2\Model\PlayerInfoSchema'
     ];
 
     /**
@@ -207,7 +207,7 @@ class AboutPlayerSchema implements ModelInterface, ArrayAccess
     /**
      * Gets modern
      *
-     * @return \Swagger\Client\Model\PlayerInfoSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PlayerInfoSchema
      */
     public function getModern()
     {
@@ -217,7 +217,7 @@ class AboutPlayerSchema implements ModelInterface, ArrayAccess
     /**
      * Sets modern
      *
-     * @param \Swagger\Client\Model\PlayerInfoSchema $modern modern
+     * @param \RusticiSoftware\Engine\V2\Model\PlayerInfoSchema $modern modern
      *
      * @return $this
      */

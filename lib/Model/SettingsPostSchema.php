@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SettingsPostSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class SettingsPostSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'settings' => '\Swagger\Client\Model\SettingsIndividualSchema[]'
+        'settings' => '\RusticiSoftware\Engine\V2\Model\SettingsIndividualSchema[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class SettingsPostSchema implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\SettingsIndividualSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\SettingsIndividualSchema[]
      */
     public function getSettings()
     {
@@ -217,7 +217,7 @@ class SettingsPostSchema implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\SettingsIndividualSchema[] $settings settings
+     * @param \RusticiSoftware\Engine\V2\Model\SettingsIndividualSchema[] $settings settings
      *
      * @return $this
      */

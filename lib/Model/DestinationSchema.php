@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * DestinationSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class DestinationSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'lti13_data' => '\Swagger\Client\Model\Lti13PlatformConfigurationSchema'
+        'lti13_data' => '\RusticiSoftware\Engine\V2\Model\Lti13PlatformConfigurationSchema'
     ];
 
     /**
@@ -240,7 +240,7 @@ class DestinationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets lti13_data
      *
-     * @return \Swagger\Client\Model\Lti13PlatformConfigurationSchema
+     * @return \RusticiSoftware\Engine\V2\Model\Lti13PlatformConfigurationSchema
      */
     public function getLti13Data()
     {
@@ -250,7 +250,7 @@ class DestinationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets lti13_data
      *
-     * @param \Swagger\Client\Model\Lti13PlatformConfigurationSchema $lti13_data lti13_data
+     * @param \RusticiSoftware\Engine\V2\Model\Lti13PlatformConfigurationSchema $lti13_data lti13_data
      *
      * @return $this
      */

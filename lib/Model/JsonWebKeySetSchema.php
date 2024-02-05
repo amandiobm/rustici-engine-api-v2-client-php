@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * JsonWebKeySetSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class JsonWebKeySetSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'keys' => '\Swagger\Client\Model\JsonWebKeySetSchemaKeys[]'
+        'keys' => '\RusticiSoftware\Engine\V2\Model\JsonWebKeySetSchemaKeys[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class JsonWebKeySetSchema implements ModelInterface, ArrayAccess
     /**
      * Gets keys
      *
-     * @return \Swagger\Client\Model\JsonWebKeySetSchemaKeys[]
+     * @return \RusticiSoftware\Engine\V2\Model\JsonWebKeySetSchemaKeys[]
      */
     public function getKeys()
     {
@@ -217,7 +217,7 @@ class JsonWebKeySetSchema implements ModelInterface, ArrayAccess
     /**
      * Sets keys
      *
-     * @param \Swagger\Client\Model\JsonWebKeySetSchemaKeys[] $keys keys
+     * @param \RusticiSoftware\Engine\V2\Model\JsonWebKeySetSchemaKeys[] $keys keys
      *
      * @return $this
      */

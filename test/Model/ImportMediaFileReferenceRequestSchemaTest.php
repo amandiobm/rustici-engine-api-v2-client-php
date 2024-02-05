@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,7 +34,7 @@ namespace RusticiSoftware\Engine\V2;
  *
  * @category    Class
  * @description Request to import a course by referencing existing media file content that is already available at the URL where it will be used.
- * @package     Swagger\Client
+ * @package     RusticiSoftware\Engine\V2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

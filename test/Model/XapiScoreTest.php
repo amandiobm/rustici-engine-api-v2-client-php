@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,7 +34,7 @@ namespace RusticiSoftware\Engine\V2;
  *
  * @category    Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#4151-score
- * @package     Swagger\Client
+ * @package     RusticiSoftware\Engine\V2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

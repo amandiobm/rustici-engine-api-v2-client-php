@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** |  | 
-**data** | [**\Swagger\Client\Model\DestinationSchema**](DestinationSchema.md) |  | 
+**data** | [**\RusticiSoftware\Engine\V2\Model\DestinationSchema**](DestinationSchema.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

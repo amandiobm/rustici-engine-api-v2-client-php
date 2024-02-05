@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ImportResultSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ImportResultSchema implements ModelInterface, ArrayAccess
         'web_path_to_course' => 'string',
         'parser_warnings' => 'string[]',
         'course_languages' => 'string[]',
-        'course' => '\Swagger\Client\Model\CourseSchema'
+        'course' => '\RusticiSoftware\Engine\V2\Model\CourseSchema'
     ];
 
     /**
@@ -297,7 +297,7 @@ class ImportResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets course
      *
-     * @return \Swagger\Client\Model\CourseSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseSchema
      */
     public function getCourse()
     {
@@ -307,7 +307,7 @@ class ImportResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets course
      *
-     * @param \Swagger\Client\Model\CourseSchema $course course
+     * @param \RusticiSoftware\Engine\V2\Model\CourseSchema $course course
      *
      * @return $this
      */

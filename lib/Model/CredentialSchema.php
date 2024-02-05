@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CredentialSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class CredentialSchema implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'id' => 'string',
         'name' => 'string',
-        'permissions' => '\Swagger\Client\Model\PermissionsSchema'
+        'permissions' => '\RusticiSoftware\Engine\V2\Model\PermissionsSchema'
     ];
 
     /**
@@ -267,7 +267,7 @@ class CredentialSchema implements ModelInterface, ArrayAccess
     /**
      * Gets permissions
      *
-     * @return \Swagger\Client\Model\PermissionsSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PermissionsSchema
      */
     public function getPermissions()
     {
@@ -277,7 +277,7 @@ class CredentialSchema implements ModelInterface, ArrayAccess
     /**
      * Sets permissions
      *
-     * @param \Swagger\Client\Model\PermissionsSchema $permissions permissions
+     * @param \RusticiSoftware\Engine\V2\Model\PermissionsSchema $permissions permissions
      *
      * @return $this
      */

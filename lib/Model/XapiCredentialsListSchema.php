@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiCredentialsListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class XapiCredentialsListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'xapi_credentials' => '\Swagger\Client\Model\XapiCredentialSchema[]',
+        'xapi_credentials' => '\RusticiSoftware\Engine\V2\Model\XapiCredentialSchema[]',
         'more' => 'string'
     ];
 
@@ -216,7 +216,7 @@ class XapiCredentialsListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets xapi_credentials
      *
-     * @return \Swagger\Client\Model\XapiCredentialSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiCredentialSchema[]
      */
     public function getXapiCredentials()
     {
@@ -226,7 +226,7 @@ class XapiCredentialsListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets xapi_credentials
      *
-     * @param \Swagger\Client\Model\XapiCredentialSchema[] $xapi_credentials xapi_credentials
+     * @param \RusticiSoftware\Engine\V2\Model\XapiCredentialSchema[] $xapi_credentials xapi_credentials
      *
      * @return $this
      */

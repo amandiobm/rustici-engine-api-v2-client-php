@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **retry_attempts** | **int** | The number of times Engine will attempt to send after a failure. Takes the lower value between this and the &#x60;SimpleQueueMaxRetries&#x60; configuration setting. | [optional] 
 **retry_delay_seconds** | **int** | The initial length of time Engine will wait before retrying after a failure. This time will be doubled after each retry. Takes the greater value between this and the &#x60;SimpleQueueRetryInitialDelaySeconds&#x60; configuration setting. | [optional] 
 **ignore_before_date** | [**\DateTime**](\DateTime.md) | Queued messages generated before this date will be discarded. | [optional] 
-**filters** | [**\Swagger\Client\Model\SubscriptionDefinitionSchemaFilters[]**](SubscriptionDefinitionSchemaFilters.md) | Filters on resources such as course, registration, or tenant for which this subscriber should be notified. If multiple filters are defined, only events that match all the filters will trigger a notification. | [optional] 
+**filters** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchemaFilters[]**](SubscriptionDefinitionSchemaFilters.md) | Filters on resources such as course, registration, or tenant for which this subscriber should be notified. If multiple filters are defined, only events that match all the filters will trigger a notification. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RegistrationListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class RegistrationListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'registrations' => '\Swagger\Client\Model\RegistrationSchema[]',
+        'registrations' => '\RusticiSoftware\Engine\V2\Model\RegistrationSchema[]',
         'more' => 'string'
     ];
 
@@ -216,7 +216,7 @@ class RegistrationListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets registrations
      *
-     * @return \Swagger\Client\Model\RegistrationSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationSchema[]
      */
     public function getRegistrations()
     {
@@ -226,7 +226,7 @@ class RegistrationListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets registrations
      *
-     * @param \Swagger\Client\Model\RegistrationSchema[] $registrations registrations
+     * @param \RusticiSoftware\Engine\V2\Model\RegistrationSchema[] $registrations registrations
      *
      * @return $this
      */

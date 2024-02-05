@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * EventMessage Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,7 +66,7 @@ class EventMessage implements ModelInterface, ArrayAccess
         'body' => 'object',
         'body_version' => 'string',
         'message_version' => 'string',
-        'resources' => '\Swagger\Client\Model\ResourcesSchema'
+        'resources' => '\RusticiSoftware\Engine\V2\Model\ResourcesSchema'
     ];
 
     /**
@@ -477,7 +477,7 @@ class EventMessage implements ModelInterface, ArrayAccess
     /**
      * Gets resources
      *
-     * @return \Swagger\Client\Model\ResourcesSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ResourcesSchema
      */
     public function getResources()
     {
@@ -487,7 +487,7 @@ class EventMessage implements ModelInterface, ArrayAccess
     /**
      * Sets resources
      *
-     * @param \Swagger\Client\Model\ResourcesSchema $resources resources
+     * @param \RusticiSoftware\Engine\V2\Model\ResourcesSchema $resources resources
      *
      * @return $this
      */

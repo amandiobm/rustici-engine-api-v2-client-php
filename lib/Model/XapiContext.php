@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiContext Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#416-context
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,13 +59,13 @@ class XapiContext implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'registration' => 'string',
-        'instructor' => '\Swagger\Client\Model\XapiAgentGroup',
-        'team' => '\Swagger\Client\Model\XapiAgentGroup',
-        'context_activities' => '\Swagger\Client\Model\XapiContextActivity',
+        'instructor' => '\RusticiSoftware\Engine\V2\Model\XapiAgentGroup',
+        'team' => '\RusticiSoftware\Engine\V2\Model\XapiAgentGroup',
+        'context_activities' => '\RusticiSoftware\Engine\V2\Model\XapiContextActivity',
         'revision' => 'string',
         'platform' => 'string',
         'language' => 'string',
-        'statement' => '\Swagger\Client\Model\XapiStatementReference',
+        'statement' => '\RusticiSoftware\Engine\V2\Model\XapiStatementReference',
         'extensions' => 'map[string,object]'
     ];
 
@@ -280,7 +280,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Gets instructor
      *
-     * @return \Swagger\Client\Model\XapiAgentGroup
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAgentGroup
      */
     public function getInstructor()
     {
@@ -290,7 +290,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Sets instructor
      *
-     * @param \Swagger\Client\Model\XapiAgentGroup $instructor instructor
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAgentGroup $instructor instructor
      *
      * @return $this
      */
@@ -304,7 +304,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Gets team
      *
-     * @return \Swagger\Client\Model\XapiAgentGroup
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAgentGroup
      */
     public function getTeam()
     {
@@ -314,7 +314,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Sets team
      *
-     * @param \Swagger\Client\Model\XapiAgentGroup $team team
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAgentGroup $team team
      *
      * @return $this
      */
@@ -328,7 +328,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Gets context_activities
      *
-     * @return \Swagger\Client\Model\XapiContextActivity
+     * @return \RusticiSoftware\Engine\V2\Model\XapiContextActivity
      */
     public function getContextActivities()
     {
@@ -338,7 +338,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Sets context_activities
      *
-     * @param \Swagger\Client\Model\XapiContextActivity $context_activities context_activities
+     * @param \RusticiSoftware\Engine\V2\Model\XapiContextActivity $context_activities context_activities
      *
      * @return $this
      */
@@ -424,7 +424,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Gets statement
      *
-     * @return \Swagger\Client\Model\XapiStatementReference
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementReference
      */
     public function getStatement()
     {
@@ -434,7 +434,7 @@ class XapiContext implements ModelInterface, ArrayAccess
     /**
      * Sets statement
      *
-     * @param \Swagger\Client\Model\XapiStatementReference $statement statement
+     * @param \RusticiSoftware\Engine\V2\Model\XapiStatementReference $statement statement
      *
      * @return $this
      */

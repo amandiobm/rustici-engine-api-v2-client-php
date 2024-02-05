@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client\Model
+ * @package  RusticiSoftware\Engine\V2\Model
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -32,7 +32,7 @@ namespace RusticiSoftware\Engine\V2\Model;
 /**
  * Interface abstracting model access.
  *
- * @package Swagger\Client\Model
+ * @package RusticiSoftware\Engine\V2\Model
  * @author  Swagger Codegen team
  */
 interface ModelInterface

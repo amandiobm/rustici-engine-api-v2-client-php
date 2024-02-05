@@ -1,4 +1,4 @@
-# Swagger\Client\AppManagementApi
+# RusticiSoftware\Engine\V2\AppManagementApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
@@ -36,7 +36,7 @@ Method | HTTP request | Description
 
 
 # **createCredential**
-> \Swagger\Client\Model\CredentialCreatedSchema createCredential($credential_request, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema createCredential($credential_request, $engine_tenant_name)
 
 Create credential
 
@@ -46,20 +46,20 @@ Create credential
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$credential_request = new \Swagger\Client\Model\CredentialRequestSchema(); // \Swagger\Client\Model\CredentialRequestSchema | 
+$credential_request = new \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema(); // \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains 'tenantName' which should be used for any permissions that need to be scoped to a particular tenant.
 
 try {
@@ -75,12 +75,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credential_request** | [**\Swagger\Client\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  |
+ **credential_request** | [**\RusticiSoftware\Engine\V2\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  |
  **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\CredentialCreatedSchema**](../Model/CredentialCreatedSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\CredentialCreatedSchema**](../Model/CredentialCreatedSchema.md)
 
 ### Authorization
 
@@ -104,21 +104,21 @@ Create or update tenant
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $tenant_name = "tenant_name_example"; // string | 
-$tenant_properties = new \Swagger\Client\Model\TenantProperties(); // \Swagger\Client\Model\TenantProperties | 
+$tenant_properties = new \RusticiSoftware\Engine\V2\Model\TenantProperties(); // \RusticiSoftware\Engine\V2\Model\TenantProperties | 
 
 try {
     $apiInstance->createOrUpdateTenant($tenant_name, $tenant_properties);
@@ -133,7 +133,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **tenant_name** | **string**|  |
- **tenant_properties** | [**\Swagger\Client\Model\TenantProperties**](../Model/TenantProperties.md)|  |
+ **tenant_properties** | [**\RusticiSoftware\Engine\V2\Model\TenantProperties**](../Model/TenantProperties.md)|  |
 
 ### Return type
 
@@ -151,7 +151,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSubscription**
-> \Swagger\Client\Model\StringResultSchema createSubscription($subscription_definition, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\StringResultSchema createSubscription($subscription_definition, $engine_tenant_name)
 
 Create subscription
 
@@ -161,20 +161,20 @@ Create subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$subscription_definition = new \Swagger\Client\Model\SubscriptionDefinitionSchema(); // \Swagger\Client\Model\SubscriptionDefinitionSchema | 
+$subscription_definition = new \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema(); // \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -190,12 +190,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_definition** | [**\Swagger\Client\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  |
+ **subscription_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createSubscriptionAuth**
-> \Swagger\Client\Model\StringResultSchema createSubscriptionAuth($subscription_auth_definition, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\StringResultSchema createSubscriptionAuth($subscription_auth_definition, $engine_tenant_name)
 
 Create subscription authentication configurations
 
@@ -219,20 +219,20 @@ Create subscription authentication configurations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$subscription_auth_definition = new \Swagger\Client\Model\SubscriptionAuthDefinitionSchema(); // \Swagger\Client\Model\SubscriptionAuthDefinitionSchema | 
+$subscription_auth_definition = new \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema(); // \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -248,12 +248,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **subscription_auth_definition** | [**\Swagger\Client\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  |
+ **subscription_auth_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createToken**
-> \Swagger\Client\Model\StringResultSchema createToken($token_request, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\StringResultSchema createToken($token_request, $engine_tenant_name)
 
 Create token
 
@@ -279,20 +279,20 @@ Creates, signs and returns a token based on the provided permissions, if the cre
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$token_request = new \Swagger\Client\Model\TokenRequestSchema(); // \Swagger\Client\Model\TokenRequestSchema | 
+$token_request = new \RusticiSoftware\Engine\V2\Model\TokenRequestSchema(); // \RusticiSoftware\Engine\V2\Model\TokenRequestSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains 'tenantName' which should be used for any permissions that need to be scoped to a particular tenant.
 
 try {
@@ -308,12 +308,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token_request** | [**\Swagger\Client\Model\TokenRequestSchema**](../Model/TokenRequestSchema.md)|  |
+ **token_request** | [**\RusticiSoftware\Engine\V2\Model\TokenRequestSchema**](../Model/TokenRequestSchema.md)|  |
  **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -337,14 +337,14 @@ Clears the `settingId` value for this level
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -398,14 +398,14 @@ Removes `credentialId` credentials
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -455,14 +455,14 @@ Delete subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -512,14 +512,14 @@ Delete subscription authentication configuration. Any subscription using this au
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -569,14 +569,14 @@ Delete a tenant. Warning: If tenant data is not deleted first, this will leave o
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -624,14 +624,14 @@ Delete all of a tenant's data.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -671,7 +671,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getApplicationConfiguration**
-> \Swagger\Client\Model\SettingListSchema getApplicationConfiguration($engine_tenant_name, $learning_standard, $single_sco, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
+> \RusticiSoftware\Engine\V2\Model\SettingListSchema getApplicationConfiguration($engine_tenant_name, $learning_standard, $single_sco, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
 
 Returns all configuration settings for this level
 
@@ -681,14 +681,14 @@ Returns all configuration settings for this level
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SettingListSchema**](../Model/SettingListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\SettingListSchema**](../Model/SettingListSchema.md)
 
 ### Authorization
 
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAuthenticatedCredential**
-> \Swagger\Client\Model\CredentialSchema getAuthenticatedCredential($engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\CredentialSchema getAuthenticatedCredential($engine_tenant_name)
 
 Get information about the credential used to authenticate this request.
 
@@ -749,14 +749,14 @@ Get information about the credential used to authenticate this request.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -781,7 +781,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CredentialSchema**](../Model/CredentialSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\CredentialSchema**](../Model/CredentialSchema.md)
 
 ### Authorization
 
@@ -795,7 +795,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredential**
-> \Swagger\Client\Model\CredentialSchema getCredential($credential_id, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\CredentialSchema getCredential($credential_id, $engine_tenant_name)
 
 Get information on `credentialId` credential
 
@@ -805,14 +805,14 @@ Get information on `credentialId` credential
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -839,7 +839,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CredentialSchema**](../Model/CredentialSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\CredentialSchema**](../Model/CredentialSchema.md)
 
 ### Authorization
 
@@ -853,7 +853,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCredentials**
-> \Swagger\Client\Model\CredentialListSchema getCredentials($engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\CredentialListSchema getCredentials($engine_tenant_name)
 
 List of credentials
 
@@ -863,14 +863,14 @@ List of credentials
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\CredentialListSchema**](../Model/CredentialListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\CredentialListSchema**](../Model/CredentialListSchema.md)
 
 ### Authorization
 
@@ -909,7 +909,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPIIDeletionJob**
-> \Swagger\Client\Model\PIIDeletionResultSchema getPIIDeletionJob($engine_tenant_name, $job_id)
+> \RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema getPIIDeletionJob($engine_tenant_name, $job_id)
 
 Check the status of a PII deletion job with the provided job id.
 
@@ -919,14 +919,14 @@ Check the status of a PII deletion job with the provided job id.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -953,7 +953,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\PIIDeletionResultSchema**](../Model/PIIDeletionResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\PIIDeletionResultSchema**](../Model/PIIDeletionResultSchema.md)
 
 ### Authorization
 
@@ -967,7 +967,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscription**
-> \Swagger\Client\Model\SubscriptionEntrySchema getSubscription($subscription_id, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema getSubscription($subscription_id, $engine_tenant_name)
 
 Returns a specific subscription
 
@@ -977,14 +977,14 @@ Returns a specific subscription
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1011,7 +1011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionEntrySchema**](../Model/SubscriptionEntrySchema.md)
+[**\RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema**](../Model/SubscriptionEntrySchema.md)
 
 ### Authorization
 
@@ -1025,7 +1025,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionAuth**
-> \Swagger\Client\Model\SubscriptionAuthDefinitionSchema getSubscriptionAuth($subscription_auth_id, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema getSubscriptionAuth($subscription_auth_id, $engine_tenant_name)
 
 Returns a specific subscription authentication configuration.
 
@@ -1035,14 +1035,14 @@ Returns a specific subscription authentication configuration.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1069,7 +1069,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptionAuths**
-> \Swagger\Client\Model\SubscriptionAuthListSchema getSubscriptionAuths($engine_tenant_name, $more)
+> \RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema getSubscriptionAuths($engine_tenant_name, $more)
 
 Returns list of subscription authentication configurations
 
@@ -1093,14 +1093,14 @@ Returns list of subscription authentication configurations
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1127,7 +1127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionAuthListSchema**](../Model/SubscriptionAuthListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthListSchema**](../Model/SubscriptionAuthListSchema.md)
 
 ### Authorization
 
@@ -1141,7 +1141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getSubscriptions**
-> \Swagger\Client\Model\SubscriptionListSchema getSubscriptions($engine_tenant_name, $more, $topic, $subtopic)
+> \RusticiSoftware\Engine\V2\Model\SubscriptionListSchema getSubscriptions($engine_tenant_name, $more, $topic, $subtopic)
 
 Returns list of subscriptions
 
@@ -1151,14 +1151,14 @@ Returns list of subscriptions
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1189,7 +1189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\SubscriptionListSchema**](../Model/SubscriptionListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\SubscriptionListSchema**](../Model/SubscriptionListSchema.md)
 
 ### Authorization
 
@@ -1203,7 +1203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getTenantList**
-> \Swagger\Client\Model\TenantListSchema getTenantList($include_deactivated)
+> \RusticiSoftware\Engine\V2\Model\TenantListSchema getTenantList($include_deactivated)
 
 Get list of all tenants
 
@@ -1213,14 +1213,14 @@ Get list of all tenants
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1245,7 +1245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TenantListSchema**](../Model/TenantListSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\TenantListSchema**](../Model/TenantListSchema.md)
 
 ### Authorization
 
@@ -1259,7 +1259,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inspectToken**
-> \Swagger\Client\Model\TokenInfoSchema inspectToken($token, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\TokenInfoSchema inspectToken($token, $engine_tenant_name)
 
 Inspect token
 
@@ -1271,14 +1271,14 @@ Verifies the signature of the provided token, and if valid returns information a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1305,7 +1305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\TokenInfoSchema**](../Model/TokenInfoSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\TokenInfoSchema**](../Model/TokenInfoSchema.md)
 
 ### Authorization
 
@@ -1319,7 +1319,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPIIDeletionJob**
-> \Swagger\Client\Model\PIIDeletionRequestResultSchema postPIIDeletionJob($engine_tenant_name, $entities)
+> \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema postPIIDeletionJob($engine_tenant_name, $entities)
 
 Initiate a job to delete a user's Personal Identifying Information from the system.
 
@@ -1329,21 +1329,21 @@ Initiate a job to delete a user's Personal Identifying Information from the syst
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
-$entities = new \Swagger\Client\Model\PIIDeletionRequestSchema(); // \Swagger\Client\Model\PIIDeletionRequestSchema | 
+$entities = new \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema(); // \RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema | 
 
 try {
     $result = $apiInstance->postPIIDeletionJob($engine_tenant_name, $entities);
@@ -1359,11 +1359,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
- **entities** | [**\Swagger\Client\Model\PIIDeletionRequestSchema**](../Model/PIIDeletionRequestSchema.md)|  |
+ **entities** | [**\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema**](../Model/PIIDeletionRequestSchema.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PIIDeletionRequestResultSchema**](../Model/PIIDeletionRequestResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestResultSchema**](../Model/PIIDeletionRequestResultSchema.md)
 
 ### Authorization
 
@@ -1387,14 +1387,14 @@ Re-write settings, and statement pipe passwords using the current encryption set
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1432,7 +1432,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **resetCredentialSecret**
-> \Swagger\Client\Model\StringResultSchema resetCredentialSecret($credential_id, $engine_tenant_name)
+> \RusticiSoftware\Engine\V2\Model\StringResultSchema resetCredentialSecret($credential_id, $engine_tenant_name)
 
 Reset credential secret
 
@@ -1442,14 +1442,14 @@ Reset credential secret
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1476,7 +1476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -1500,20 +1500,20 @@ Set configuration settings for this level.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$configuration_settings = new \Swagger\Client\Model\SettingsPostSchema(); // \Swagger\Client\Model\SettingsPostSchema | 
+$configuration_settings = new \RusticiSoftware\Engine\V2\Model\SettingsPostSchema(); // \RusticiSoftware\Engine\V2\Model\SettingsPostSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 $learning_standard = "learning_standard_example"; // string | Required if singleSco is specified. Scopes the request to the provided learning standard.
 $single_sco = true; // bool | Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes.
@@ -1530,7 +1530,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **configuration_settings** | [**\Swagger\Client\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
  **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional]
  **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional]
@@ -1561,21 +1561,21 @@ Update `credentialId` credentials
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $credential_id = "credential_id_example"; // string | 
-$credential_update = new \Swagger\Client\Model\CredentialRequestSchema(); // \Swagger\Client\Model\CredentialRequestSchema | 
+$credential_update = new \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema(); // \RusticiSoftware\Engine\V2\Model\CredentialRequestSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains 'tenantName' which should be used for any permissions that need to be scoped to a particular tenant.
 
 try {
@@ -1591,7 +1591,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **credential_id** | **string**|  |
- **credential_update** | [**\Swagger\Client\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  |
+ **credential_update** | [**\RusticiSoftware\Engine\V2\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  |
  **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
@@ -1620,21 +1620,21 @@ Update subscription. Partial updates not supported.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $subscription_id = "subscription_id_example"; // string | 
-$subscription_definition = new \Swagger\Client\Model\SubscriptionDefinitionSchema(); // \Swagger\Client\Model\SubscriptionDefinitionSchema | 
+$subscription_definition = new \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema(); // \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -1650,7 +1650,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_id** | **string**|  |
- **subscription_definition** | [**\Swagger\Client\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  |
+ **subscription_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
@@ -1679,21 +1679,21 @@ Update subscription authentication configuration. Partial updates not supported.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = Swagger\Client\Configuration::getDefaultConfiguration()
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AppManagementApi(
+$apiInstance = new RusticiSoftware\Engine\V2\Api\AppManagementApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $subscription_auth_id = "subscription_auth_id_example"; // string | 
-$subscription_auth_definition = new \Swagger\Client\Model\SubscriptionAuthDefinitionSchema(); // \Swagger\Client\Model\SubscriptionAuthDefinitionSchema | 
+$subscription_auth_definition = new \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema(); // \RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema | 
 $engine_tenant_name = "engine_tenant_name_example"; // string | optional tenant for this request
 
 try {
@@ -1709,7 +1709,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **subscription_auth_id** | **string**|  |
- **subscription_auth_definition** | [**\Swagger\Client\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  |
+ **subscription_auth_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  |
  **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type

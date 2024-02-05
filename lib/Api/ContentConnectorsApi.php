@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ContentConnectorsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,12 +92,12 @@ class ContentConnectorsApi
      *
      * Create a connector
      *
-     * @param  \Swagger\Client\Model\CreateConnectorSchema $connector connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema $connector connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createConnector($connector, $engine_tenant_name = null)
     {
@@ -110,16 +110,16 @@ class ContentConnectorsApi
      *
      * Create a connector
      *
-     * @param  \Swagger\Client\Model\CreateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createConnectorWithHttpInfo($connector, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createConnectorRequest($connector, $engine_tenant_name);
 
         try {
@@ -171,7 +171,7 @@ class ContentConnectorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -179,7 +179,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -194,7 +194,7 @@ class ContentConnectorsApi
      *
      * Create a connector
      *
-     * @param  \Swagger\Client\Model\CreateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -215,7 +215,7 @@ class ContentConnectorsApi
      *
      * Create a connector
      *
-     * @param  \Swagger\Client\Model\CreateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -223,7 +223,7 @@ class ContentConnectorsApi
      */
     public function createConnectorAsyncWithHttpInfo($connector, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createConnectorRequest($connector, $engine_tenant_name);
 
         return $this->client
@@ -266,7 +266,7 @@ class ContentConnectorsApi
     /**
      * Create request for operation 'createConnector'
      *
-     * @param  \Swagger\Client\Model\CreateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -389,9 +389,9 @@ class ContentConnectorsApi
      * @param  string $search search (optional)
      * @param  bool $include_all_metadata include_all_metadata (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ConnectorContentListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema
      */
     public function getConnectorContentList($engine_tenant_name = null, $connector_id = null, $since = null, $more = null, $not_imported = 'false', $search = null, $include_all_metadata = 'false')
     {
@@ -412,13 +412,13 @@ class ContentConnectorsApi
      * @param  string $search (optional)
      * @param  bool $include_all_metadata (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ConnectorContentListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConnectorContentListWithHttpInfo($engine_tenant_name = null, $connector_id = null, $since = null, $more = null, $not_imported = 'false', $search = null, $include_all_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\ConnectorContentListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema';
         $request = $this->getConnectorContentListRequest($engine_tenant_name, $connector_id, $since, $more, $not_imported, $search, $include_all_metadata);
 
         try {
@@ -470,7 +470,7 @@ class ContentConnectorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ConnectorContentListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -478,7 +478,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -532,7 +532,7 @@ class ContentConnectorsApi
      */
     public function getConnectorContentListAsyncWithHttpInfo($engine_tenant_name = null, $connector_id = null, $since = null, $more = null, $not_imported = 'false', $search = null, $include_all_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\ConnectorContentListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema';
         $request = $this->getConnectorContentListRequest($engine_tenant_name, $connector_id, $since, $more, $not_imported, $search, $include_all_metadata);
 
         return $this->client
@@ -713,9 +713,9 @@ class ContentConnectorsApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  bool $include_additional_instance_information include_additional_instance_information (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ConnectorListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorListSchema
      */
     public function getConnectorsList($engine_tenant_name = null, $include_additional_instance_information = null)
     {
@@ -731,13 +731,13 @@ class ContentConnectorsApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  bool $include_additional_instance_information (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ConnectorListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\ConnectorListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getConnectorsListWithHttpInfo($engine_tenant_name = null, $include_additional_instance_information = null)
     {
-        $returnType = '\Swagger\Client\Model\ConnectorListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ConnectorListSchema';
         $request = $this->getConnectorsListRequest($engine_tenant_name, $include_additional_instance_information);
 
         try {
@@ -789,7 +789,7 @@ class ContentConnectorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ConnectorListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ConnectorListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -797,7 +797,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -841,7 +841,7 @@ class ContentConnectorsApi
      */
     public function getConnectorsListAsyncWithHttpInfo($engine_tenant_name = null, $include_additional_instance_information = null)
     {
-        $returnType = '\Swagger\Client\Model\ConnectorListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ConnectorListSchema';
         $request = $this->getConnectorsListRequest($engine_tenant_name, $include_additional_instance_information);
 
         return $this->client
@@ -997,9 +997,9 @@ class ContentConnectorsApi
      * @param  string $refresh_job_id The Id received when the refresh job was submitted to the refreshJobs resource. (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RefreshConnectorResultListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema
      */
     public function getRefreshJobStatus($refresh_job_id, $engine_tenant_name = null)
     {
@@ -1015,13 +1015,13 @@ class ContentConnectorsApi
      * @param  string $refresh_job_id The Id received when the refresh job was submitted to the refreshJobs resource. (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RefreshConnectorResultListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRefreshJobStatusWithHttpInfo($refresh_job_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\RefreshConnectorResultListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema';
         $request = $this->getRefreshJobStatusRequest($refresh_job_id, $engine_tenant_name);
 
         try {
@@ -1073,7 +1073,7 @@ class ContentConnectorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RefreshConnectorResultListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1081,7 +1081,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1089,7 +1089,7 @@ class ContentConnectorsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseErrorSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ResponseErrorSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1133,7 +1133,7 @@ class ContentConnectorsApi
      */
     public function getRefreshJobStatusAsyncWithHttpInfo($refresh_job_id, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\RefreshConnectorResultListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RefreshConnectorResultListSchema';
         $request = $this->getRefreshJobStatusRequest($refresh_job_id, $engine_tenant_name);
 
         return $this->client
@@ -1299,9 +1299,9 @@ class ContentConnectorsApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $connector_id the connector id (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function refreshConnectorContentListJob($engine_tenant_name = null, $connector_id = null)
     {
@@ -1317,13 +1317,13 @@ class ContentConnectorsApi
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      * @param  string $connector_id the connector id (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function refreshConnectorContentListJobWithHttpInfo($engine_tenant_name = null, $connector_id = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->refreshConnectorContentListJobRequest($engine_tenant_name, $connector_id);
 
         try {
@@ -1375,7 +1375,7 @@ class ContentConnectorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1383,7 +1383,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1427,7 +1427,7 @@ class ContentConnectorsApi
      */
     public function refreshConnectorContentListJobAsyncWithHttpInfo($engine_tenant_name = null, $connector_id = null)
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->refreshConnectorContentListJobRequest($engine_tenant_name, $connector_id);
 
         return $this->client
@@ -1580,12 +1580,12 @@ class ContentConnectorsApi
      *
      * search remote content
      *
-     * @param  \Swagger\Client\Model\ConnectorContentSearchSchema $search_info search_info (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema $search_info search_info (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ConnectorContentListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema
      */
     public function searchRemoteConnectorContent($search_info, $engine_tenant_name = null)
     {
@@ -1598,16 +1598,16 @@ class ContentConnectorsApi
      *
      * search remote content
      *
-     * @param  \Swagger\Client\Model\ConnectorContentSearchSchema $search_info (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema $search_info (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ConnectorContentListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchRemoteConnectorContentWithHttpInfo($search_info, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\ConnectorContentListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema';
         $request = $this->searchRemoteConnectorContentRequest($search_info, $engine_tenant_name);
 
         try {
@@ -1659,7 +1659,7 @@ class ContentConnectorsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ConnectorContentListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1667,7 +1667,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1682,7 +1682,7 @@ class ContentConnectorsApi
      *
      * search remote content
      *
-     * @param  \Swagger\Client\Model\ConnectorContentSearchSchema $search_info (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema $search_info (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1703,7 +1703,7 @@ class ContentConnectorsApi
      *
      * search remote content
      *
-     * @param  \Swagger\Client\Model\ConnectorContentSearchSchema $search_info (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema $search_info (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1711,7 +1711,7 @@ class ContentConnectorsApi
      */
     public function searchRemoteConnectorContentAsyncWithHttpInfo($search_info, $engine_tenant_name = null)
     {
-        $returnType = '\Swagger\Client\Model\ConnectorContentListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ConnectorContentListSchema';
         $request = $this->searchRemoteConnectorContentRequest($search_info, $engine_tenant_name);
 
         return $this->client
@@ -1754,7 +1754,7 @@ class ContentConnectorsApi
     /**
      * Create request for operation 'searchRemoteConnectorContent'
      *
-     * @param  \Swagger\Client\Model\ConnectorContentSearchSchema $search_info (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema $search_info (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1870,10 +1870,10 @@ class ContentConnectorsApi
      * Update a connector
      *
      * @param  string $connector_id the connector id (required)
-     * @param  \Swagger\Client\Model\UpdateConnectorSchema $connector connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema $connector connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1888,10 +1888,10 @@ class ContentConnectorsApi
      * Update a connector
      *
      * @param  string $connector_id the connector id (required)
-     * @param  \Swagger\Client\Model\UpdateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1935,7 +1935,7 @@ class ContentConnectorsApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1943,7 +1943,7 @@ class ContentConnectorsApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1959,7 +1959,7 @@ class ContentConnectorsApi
      * Update a connector
      *
      * @param  string $connector_id the connector id (required)
-     * @param  \Swagger\Client\Model\UpdateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -1981,7 +1981,7 @@ class ContentConnectorsApi
      * Update a connector
      *
      * @param  string $connector_id the connector id (required)
-     * @param  \Swagger\Client\Model\UpdateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException
@@ -2019,7 +2019,7 @@ class ContentConnectorsApi
      * Create request for operation 'updateConnector'
      *
      * @param  string $connector_id the connector id (required)
-     * @param  \Swagger\Client\Model\UpdateConnectorSchema $connector (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema $connector (required)
      * @param  string $engine_tenant_name optional tenant for this request (optional)
      *
      * @throws \InvalidArgumentException

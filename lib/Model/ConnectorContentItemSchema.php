@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ConnectorContentItemSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class ConnectorContentItemSchema implements ModelInterface, ArrayAccess
         'id' => 'string',
         'title' => 'string',
         'updated' => '\DateTime',
-        'metadata' => '\Swagger\Client\Model\MetadataSchema'
+        'metadata' => '\RusticiSoftware\Engine\V2\Model\MetadataSchema'
     ];
 
     /**
@@ -297,7 +297,7 @@ class ConnectorContentItemSchema implements ModelInterface, ArrayAccess
     /**
      * Gets metadata
      *
-     * @return \Swagger\Client\Model\MetadataSchema
+     * @return \RusticiSoftware\Engine\V2\Model\MetadataSchema
      */
     public function getMetadata()
     {
@@ -307,7 +307,7 @@ class ConnectorContentItemSchema implements ModelInterface, ArrayAccess
     /**
      * Sets metadata
      *
-     * @param \Swagger\Client\Model\MetadataSchema $metadata metadata
+     * @param \RusticiSoftware\Engine\V2\Model\MetadataSchema $metadata metadata
      *
      * @return $this
      */

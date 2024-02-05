@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ImportRequestSchema Class Doc Comment
  *
  * @category Class
  * @description Request to import a new course. Exactly one of fetchRequest, referenceRequest, mediaFileReferenceRequest, connectorReferenceRequest, adHocReferenceRequest, or lti11LinkReferenceRequest must be supplied, depending on the desired import behavior.
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,12 +58,12 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'fetch_request' => '\Swagger\Client\Model\ImportFetchRequestSchema',
-        'reference_request' => '\Swagger\Client\Model\ImportReferenceRequestSchema',
-        'media_file_reference_request' => '\Swagger\Client\Model\ImportMediaFileReferenceRequestSchema',
-        'connector_reference_request' => '\Swagger\Client\Model\ImportConnectorRequestSchema',
-        'ad_hoc_reference_request' => '\Swagger\Client\Model\ImportAdHocReferenceRequestSchema',
-        'lti11_link_reference_request' => '\Swagger\Client\Model\ImportLti11LinkReferenceRequestSchema'
+        'fetch_request' => '\RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema',
+        'reference_request' => '\RusticiSoftware\Engine\V2\Model\ImportReferenceRequestSchema',
+        'media_file_reference_request' => '\RusticiSoftware\Engine\V2\Model\ImportMediaFileReferenceRequestSchema',
+        'connector_reference_request' => '\RusticiSoftware\Engine\V2\Model\ImportConnectorRequestSchema',
+        'ad_hoc_reference_request' => '\RusticiSoftware\Engine\V2\Model\ImportAdHocReferenceRequestSchema',
+        'lti11_link_reference_request' => '\RusticiSoftware\Engine\V2\Model\ImportLti11LinkReferenceRequestSchema'
     ];
 
     /**
@@ -238,7 +238,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets fetch_request
      *
-     * @return \Swagger\Client\Model\ImportFetchRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema
      */
     public function getFetchRequest()
     {
@@ -248,7 +248,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets fetch_request
      *
-     * @param \Swagger\Client\Model\ImportFetchRequestSchema $fetch_request fetch_request
+     * @param \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema $fetch_request fetch_request
      *
      * @return $this
      */
@@ -262,7 +262,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets reference_request
      *
-     * @return \Swagger\Client\Model\ImportReferenceRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportReferenceRequestSchema
      */
     public function getReferenceRequest()
     {
@@ -272,7 +272,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets reference_request
      *
-     * @param \Swagger\Client\Model\ImportReferenceRequestSchema $reference_request reference_request
+     * @param \RusticiSoftware\Engine\V2\Model\ImportReferenceRequestSchema $reference_request reference_request
      *
      * @return $this
      */
@@ -286,7 +286,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets media_file_reference_request
      *
-     * @return \Swagger\Client\Model\ImportMediaFileReferenceRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportMediaFileReferenceRequestSchema
      */
     public function getMediaFileReferenceRequest()
     {
@@ -296,7 +296,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets media_file_reference_request
      *
-     * @param \Swagger\Client\Model\ImportMediaFileReferenceRequestSchema $media_file_reference_request media_file_reference_request
+     * @param \RusticiSoftware\Engine\V2\Model\ImportMediaFileReferenceRequestSchema $media_file_reference_request media_file_reference_request
      *
      * @return $this
      */
@@ -310,7 +310,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets connector_reference_request
      *
-     * @return \Swagger\Client\Model\ImportConnectorRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportConnectorRequestSchema
      */
     public function getConnectorReferenceRequest()
     {
@@ -320,7 +320,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets connector_reference_request
      *
-     * @param \Swagger\Client\Model\ImportConnectorRequestSchema $connector_reference_request connector_reference_request
+     * @param \RusticiSoftware\Engine\V2\Model\ImportConnectorRequestSchema $connector_reference_request connector_reference_request
      *
      * @return $this
      */
@@ -334,7 +334,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets ad_hoc_reference_request
      *
-     * @return \Swagger\Client\Model\ImportAdHocReferenceRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportAdHocReferenceRequestSchema
      */
     public function getAdHocReferenceRequest()
     {
@@ -344,7 +344,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets ad_hoc_reference_request
      *
-     * @param \Swagger\Client\Model\ImportAdHocReferenceRequestSchema $ad_hoc_reference_request ad_hoc_reference_request
+     * @param \RusticiSoftware\Engine\V2\Model\ImportAdHocReferenceRequestSchema $ad_hoc_reference_request ad_hoc_reference_request
      *
      * @return $this
      */
@@ -358,7 +358,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets lti11_link_reference_request
      *
-     * @return \Swagger\Client\Model\ImportLti11LinkReferenceRequestSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportLti11LinkReferenceRequestSchema
      */
     public function getLti11LinkReferenceRequest()
     {
@@ -368,7 +368,7 @@ class ImportRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets lti11_link_reference_request
      *
-     * @param \Swagger\Client\Model\ImportLti11LinkReferenceRequestSchema $lti11_link_reference_request lti11_link_reference_request
+     * @param \RusticiSoftware\Engine\V2\Model\ImportLti11LinkReferenceRequestSchema $lti11_link_reference_request lti11_link_reference_request
      *
      * @return $this
      */

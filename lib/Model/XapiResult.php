@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiResult Class Doc Comment
  *
  * @category Class
  * @description https://github.com/adlnet/xAPI-Spec/blob/1.0.2/xAPI.md#415-result
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class XapiResult implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'score' => '\Swagger\Client\Model\XapiScore',
+        'score' => '\RusticiSoftware\Engine\V2\Model\XapiScore',
         'success' => 'bool',
         'completion' => 'bool',
         'response' => 'string',
@@ -238,7 +238,7 @@ class XapiResult implements ModelInterface, ArrayAccess
     /**
      * Gets score
      *
-     * @return \Swagger\Client\Model\XapiScore
+     * @return \RusticiSoftware\Engine\V2\Model\XapiScore
      */
     public function getScore()
     {
@@ -248,7 +248,7 @@ class XapiResult implements ModelInterface, ArrayAccess
     /**
      * Sets score
      *
-     * @param \Swagger\Client\Model\XapiScore $score score
+     * @param \RusticiSoftware\Engine\V2\Model\XapiScore $score score
      *
      * @return $this
      */

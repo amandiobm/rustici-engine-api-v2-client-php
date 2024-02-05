@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ConnectorTypeSchema Class Doc Comment
  *
  * @category Class
  * @description An installed content connector type.
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class ConnectorTypeSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'content_connector_type' => 'string',
-        'version' => '\Swagger\Client\Model\PluginVersionSchema',
+        'version' => '\RusticiSoftware\Engine\V2\Model\PluginVersionSchema',
         'name' => 'string',
         'enabled' => 'bool'
     ];
@@ -250,7 +250,7 @@ class ConnectorTypeSchema implements ModelInterface, ArrayAccess
     /**
      * Gets version
      *
-     * @return \Swagger\Client\Model\PluginVersionSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PluginVersionSchema
      */
     public function getVersion()
     {
@@ -260,7 +260,7 @@ class ConnectorTypeSchema implements ModelInterface, ArrayAccess
     /**
      * Sets version
      *
-     * @param \Swagger\Client\Model\PluginVersionSchema $version version
+     * @param \RusticiSoftware\Engine\V2\Model\PluginVersionSchema $version version
      *
      * @return $this
      */

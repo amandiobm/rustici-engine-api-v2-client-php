@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,7 +34,7 @@ namespace RusticiSoftware\Engine\V2;
  *
  * @category    Class
  * @description Schema that defines optional metadata values for LTI 1.1 and 1.3 link content
- * @package     Swagger\Client
+ * @package     RusticiSoftware\Engine\V2
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

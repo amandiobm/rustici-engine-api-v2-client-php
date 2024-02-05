@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * DispatchListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class DispatchListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dispatches' => '\Swagger\Client\Model\DispatchIdSchema[]',
+        'dispatches' => '\RusticiSoftware\Engine\V2\Model\DispatchIdSchema[]',
         'more' => 'string'
     ];
 
@@ -213,7 +213,7 @@ class DispatchListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets dispatches
      *
-     * @return \Swagger\Client\Model\DispatchIdSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\DispatchIdSchema[]
      */
     public function getDispatches()
     {
@@ -223,7 +223,7 @@ class DispatchListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets dispatches
      *
-     * @param \Swagger\Client\Model\DispatchIdSchema[] $dispatches dispatches
+     * @param \RusticiSoftware\Engine\V2\Model\DispatchIdSchema[] $dispatches dispatches
      *
      * @return $this
      */

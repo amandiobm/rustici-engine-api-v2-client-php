@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ConnectorListSchema Class Doc Comment
  *
  * @category Class
  * @description List of content connectors.
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class ConnectorListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'connector_entries' => '\Swagger\Client\Model\ConnectorSchema[]'
+        'connector_entries' => '\RusticiSoftware\Engine\V2\Model\ConnectorSchema[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class ConnectorListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets connector_entries
      *
-     * @return \Swagger\Client\Model\ConnectorSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorSchema[]
      */
     public function getConnectorEntries()
     {
@@ -218,7 +218,7 @@ class ConnectorListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets connector_entries
      *
-     * @param \Swagger\Client\Model\ConnectorSchema[] $connector_entries connector_entries
+     * @param \RusticiSoftware\Engine\V2\Model\ConnectorSchema[] $connector_entries connector_entries
      *
      * @return $this
      */

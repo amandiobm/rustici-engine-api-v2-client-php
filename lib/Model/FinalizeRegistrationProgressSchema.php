@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * FinalizeRegistrationProgressSchema Class Doc Comment
  *
  * @category Class
  * @description The schema for the client to send to the API to finalize a registration&#39;s progress for a course or activity
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class FinalizeRegistrationProgressSchema implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'is_completed' => 'bool',
         'is_passed' => 'bool',
-        'score' => '\Swagger\Client\Model\ScoreSchema',
+        'score' => '\RusticiSoftware\Engine\V2\Model\ScoreSchema',
         'total_seconds_tracked' => 'double',
         'update_reason' => 'string'
     ];
@@ -309,7 +309,7 @@ class FinalizeRegistrationProgressSchema implements ModelInterface, ArrayAccess
     /**
      * Gets score
      *
-     * @return \Swagger\Client\Model\ScoreSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ScoreSchema
      */
     public function getScore()
     {
@@ -319,7 +319,7 @@ class FinalizeRegistrationProgressSchema implements ModelInterface, ArrayAccess
     /**
      * Sets score
      *
-     * @param \Swagger\Client\Model\ScoreSchema $score score
+     * @param \RusticiSoftware\Engine\V2\Model\ScoreSchema $score score
      *
      * @return $this
      */

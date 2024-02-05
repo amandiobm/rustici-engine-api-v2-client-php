@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SettingItem Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class SettingItem implements ModelInterface, ArrayAccess
         'effective_value' => 'string',
         'effective_value_source' => 'string',
         'explicit_value' => 'string',
-        'metadata' => '\Swagger\Client\Model\SettingMetadata'
+        'metadata' => '\RusticiSoftware\Engine\V2\Model\SettingMetadata'
     ];
 
     /**
@@ -381,7 +381,7 @@ class SettingItem implements ModelInterface, ArrayAccess
     /**
      * Gets metadata
      *
-     * @return \Swagger\Client\Model\SettingMetadata
+     * @return \RusticiSoftware\Engine\V2\Model\SettingMetadata
      */
     public function getMetadata()
     {
@@ -391,7 +391,7 @@ class SettingItem implements ModelInterface, ArrayAccess
     /**
      * Sets metadata
      *
-     * @param \Swagger\Client\Model\SettingMetadata $metadata metadata
+     * @param \RusticiSoftware\Engine\V2\Model\SettingMetadata $metadata metadata
      *
      * @return $this
      */

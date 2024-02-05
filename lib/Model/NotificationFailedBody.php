@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * NotificationFailedBody Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class NotificationFailedBody implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subscription_definition' => '\Swagger\Client\Model\SubscriptionDefinitionSchema',
-        'message' => '\Swagger\Client\Model\EventMessage',
+        'subscription_definition' => '\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema',
+        'message' => '\RusticiSoftware\Engine\V2\Model\EventMessage',
         'error_message' => 'string',
         'error_reference' => 'string',
         'http_response_code' => 'int',
@@ -237,7 +237,7 @@ class NotificationFailedBody implements ModelInterface, ArrayAccess
     /**
      * Gets subscription_definition
      *
-     * @return \Swagger\Client\Model\SubscriptionDefinitionSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema
      */
     public function getSubscriptionDefinition()
     {
@@ -247,7 +247,7 @@ class NotificationFailedBody implements ModelInterface, ArrayAccess
     /**
      * Sets subscription_definition
      *
-     * @param \Swagger\Client\Model\SubscriptionDefinitionSchema $subscription_definition The subscription whose message failed.
+     * @param \RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema $subscription_definition The subscription whose message failed.
      *
      * @return $this
      */
@@ -261,7 +261,7 @@ class NotificationFailedBody implements ModelInterface, ArrayAccess
     /**
      * Gets message
      *
-     * @return \Swagger\Client\Model\EventMessage
+     * @return \RusticiSoftware\Engine\V2\Model\EventMessage
      */
     public function getMessage()
     {
@@ -271,7 +271,7 @@ class NotificationFailedBody implements ModelInterface, ArrayAccess
     /**
      * Sets message
      *
-     * @param \Swagger\Client\Model\EventMessage $message The contents of the message which failed.
+     * @param \RusticiSoftware\Engine\V2\Model\EventMessage $message The contents of the message which failed.
      *
      * @return $this
      */

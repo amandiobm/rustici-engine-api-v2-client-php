@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CourseActivitySchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class CourseActivitySchema implements ModelInterface, ArrayAccess
         'href' => 'string',
         'scaled_passing_score' => 'string',
         'title' => 'string',
-        'children' => '\Swagger\Client\Model\CourseActivitySchema[]'
+        'children' => '\RusticiSoftware\Engine\V2\Model\CourseActivitySchema[]'
     ];
 
     /**
@@ -455,7 +455,7 @@ class CourseActivitySchema implements ModelInterface, ArrayAccess
     /**
      * Gets children
      *
-     * @return \Swagger\Client\Model\CourseActivitySchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\CourseActivitySchema[]
      */
     public function getChildren()
     {
@@ -465,7 +465,7 @@ class CourseActivitySchema implements ModelInterface, ArrayAccess
     /**
      * Sets children
      *
-     * @param \Swagger\Client\Model\CourseActivitySchema[] $children children
+     * @param \RusticiSoftware\Engine\V2\Model\CourseActivitySchema[] $children children
      *
      * @return $this
      */

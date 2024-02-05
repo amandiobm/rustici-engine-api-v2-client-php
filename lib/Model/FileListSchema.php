@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * FileListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class FileListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'files' => '\Swagger\Client\Model\FileListItemSchema[]'
+        'files' => '\RusticiSoftware\Engine\V2\Model\FileListItemSchema[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class FileListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets files
      *
-     * @return \Swagger\Client\Model\FileListItemSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\FileListItemSchema[]
      */
     public function getFiles()
     {
@@ -217,7 +217,7 @@ class FileListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets files
      *
-     * @param \Swagger\Client\Model\FileListItemSchema[] $files files
+     * @param \RusticiSoftware\Engine\V2\Model\FileListItemSchema[] $files files
      *
      * @return $this
      */

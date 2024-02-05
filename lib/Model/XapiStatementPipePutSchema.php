@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiStatementPipePutSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,9 +57,9 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'source' => '\Swagger\Client\Model\XapiEndpointSchema',
-        'target' => '\Swagger\Client\Model\XapiEndpointSchema',
-        'local_source' => '\Swagger\Client\Model\XapiSelfSourcedPipeSchema'
+        'source' => '\RusticiSoftware\Engine\V2\Model\XapiEndpointSchema',
+        'target' => '\RusticiSoftware\Engine\V2\Model\XapiEndpointSchema',
+        'local_source' => '\RusticiSoftware\Engine\V2\Model\XapiSelfSourcedPipeSchema'
     ];
 
     /**
@@ -219,7 +219,7 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
     /**
      * Gets source
      *
-     * @return \Swagger\Client\Model\XapiEndpointSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiEndpointSchema
      */
     public function getSource()
     {
@@ -229,7 +229,7 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
     /**
      * Sets source
      *
-     * @param \Swagger\Client\Model\XapiEndpointSchema $source source
+     * @param \RusticiSoftware\Engine\V2\Model\XapiEndpointSchema $source source
      *
      * @return $this
      */
@@ -243,7 +243,7 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
     /**
      * Gets target
      *
-     * @return \Swagger\Client\Model\XapiEndpointSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiEndpointSchema
      */
     public function getTarget()
     {
@@ -253,7 +253,7 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
     /**
      * Sets target
      *
-     * @param \Swagger\Client\Model\XapiEndpointSchema $target target
+     * @param \RusticiSoftware\Engine\V2\Model\XapiEndpointSchema $target target
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
     /**
      * Gets local_source
      *
-     * @return \Swagger\Client\Model\XapiSelfSourcedPipeSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiSelfSourcedPipeSchema
      */
     public function getLocalSource()
     {
@@ -277,7 +277,7 @@ class XapiStatementPipePutSchema implements ModelInterface, ArrayAccess
     /**
      * Sets local_source
      *
-     * @param \Swagger\Client\Model\XapiSelfSourcedPipeSchema $local_source local_source
+     * @param \RusticiSoftware\Engine\V2\Model\XapiSelfSourcedPipeSchema $local_source local_source
      *
      * @return $this
      */

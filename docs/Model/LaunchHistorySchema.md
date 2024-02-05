@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Identifier for the registration associated with this record | [optional] 
 **instance** | **int** |  | [optional] 
-**score** | [**\Swagger\Client\Model\ScoreSchema**](ScoreSchema.md) |  | [optional] 
+**score** | [**\RusticiSoftware\Engine\V2\Model\ScoreSchema**](ScoreSchema.md) |  | [optional] 
 **completion_status** | **string** |  | [optional] [default to 'UNKNOWN']
 **success_status** | **string** |  | [optional] [default to 'UNKNOWN']
 **history_log** | **string** |  | [optional] 

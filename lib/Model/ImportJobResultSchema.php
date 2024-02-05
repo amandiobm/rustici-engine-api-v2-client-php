@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * ImportJobResultSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class ImportJobResultSchema implements ModelInterface, ArrayAccess
         'status' => 'string',
         'message' => 'string',
         'is_dry_run' => 'bool',
-        'import_result' => '\Swagger\Client\Model\ImportResultSchema'
+        'import_result' => '\RusticiSoftware\Engine\V2\Model\ImportResultSchema'
     ];
 
     /**
@@ -363,7 +363,7 @@ class ImportJobResultSchema implements ModelInterface, ArrayAccess
     /**
      * Gets import_result
      *
-     * @return \Swagger\Client\Model\ImportResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportResultSchema
      */
     public function getImportResult()
     {
@@ -373,7 +373,7 @@ class ImportJobResultSchema implements ModelInterface, ArrayAccess
     /**
      * Sets import_result
      *
-     * @param \Swagger\Client\Model\ImportResultSchema $import_result import_result
+     * @param \RusticiSoftware\Engine\V2\Model\ImportResultSchema $import_result import_result
      *
      * @return $this
      */

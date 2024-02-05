@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CreateRegistrationSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,13 +58,13 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'course_id' => 'string',
-        'learner' => '\Swagger\Client\Model\LearnerSchema',
+        'learner' => '\RusticiSoftware\Engine\V2\Model\LearnerSchema',
         'registration_id' => 'string',
         'for_credit' => 'bool',
         'xapi_registration_id' => 'string',
-        'post_back' => '\Swagger\Client\Model\PostBackSchema',
-        'initial_registration_state' => '\Swagger\Client\Model\RegistrationSchema',
-        'initial_settings' => '\Swagger\Client\Model\SettingsPostSchema'
+        'post_back' => '\RusticiSoftware\Engine\V2\Model\PostBackSchema',
+        'initial_registration_state' => '\RusticiSoftware\Engine\V2\Model\RegistrationSchema',
+        'initial_settings' => '\RusticiSoftware\Engine\V2\Model\SettingsPostSchema'
     ];
 
     /**
@@ -282,7 +282,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets learner
      *
-     * @return \Swagger\Client\Model\LearnerSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LearnerSchema
      */
     public function getLearner()
     {
@@ -292,7 +292,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets learner
      *
-     * @param \Swagger\Client\Model\LearnerSchema $learner learner
+     * @param \RusticiSoftware\Engine\V2\Model\LearnerSchema $learner learner
      *
      * @return $this
      */
@@ -378,7 +378,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets post_back
      *
-     * @return \Swagger\Client\Model\PostBackSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PostBackSchema
      */
     public function getPostBack()
     {
@@ -388,7 +388,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets post_back
      *
-     * @param \Swagger\Client\Model\PostBackSchema $post_back post_back
+     * @param \RusticiSoftware\Engine\V2\Model\PostBackSchema $post_back post_back
      *
      * @return $this
      */
@@ -402,7 +402,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets initial_registration_state
      *
-     * @return \Swagger\Client\Model\RegistrationSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationSchema
      */
     public function getInitialRegistrationState()
     {
@@ -412,7 +412,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets initial_registration_state
      *
-     * @param \Swagger\Client\Model\RegistrationSchema $initial_registration_state initial_registration_state
+     * @param \RusticiSoftware\Engine\V2\Model\RegistrationSchema $initial_registration_state initial_registration_state
      *
      * @return $this
      */
@@ -426,7 +426,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Gets initial_settings
      *
-     * @return \Swagger\Client\Model\SettingsPostSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SettingsPostSchema
      */
     public function getInitialSettings()
     {
@@ -436,7 +436,7 @@ class CreateRegistrationSchema implements ModelInterface, ArrayAccess
     /**
      * Sets initial_settings
      *
-     * @param \Swagger\Client\Model\SettingsPostSchema $initial_settings initial_settings
+     * @param \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $initial_settings initial_settings
      *
      * @return $this
      */

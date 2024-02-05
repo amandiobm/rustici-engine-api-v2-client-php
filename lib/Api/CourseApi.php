@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * CourseApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,11 +94,11 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request launch_link_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LaunchLinkSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema
      */
     public function buildCoursePreviewLaunchLink($engine_tenant_name, $course_id, $launch_link_request)
     {
@@ -113,15 +113,15 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function buildCoursePreviewLaunchLinkWithHttpInfo($engine_tenant_name, $course_id, $launch_link_request)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->buildCoursePreviewLaunchLinkRequest($engine_tenant_name, $course_id, $launch_link_request);
 
         try {
@@ -173,7 +173,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LaunchLinkSchema',
+                        '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -181,7 +181,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -189,7 +189,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -206,7 +206,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -228,14 +228,14 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function buildCoursePreviewLaunchLinkAsyncWithHttpInfo($engine_tenant_name, $course_id, $launch_link_request)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->buildCoursePreviewLaunchLinkRequest($engine_tenant_name, $course_id, $launch_link_request);
 
         return $this->client
@@ -280,7 +280,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -417,11 +417,11 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request launch_link_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LaunchLinkSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema
      */
     public function buildCoursePreviewLaunchLinkWithVersion($engine_tenant_name, $course_id, $version_id, $launch_link_request)
     {
@@ -437,15 +437,15 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function buildCoursePreviewLaunchLinkWithVersionWithHttpInfo($engine_tenant_name, $course_id, $version_id, $launch_link_request)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->buildCoursePreviewLaunchLinkWithVersionRequest($engine_tenant_name, $course_id, $version_id, $launch_link_request);
 
         try {
@@ -497,7 +497,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LaunchLinkSchema',
+                        '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -505,7 +505,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -513,7 +513,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -531,7 +531,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -554,14 +554,14 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function buildCoursePreviewLaunchLinkWithVersionAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id, $launch_link_request)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->buildCoursePreviewLaunchLinkWithVersionRequest($engine_tenant_name, $course_id, $version_id, $launch_link_request);
 
         return $this->client
@@ -607,7 +607,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -757,12 +757,12 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportFetchRequestSchema $import_request import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema $import_request import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createFetchAndImportCourseJob($engine_tenant_name, $course_id, $import_request, $may_create_new_version = 'false')
     {
@@ -777,16 +777,16 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportFetchRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createFetchAndImportCourseJobWithHttpInfo($engine_tenant_name, $course_id, $import_request, $may_create_new_version = 'false')
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createFetchAndImportCourseJobRequest($engine_tenant_name, $course_id, $import_request, $may_create_new_version);
 
         try {
@@ -838,7 +838,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -846,7 +846,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -854,7 +854,7 @@ class CourseApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -871,7 +871,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportFetchRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -894,7 +894,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportFetchRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -902,7 +902,7 @@ class CourseApi
      */
     public function createFetchAndImportCourseJobAsyncWithHttpInfo($engine_tenant_name, $course_id, $import_request, $may_create_new_version = 'false')
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createFetchAndImportCourseJobRequest($engine_tenant_name, $course_id, $import_request, $may_create_new_version);
 
         return $this->client
@@ -947,7 +947,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportFetchRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      *
      * @throws \InvalidArgumentException
@@ -1089,9 +1089,9 @@ class CourseApi
      * @param  string $content_metadata Serialized &#39;mediaFileMetadata&#39; schema. (optional)
      * @param  string $uploaded_content_type The MIME type identifier for the content to be uploaded (optional, default to application/zip)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\StringResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\StringResultSchema
      */
     public function createUploadAndImportCourseJob($engine_tenant_name, $course_id, $may_create_new_version = 'false', $file = null, $content_metadata = null, $uploaded_content_type = 'application/zip')
     {
@@ -1111,13 +1111,13 @@ class CourseApi
      * @param  string $content_metadata Serialized &#39;mediaFileMetadata&#39; schema. (optional)
      * @param  string $uploaded_content_type The MIME type identifier for the content to be uploaded (optional, default to application/zip)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\StringResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createUploadAndImportCourseJobWithHttpInfo($engine_tenant_name, $course_id, $may_create_new_version = 'false', $file = null, $content_metadata = null, $uploaded_content_type = 'application/zip')
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createUploadAndImportCourseJobRequest($engine_tenant_name, $course_id, $may_create_new_version, $file, $content_metadata, $uploaded_content_type);
 
         try {
@@ -1169,7 +1169,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\StringResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\StringResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1177,7 +1177,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1185,7 +1185,7 @@ class CourseApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1237,7 +1237,7 @@ class CourseApi
      */
     public function createUploadAndImportCourseJobAsyncWithHttpInfo($engine_tenant_name, $course_id, $may_create_new_version = 'false', $file = null, $content_metadata = null, $uploaded_content_type = 'application/zip')
     {
-        $returnType = '\Swagger\Client\Model\StringResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\StringResultSchema';
         $request = $this->createUploadAndImportCourseJobRequest($engine_tenant_name, $course_id, $may_create_new_version, $file, $content_metadata, $uploaded_content_type);
 
         return $this->client
@@ -1426,7 +1426,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1443,7 +1443,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1487,7 +1487,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1495,7 +1495,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1698,7 +1698,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1716,7 +1716,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1760,7 +1760,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1768,7 +1768,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1984,7 +1984,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  string $setting_id setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2002,7 +2002,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  string $setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2046,7 +2046,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2054,7 +2054,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2274,7 +2274,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  int $version_id the course version (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2292,7 +2292,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2336,7 +2336,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2344,7 +2344,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2565,7 +2565,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2584,7 +2584,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2628,7 +2628,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2636,7 +2636,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2870,7 +2870,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $setting_id setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2889,7 +2889,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2933,7 +2933,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2941,7 +2941,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3178,7 +3178,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  string $setting_id setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3196,7 +3196,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  string $setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3240,7 +3240,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3248,7 +3248,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3468,7 +3468,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  string $export_type export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3486,7 +3486,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  string $export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3530,7 +3530,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3747,7 +3747,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $export_type export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3766,7 +3766,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3810,7 +3810,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4044,9 +4044,9 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CourseSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseSchema
      */
     public function getCourse($engine_tenant_name, $course_id, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
@@ -4064,13 +4064,13 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CourseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CourseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseWithHttpInfo($engine_tenant_name, $course_id, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseSchema';
         $request = $this->getCourseRequest($engine_tenant_name, $course_id, $include_registration_count, $include_course_metadata);
 
         try {
@@ -4122,7 +4122,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CourseSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CourseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4130,7 +4130,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4138,7 +4138,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4186,7 +4186,7 @@ class CourseApi
      */
     public function getCourseAsyncWithHttpInfo($engine_tenant_name, $course_id, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseSchema';
         $request = $this->getCourseRequest($engine_tenant_name, $course_id, $include_registration_count, $include_course_metadata);
 
         return $this->client
@@ -4369,7 +4369,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -4388,7 +4388,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4454,7 +4454,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4462,7 +4462,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4695,9 +4695,9 @@ class CourseApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SettingListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SettingListSchema
      */
     public function getCourseConfiguration($engine_tenant_name, $course_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
@@ -4717,13 +4717,13 @@ class CourseApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseConfigurationWithHttpInfo($engine_tenant_name, $course_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getCourseConfigurationRequest($engine_tenant_name, $course_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         try {
@@ -4775,7 +4775,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SettingListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SettingListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4783,7 +4783,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4791,7 +4791,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4843,7 +4843,7 @@ class CourseApi
      */
     public function getCourseConfigurationAsyncWithHttpInfo($engine_tenant_name, $course_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getCourseConfigurationRequest($engine_tenant_name, $course_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         return $this->client
@@ -5035,9 +5035,9 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FileListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\FileListSchema
      */
     public function getCourseFileList($engine_tenant_name, $course_id)
     {
@@ -5053,13 +5053,13 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FileListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\FileListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseFileListWithHttpInfo($engine_tenant_name, $course_id)
     {
-        $returnType = '\Swagger\Client\Model\FileListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\FileListSchema';
         $request = $this->getCourseFileListRequest($engine_tenant_name, $course_id);
 
         try {
@@ -5111,7 +5111,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FileListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\FileListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5119,7 +5119,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5127,7 +5127,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5171,7 +5171,7 @@ class CourseApi
      */
     public function getCourseFileListAsyncWithHttpInfo($engine_tenant_name, $course_id)
     {
-        $returnType = '\Swagger\Client\Model\FileListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\FileListSchema';
         $request = $this->getCourseFileListRequest($engine_tenant_name, $course_id);
 
         return $this->client
@@ -5347,9 +5347,9 @@ class CourseApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiStatementResult
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementResult
      */
     public function getCourseStatements($engine_tenant_name, $course_id, $learner_id = null, $since = null, $until = null, $more = null)
     {
@@ -5369,13 +5369,13 @@ class CourseApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseStatementsWithHttpInfo($engine_tenant_name, $course_id, $learner_id = null, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getCourseStatementsRequest($engine_tenant_name, $course_id, $learner_id, $since, $until, $more);
 
         try {
@@ -5427,7 +5427,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiStatementResult',
+                        '\RusticiSoftware\Engine\V2\Model\XapiStatementResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5435,7 +5435,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5443,7 +5443,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5495,7 +5495,7 @@ class CourseApi
      */
     public function getCourseStatementsAsyncWithHttpInfo($engine_tenant_name, $course_id, $learner_id = null, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getCourseStatementsRequest($engine_tenant_name, $course_id, $learner_id, $since, $until, $more);
 
         return $this->client
@@ -5689,7 +5689,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -5709,7 +5709,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $relative_path Relative path of the asset within the course. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5775,7 +5775,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5783,7 +5783,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6034,9 +6034,9 @@ class CourseApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SettingListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SettingListSchema
      */
     public function getCourseVersionConfiguration($engine_tenant_name, $course_id, $version_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
@@ -6057,13 +6057,13 @@ class CourseApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseVersionConfigurationWithHttpInfo($engine_tenant_name, $course_id, $version_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getCourseVersionConfigurationRequest($engine_tenant_name, $course_id, $version_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         try {
@@ -6115,7 +6115,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SettingListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SettingListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6123,7 +6123,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6131,7 +6131,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6185,7 +6185,7 @@ class CourseApi
      */
     public function getCourseVersionConfigurationAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getCourseVersionConfigurationRequest($engine_tenant_name, $course_id, $version_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         return $this->client
@@ -6393,9 +6393,9 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  int $version_id the course version (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\FileListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\FileListSchema
      */
     public function getCourseVersionFileList($engine_tenant_name, $course_id, $version_id)
     {
@@ -6412,13 +6412,13 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\FileListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\FileListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseVersionFileListWithHttpInfo($engine_tenant_name, $course_id, $version_id)
     {
-        $returnType = '\Swagger\Client\Model\FileListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\FileListSchema';
         $request = $this->getCourseVersionFileListRequest($engine_tenant_name, $course_id, $version_id);
 
         try {
@@ -6470,7 +6470,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\FileListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\FileListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6478,7 +6478,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6486,7 +6486,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6532,7 +6532,7 @@ class CourseApi
      */
     public function getCourseVersionFileListAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id)
     {
-        $returnType = '\Swagger\Client\Model\FileListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\FileListSchema';
         $request = $this->getCourseVersionFileListRequest($engine_tenant_name, $course_id, $version_id);
 
         return $this->client
@@ -6722,9 +6722,9 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CourseSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseSchema
      */
     public function getCourseVersionInfo($engine_tenant_name, $course_id, $version_id, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
@@ -6743,13 +6743,13 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CourseSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CourseSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseVersionInfoWithHttpInfo($engine_tenant_name, $course_id, $version_id, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseSchema';
         $request = $this->getCourseVersionInfoRequest($engine_tenant_name, $course_id, $version_id, $include_registration_count, $include_course_metadata);
 
         try {
@@ -6801,7 +6801,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CourseSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CourseSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6809,7 +6809,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6817,7 +6817,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6867,7 +6867,7 @@ class CourseApi
      */
     public function getCourseVersionInfoAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseSchema';
         $request = $this->getCourseVersionInfoRequest($engine_tenant_name, $course_id, $version_id, $include_registration_count, $include_course_metadata);
 
         return $this->client
@@ -7069,9 +7069,9 @@ class CourseApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiStatementResult
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementResult
      */
     public function getCourseVersionStatements($engine_tenant_name, $course_id, $version_id, $learner_id = null, $since = null, $until = null, $more = null)
     {
@@ -7092,13 +7092,13 @@ class CourseApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseVersionStatementsWithHttpInfo($engine_tenant_name, $course_id, $version_id, $learner_id = null, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getCourseVersionStatementsRequest($engine_tenant_name, $course_id, $version_id, $learner_id, $since, $until, $more);
 
         try {
@@ -7150,7 +7150,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiStatementResult',
+                        '\RusticiSoftware\Engine\V2\Model\XapiStatementResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7158,7 +7158,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7166,7 +7166,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7220,7 +7220,7 @@ class CourseApi
      */
     public function getCourseVersionStatementsAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id, $learner_id = null, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getCourseVersionStatementsRequest($engine_tenant_name, $course_id, $version_id, $learner_id, $since, $until, $more);
 
         return $this->client
@@ -7431,9 +7431,9 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CourseListNonPagedSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema
      */
     public function getCourseVersions($engine_tenant_name, $course_id, $since = null, $until = null, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
@@ -7453,13 +7453,13 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CourseListNonPagedSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCourseVersionsWithHttpInfo($engine_tenant_name, $course_id, $since = null, $until = null, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseListNonPagedSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema';
         $request = $this->getCourseVersionsRequest($engine_tenant_name, $course_id, $since, $until, $include_registration_count, $include_course_metadata);
 
         try {
@@ -7511,7 +7511,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CourseListNonPagedSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7519,7 +7519,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7527,7 +7527,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7579,7 +7579,7 @@ class CourseApi
      */
     public function getCourseVersionsAsyncWithHttpInfo($engine_tenant_name, $course_id, $since = null, $until = null, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseListNonPagedSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema';
         $request = $this->getCourseVersionsRequest($engine_tenant_name, $course_id, $since, $until, $include_registration_count, $include_course_metadata);
 
         return $this->client
@@ -7772,7 +7772,7 @@ class CourseApi
      * @param  string $course_id course_id (required)
      * @param  string $export_type export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -7791,7 +7791,7 @@ class CourseApi
      * @param  string $course_id (required)
      * @param  string $export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7857,7 +7857,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7865,7 +7865,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8098,9 +8098,9 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\CourseListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\CourseListSchema
      */
     public function getCourses($engine_tenant_name, $more = null, $since = null, $until = null, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
@@ -8120,13 +8120,13 @@ class CourseApi
      * @param  bool $include_registration_count Include the registration count in the results (optional, default to false)
      * @param  bool $include_course_metadata Include course metadata in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\CourseListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\CourseListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCoursesWithHttpInfo($engine_tenant_name, $more = null, $since = null, $until = null, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseListSchema';
         $request = $this->getCoursesRequest($engine_tenant_name, $more, $since, $until, $include_registration_count, $include_course_metadata);
 
         try {
@@ -8178,7 +8178,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\CourseListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\CourseListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8186,7 +8186,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8238,7 +8238,7 @@ class CourseApi
      */
     public function getCoursesAsyncWithHttpInfo($engine_tenant_name, $more = null, $since = null, $until = null, $include_registration_count = 'false', $include_course_metadata = 'false')
     {
-        $returnType = '\Swagger\Client\Model\CourseListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\CourseListSchema';
         $request = $this->getCoursesRequest($engine_tenant_name, $more, $since, $until, $include_registration_count, $include_course_metadata);
 
         return $this->client
@@ -8420,9 +8420,9 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $import_job_id Id received when the import job was submitted to the importJobs resource. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ImportJobResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportJobResultSchema
      */
     public function getImportJobStatus($engine_tenant_name, $import_job_id)
     {
@@ -8438,13 +8438,13 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $import_job_id Id received when the import job was submitted to the importJobs resource. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ImportJobResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\ImportJobResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getImportJobStatusWithHttpInfo($engine_tenant_name, $import_job_id)
     {
-        $returnType = '\Swagger\Client\Model\ImportJobResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ImportJobResultSchema';
         $request = $this->getImportJobStatusRequest($engine_tenant_name, $import_job_id);
 
         try {
@@ -8496,7 +8496,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ImportJobResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ImportJobResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8504,7 +8504,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8512,7 +8512,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseErrorSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ResponseErrorSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8556,7 +8556,7 @@ class CourseApi
      */
     public function getImportJobStatusAsyncWithHttpInfo($engine_tenant_name, $import_job_id)
     {
-        $returnType = '\Swagger\Client\Model\ImportJobResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ImportJobResultSchema';
         $request = $this->getImportJobStatusRequest($engine_tenant_name, $import_job_id);
 
         return $this->client
@@ -8730,7 +8730,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $export_type export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \SplFileObject
      */
@@ -8750,7 +8750,7 @@ class CourseApi
      * @param  int $version_id the course version (required)
      * @param  string $export_type (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8816,7 +8816,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8824,7 +8824,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9069,12 +9069,12 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AssetFileSchema
+     * @return \RusticiSoftware\Engine\V2\Model\AssetFileSchema
      */
     public function importCourseAssetFile($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy = 'lax')
     {
@@ -9089,16 +9089,16 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function importCourseAssetFileWithHttpInfo($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->importCourseAssetFileRequest($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy);
 
         try {
@@ -9150,7 +9150,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AssetFileSchema',
+                        '\RusticiSoftware\Engine\V2\Model\AssetFileSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9158,7 +9158,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9166,7 +9166,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9183,7 +9183,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
      * @throws \InvalidArgumentException
@@ -9206,7 +9206,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
      * @throws \InvalidArgumentException
@@ -9214,7 +9214,7 @@ class CourseApi
      */
     public function importCourseAssetFileAsyncWithHttpInfo($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->importCourseAssetFileRequest($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy);
 
         return $this->client
@@ -9259,7 +9259,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
      * @throws \InvalidArgumentException
@@ -9401,12 +9401,12 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AssetFileSchema
+     * @return \RusticiSoftware\Engine\V2\Model\AssetFileSchema
      */
     public function importCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy = 'lax')
     {
@@ -9422,16 +9422,16 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function importCourseVersionAssetFileWithHttpInfo($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->importCourseVersionAssetFileRequest($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy);
 
         try {
@@ -9483,7 +9483,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AssetFileSchema',
+                        '\RusticiSoftware\Engine\V2\Model\AssetFileSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9491,7 +9491,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9499,7 +9499,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9517,7 +9517,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
      * @throws \InvalidArgumentException
@@ -9541,7 +9541,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
      * @throws \InvalidArgumentException
@@ -9549,7 +9549,7 @@ class CourseApi
      */
     public function importCourseVersionAssetFileAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->importCourseVersionAssetFileRequest($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy);
 
         return $this->client
@@ -9595,7 +9595,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\ImportAssetRequestSchema $asset_schema (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema $asset_schema (required)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
      * @throws \InvalidArgumentException
@@ -9750,13 +9750,13 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportRequestSchema $import_request import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportRequestSchema $import_request import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      * @param  bool $dry_run Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ImportResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportResultSchema
      */
     public function importCourseWithoutUpload($engine_tenant_name, $course_id, $import_request, $may_create_new_version = 'false', $dry_run = 'false')
     {
@@ -9771,17 +9771,17 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      * @param  bool $dry_run Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ImportResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\ImportResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function importCourseWithoutUploadWithHttpInfo($engine_tenant_name, $course_id, $import_request, $may_create_new_version = 'false', $dry_run = 'false')
     {
-        $returnType = '\Swagger\Client\Model\ImportResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ImportResultSchema';
         $request = $this->importCourseWithoutUploadRequest($engine_tenant_name, $course_id, $import_request, $may_create_new_version, $dry_run);
 
         try {
@@ -9833,7 +9833,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ImportResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ImportResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9841,7 +9841,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9849,7 +9849,7 @@ class CourseApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9866,7 +9866,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      * @param  bool $dry_run Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. (optional, default to false)
      *
@@ -9890,7 +9890,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      * @param  bool $dry_run Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. (optional, default to false)
      *
@@ -9899,7 +9899,7 @@ class CourseApi
      */
     public function importCourseWithoutUploadAsyncWithHttpInfo($engine_tenant_name, $course_id, $import_request, $may_create_new_version = 'false', $dry_run = 'false')
     {
-        $returnType = '\Swagger\Client\Model\ImportResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ImportResultSchema';
         $request = $this->importCourseWithoutUploadRequest($engine_tenant_name, $course_id, $import_request, $may_create_new_version, $dry_run);
 
         return $this->client
@@ -9944,7 +9944,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. (required)
-     * @param  \Swagger\Client\Model\ImportRequestSchema $import_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\ImportRequestSchema $import_request (required)
      * @param  bool $may_create_new_version Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. (optional, default to false)
      * @param  bool $dry_run Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. (optional, default to false)
      *
@@ -10086,9 +10086,9 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10104,9 +10104,9 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10150,7 +10150,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10158,7 +10158,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10175,7 +10175,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10197,7 +10197,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10235,7 +10235,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10371,9 +10371,9 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
-     * @param  \Swagger\Client\Model\TitleSchema $title title (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TitleSchema $title title (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10389,9 +10389,9 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\TitleSchema $title (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TitleSchema $title (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10435,7 +10435,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10443,7 +10443,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10460,7 +10460,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\TitleSchema $title (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TitleSchema $title (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10482,7 +10482,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\TitleSchema $title (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TitleSchema $title (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10520,7 +10520,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\TitleSchema $title (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\TitleSchema $title (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10657,9 +10657,9 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10676,9 +10676,9 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10722,7 +10722,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10730,7 +10730,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10748,7 +10748,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10771,7 +10771,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10810,7 +10810,7 @@ class CourseApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
      * @param  int $version_id the course version (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -10960,9 +10960,9 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10978,9 +10978,9 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11024,7 +11024,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11032,7 +11032,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11049,7 +11049,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -11071,7 +11071,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -11109,7 +11109,7 @@ class CourseApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $course_id (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -11251,9 +11251,9 @@ class CourseApi
      * @param  string $content_metadata Serialized &#39;mediaFileMetadata&#39; schema. (optional)
      * @param  string $uploaded_content_type The MIME type identifier for the content to be uploaded (optional, default to application/zip)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ImportResultSchema
+     * @return \RusticiSoftware\Engine\V2\Model\ImportResultSchema
      */
     public function uploadAndImportCourse($engine_tenant_name, $course_id, $may_create_new_version = 'false', $dry_run = 'false', $file = null, $content_metadata = null, $uploaded_content_type = 'application/zip')
     {
@@ -11274,13 +11274,13 @@ class CourseApi
      * @param  string $content_metadata Serialized &#39;mediaFileMetadata&#39; schema. (optional)
      * @param  string $uploaded_content_type The MIME type identifier for the content to be uploaded (optional, default to application/zip)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ImportResultSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\ImportResultSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadAndImportCourseWithHttpInfo($engine_tenant_name, $course_id, $may_create_new_version = 'false', $dry_run = 'false', $file = null, $content_metadata = null, $uploaded_content_type = 'application/zip')
     {
-        $returnType = '\Swagger\Client\Model\ImportResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ImportResultSchema';
         $request = $this->uploadAndImportCourseRequest($engine_tenant_name, $course_id, $may_create_new_version, $dry_run, $file, $content_metadata, $uploaded_content_type);
 
         try {
@@ -11332,7 +11332,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ImportResultSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ImportResultSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11340,7 +11340,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11348,7 +11348,7 @@ class CourseApi
                 case 409:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11402,7 +11402,7 @@ class CourseApi
      */
     public function uploadAndImportCourseAsyncWithHttpInfo($engine_tenant_name, $course_id, $may_create_new_version = 'false', $dry_run = 'false', $file = null, $content_metadata = null, $uploaded_content_type = 'application/zip')
     {
-        $returnType = '\Swagger\Client\Model\ImportResultSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\ImportResultSchema';
         $request = $this->uploadAndImportCourseRequest($engine_tenant_name, $course_id, $may_create_new_version, $dry_run, $file, $content_metadata, $uploaded_content_type);
 
         return $this->client
@@ -11599,9 +11599,9 @@ class CourseApi
      * @param  \SplFileObject $file The course content file to import. (optional)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AssetFileSchema
+     * @return \RusticiSoftware\Engine\V2\Model\AssetFileSchema
      */
     public function uploadCourseAssetFile($engine_tenant_name, $course_id, $destination, $file = null, $update_asset_policy = 'lax')
     {
@@ -11620,13 +11620,13 @@ class CourseApi
      * @param  \SplFileObject $file The course content file to import. (optional)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadCourseAssetFileWithHttpInfo($engine_tenant_name, $course_id, $destination, $file = null, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->uploadCourseAssetFileRequest($engine_tenant_name, $course_id, $destination, $file, $update_asset_policy);
 
         try {
@@ -11678,7 +11678,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AssetFileSchema',
+                        '\RusticiSoftware\Engine\V2\Model\AssetFileSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11686,7 +11686,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11694,7 +11694,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11744,7 +11744,7 @@ class CourseApi
      */
     public function uploadCourseAssetFileAsyncWithHttpInfo($engine_tenant_name, $course_id, $destination, $file = null, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->uploadCourseAssetFileRequest($engine_tenant_name, $course_id, $destination, $file, $update_asset_policy);
 
         return $this->client
@@ -11942,9 +11942,9 @@ class CourseApi
      * @param  \SplFileObject $file The course content file to import. (optional)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AssetFileSchema
+     * @return \RusticiSoftware\Engine\V2\Model\AssetFileSchema
      */
     public function uploadCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $destination, $file = null, $update_asset_policy = 'lax')
     {
@@ -11964,13 +11964,13 @@ class CourseApi
      * @param  \SplFileObject $file The course content file to import. (optional)
      * @param  string $update_asset_policy Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). (optional, default to lax)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\AssetFileSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadCourseVersionAssetFileWithHttpInfo($engine_tenant_name, $course_id, $version_id, $destination, $file = null, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->uploadCourseVersionAssetFileRequest($engine_tenant_name, $course_id, $version_id, $destination, $file, $update_asset_policy);
 
         try {
@@ -12022,7 +12022,7 @@ class CourseApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AssetFileSchema',
+                        '\RusticiSoftware\Engine\V2\Model\AssetFileSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12030,7 +12030,7 @@ class CourseApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12038,7 +12038,7 @@ class CourseApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12090,7 +12090,7 @@ class CourseApi
      */
     public function uploadCourseVersionAssetFileAsyncWithHttpInfo($engine_tenant_name, $course_id, $version_id, $destination, $file = null, $update_asset_policy = 'lax')
     {
-        $returnType = '\Swagger\Client\Model\AssetFileSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\AssetFileSchema';
         $request = $this->uploadCourseVersionAssetFileRequest($engine_tenant_name, $course_id, $version_id, $destination, $file, $update_asset_policy);
 
         return $this->client

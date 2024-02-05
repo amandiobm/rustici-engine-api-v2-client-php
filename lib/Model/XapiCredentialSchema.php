@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiCredentialSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,8 +62,8 @@ class XapiCredentialSchema implements ModelInterface, ArrayAccess
         'info' => 'string',
         'secret' => 'string',
         'is_enabled' => 'bool',
-        'auth' => '\Swagger\Client\Model\XapiCredentialAuthTypeSchema',
-        'permissions_level' => '\Swagger\Client\Model\XapiCredentialPermissionsLevelSchema'
+        'auth' => '\RusticiSoftware\Engine\V2\Model\XapiCredentialAuthTypeSchema',
+        'permissions_level' => '\RusticiSoftware\Engine\V2\Model\XapiCredentialPermissionsLevelSchema'
     ];
 
     /**
@@ -378,7 +378,7 @@ class XapiCredentialSchema implements ModelInterface, ArrayAccess
     /**
      * Gets auth
      *
-     * @return \Swagger\Client\Model\XapiCredentialAuthTypeSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiCredentialAuthTypeSchema
      */
     public function getAuth()
     {
@@ -388,7 +388,7 @@ class XapiCredentialSchema implements ModelInterface, ArrayAccess
     /**
      * Sets auth
      *
-     * @param \Swagger\Client\Model\XapiCredentialAuthTypeSchema $auth auth
+     * @param \RusticiSoftware\Engine\V2\Model\XapiCredentialAuthTypeSchema $auth auth
      *
      * @return $this
      */
@@ -402,7 +402,7 @@ class XapiCredentialSchema implements ModelInterface, ArrayAccess
     /**
      * Gets permissions_level
      *
-     * @return \Swagger\Client\Model\XapiCredentialPermissionsLevelSchema
+     * @return \RusticiSoftware\Engine\V2\Model\XapiCredentialPermissionsLevelSchema
      */
     public function getPermissionsLevel()
     {
@@ -412,7 +412,7 @@ class XapiCredentialSchema implements ModelInterface, ArrayAccess
     /**
      * Sets permissions_level
      *
-     * @param \Swagger\Client\Model\XapiCredentialPermissionsLevelSchema $permissions_level permissions_level
+     * @param \RusticiSoftware\Engine\V2\Model\XapiCredentialPermissionsLevelSchema $permissions_level permissions_level
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RegistrationCountSummarySchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class RegistrationCountSummarySchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'combined_tenants' => '\Swagger\Client\Model\RegistrationCountDetailSchema',
-        'by_tenant' => '\Swagger\Client\Model\RegistrationCountDetailSchema[]'
+        'combined_tenants' => '\RusticiSoftware\Engine\V2\Model\RegistrationCountDetailSchema',
+        'by_tenant' => '\RusticiSoftware\Engine\V2\Model\RegistrationCountDetailSchema[]'
     ];
 
     /**
@@ -216,7 +216,7 @@ class RegistrationCountSummarySchema implements ModelInterface, ArrayAccess
     /**
      * Gets combined_tenants
      *
-     * @return \Swagger\Client\Model\RegistrationCountDetailSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationCountDetailSchema
      */
     public function getCombinedTenants()
     {
@@ -226,7 +226,7 @@ class RegistrationCountSummarySchema implements ModelInterface, ArrayAccess
     /**
      * Sets combined_tenants
      *
-     * @param \Swagger\Client\Model\RegistrationCountDetailSchema $combined_tenants combined_tenants
+     * @param \RusticiSoftware\Engine\V2\Model\RegistrationCountDetailSchema $combined_tenants combined_tenants
      *
      * @return $this
      */
@@ -240,7 +240,7 @@ class RegistrationCountSummarySchema implements ModelInterface, ArrayAccess
     /**
      * Gets by_tenant
      *
-     * @return \Swagger\Client\Model\RegistrationCountDetailSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationCountDetailSchema[]
      */
     public function getByTenant()
     {
@@ -250,7 +250,7 @@ class RegistrationCountSummarySchema implements ModelInterface, ArrayAccess
     /**
      * Sets by_tenant
      *
-     * @param \Swagger\Client\Model\RegistrationCountDetailSchema[] $by_tenant by_tenant
+     * @param \RusticiSoftware\Engine\V2\Model\RegistrationCountDetailSchema[] $by_tenant by_tenant
      *
      * @return $this
      */

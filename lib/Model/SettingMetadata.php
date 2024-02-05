@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SettingMetadata Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,7 +63,7 @@ class SettingMetadata implements ModelInterface, ArrayAccess
         'level' => 'string',
         'learning_standards' => 'string[]',
         'fallback' => 'string',
-        'valid_values' => '\Swagger\Client\Model\SettingValidValue[]'
+        'valid_values' => '\RusticiSoftware\Engine\V2\Model\SettingValidValue[]'
     ];
 
     /**
@@ -387,7 +387,7 @@ class SettingMetadata implements ModelInterface, ArrayAccess
     /**
      * Gets valid_values
      *
-     * @return \Swagger\Client\Model\SettingValidValue[]
+     * @return \RusticiSoftware\Engine\V2\Model\SettingValidValue[]
      */
     public function getValidValues()
     {
@@ -397,7 +397,7 @@ class SettingMetadata implements ModelInterface, ArrayAccess
     /**
      * Sets valid_values
      *
-     * @param \Swagger\Client\Model\SettingValidValue[] $valid_values For settings with a fixed list of valid values, the list of those values
+     * @param \RusticiSoftware\Engine\V2\Model\SettingValidValue[] $valid_values For settings with a fixed list of valid values, the list of those values
      *
      * @return $this
      */

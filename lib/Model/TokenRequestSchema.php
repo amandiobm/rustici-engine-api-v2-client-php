@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * TokenRequestSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,10 +57,10 @@ class TokenRequestSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'permissions' => '\Swagger\Client\Model\PermissionsSchema',
+        'permissions' => '\RusticiSoftware\Engine\V2\Model\PermissionsSchema',
         'expiry' => '\DateTime',
         'id' => 'string',
-        'additional_values' => '\Swagger\Client\Model\ItemValuePairSchema[]'
+        'additional_values' => '\RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]'
     ];
 
     /**
@@ -231,7 +231,7 @@ class TokenRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets permissions
      *
-     * @return \Swagger\Client\Model\PermissionsSchema
+     * @return \RusticiSoftware\Engine\V2\Model\PermissionsSchema
      */
     public function getPermissions()
     {
@@ -241,7 +241,7 @@ class TokenRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets permissions
      *
-     * @param \Swagger\Client\Model\PermissionsSchema $permissions permissions
+     * @param \RusticiSoftware\Engine\V2\Model\PermissionsSchema $permissions permissions
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class TokenRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Gets additional_values
      *
-     * @return \Swagger\Client\Model\ItemValuePairSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[]
      */
     public function getAdditionalValues()
     {
@@ -313,7 +313,7 @@ class TokenRequestSchema implements ModelInterface, ArrayAccess
     /**
      * Sets additional_values
      *
-     * @param \Swagger\Client\Model\ItemValuePairSchema[] $additional_values Additional values to be included in the token
+     * @param \RusticiSoftware\Engine\V2\Model\ItemValuePairSchema[] $additional_values Additional values to be included in the token
      *
      * @return $this
      */

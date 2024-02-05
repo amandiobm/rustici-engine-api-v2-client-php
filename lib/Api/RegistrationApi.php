@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use RusticiSoftware\Engine\V2\ApiException;
+use RusticiSoftware\Engine\V2\Configuration;
+use RusticiSoftware\Engine\V2\HeaderSelector;
+use RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * RegistrationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,7 +95,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -112,7 +112,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -156,7 +156,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -164,7 +164,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -365,11 +365,11 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request launch_link_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LaunchLinkSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema
      */
     public function buildRegistrationLaunchLink($engine_tenant_name, $registration_id, $launch_link_request)
     {
@@ -384,15 +384,15 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function buildRegistrationLaunchLinkWithHttpInfo($engine_tenant_name, $registration_id, $launch_link_request)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->buildRegistrationLaunchLinkRequest($engine_tenant_name, $registration_id, $launch_link_request);
 
         try {
@@ -444,7 +444,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LaunchLinkSchema',
+                        '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -452,7 +452,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -460,7 +460,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -477,7 +477,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -499,14 +499,14 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function buildRegistrationLaunchLinkAsyncWithHttpInfo($engine_tenant_name, $registration_id, $launch_link_request)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->buildRegistrationLaunchLinkRequest($engine_tenant_name, $registration_id, $launch_link_request);
 
         return $this->client
@@ -551,7 +551,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\LaunchLinkRequestSchema $launch_link_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema $launch_link_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -688,7 +688,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -705,7 +705,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -749,7 +749,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -757,7 +757,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -957,10 +957,10 @@ class RegistrationApi
      * Create a registration.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationSchema $registration registration (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema $registration registration (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -975,10 +975,10 @@ class RegistrationApi
      * Create a registration.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationSchema $registration (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema $registration (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1022,7 +1022,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class RegistrationApi
      * Create a registration.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationSchema $registration (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema $registration (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1060,7 +1060,7 @@ class RegistrationApi
      * Create a registration.
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationSchema $registration (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema $registration (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1098,7 +1098,7 @@ class RegistrationApi
      * Create request for operation 'createRegistration'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationSchema $registration (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema $registration (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1224,12 +1224,12 @@ class RegistrationApi
      * Creates a registration and returns the link to use to launch it
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema $create_request create_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema $create_request create_request (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LaunchLinkSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema
      */
     public function createRegistrationWithLaunchLink($engine_tenant_name, $create_request, $course_version = null)
     {
@@ -1243,16 +1243,16 @@ class RegistrationApi
      * Creates a registration and returns the link to use to launch it
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRegistrationWithLaunchLinkWithHttpInfo($engine_tenant_name, $create_request, $course_version = null)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->createRegistrationWithLaunchLinkRequest($engine_tenant_name, $create_request, $course_version);
 
         try {
@@ -1304,7 +1304,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LaunchLinkSchema',
+                        '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1312,7 +1312,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1328,7 +1328,7 @@ class RegistrationApi
      * Creates a registration and returns the link to use to launch it
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1350,7 +1350,7 @@ class RegistrationApi
      * Creates a registration and returns the link to use to launch it
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1358,7 +1358,7 @@ class RegistrationApi
      */
     public function createRegistrationWithLaunchLinkAsyncWithHttpInfo($engine_tenant_name, $create_request, $course_version = null)
     {
-        $returnType = '\Swagger\Client\Model\LaunchLinkSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema';
         $request = $this->createRegistrationWithLaunchLinkRequest($engine_tenant_name, $create_request, $course_version);
 
         return $this->client
@@ -1402,7 +1402,7 @@ class RegistrationApi
      * Create request for operation 'createRegistrationWithLaunchLink'
      *
      * @param  string $engine_tenant_name tenant for this request (required)
-     * @param  \Swagger\Client\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema $create_request (required)
      * @param  int $course_version The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1530,7 +1530,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1547,7 +1547,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1591,7 +1591,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1599,7 +1599,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ResponseErrorSchema',
+                        '\RusticiSoftware\Engine\V2\Model\ResponseErrorSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1802,7 +1802,7 @@ class RegistrationApi
      * @param  string $registration_id id for this registration (required)
      * @param  string $setting_id setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1820,7 +1820,7 @@ class RegistrationApi
      * @param  string $registration_id id for this registration (required)
      * @param  string $setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1864,7 +1864,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1872,7 +1872,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2091,7 +2091,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2108,7 +2108,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2152,7 +2152,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2160,7 +2160,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2363,7 +2363,7 @@ class RegistrationApi
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2381,7 +2381,7 @@ class RegistrationApi
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2425,7 +2425,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2433,7 +2433,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2654,7 +2654,7 @@ class RegistrationApi
      * @param  int $instance_id the instance of this registration (required)
      * @param  string $setting_id setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2673,7 +2673,7 @@ class RegistrationApi
      * @param  int $instance_id the instance of this registration (required)
      * @param  string $setting_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2717,7 +2717,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2725,7 +2725,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2961,7 +2961,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2978,7 +2978,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3022,7 +3022,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3030,7 +3030,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3232,10 +3232,10 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3252,10 +3252,10 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3299,7 +3299,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3307,7 +3307,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3325,7 +3325,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
      * @throws \InvalidArgumentException
@@ -3349,7 +3349,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
      * @throws \InvalidArgumentException
@@ -3389,7 +3389,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
      * @throws \InvalidArgumentException
@@ -3544,10 +3544,10 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3563,10 +3563,10 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3610,7 +3610,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3618,7 +3618,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3635,7 +3635,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
      * @throws \InvalidArgumentException
@@ -3658,7 +3658,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
      * @throws \InvalidArgumentException
@@ -3697,7 +3697,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema $registration_final_state (required)
      * @param  string $activity_id Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. (optional, default to )
      *
      * @throws \InvalidArgumentException
@@ -3839,7 +3839,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3856,7 +3856,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4098,9 +4098,9 @@ class RegistrationApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SettingListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SettingListSchema
      */
     public function getRegistrationConfiguration($engine_tenant_name, $registration_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
@@ -4120,13 +4120,13 @@ class RegistrationApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationConfigurationWithHttpInfo($engine_tenant_name, $registration_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getRegistrationConfigurationRequest($engine_tenant_name, $registration_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         try {
@@ -4178,7 +4178,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SettingListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SettingListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4186,7 +4186,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4194,7 +4194,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4246,7 +4246,7 @@ class RegistrationApi
      */
     public function getRegistrationConfigurationAsyncWithHttpInfo($engine_tenant_name, $registration_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getRegistrationConfigurationRequest($engine_tenant_name, $registration_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         return $this->client
@@ -4443,9 +4443,9 @@ class RegistrationApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\SettingListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\SettingListSchema
      */
     public function getRegistrationInstanceConfiguration($engine_tenant_name, $registration_id, $instance_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
@@ -4466,13 +4466,13 @@ class RegistrationApi
      * @param  bool $include_secret_settings Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. (optional, default to false)
      * @param  bool $process_replacement_tokens Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) (optional, default to true)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\SettingListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationInstanceConfigurationWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getRegistrationInstanceConfigurationRequest($engine_tenant_name, $registration_id, $instance_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         try {
@@ -4524,7 +4524,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\SettingListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\SettingListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4532,7 +4532,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4540,7 +4540,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4594,7 +4594,7 @@ class RegistrationApi
      */
     public function getRegistrationInstanceConfigurationAsyncWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $include_metadata = 'false', $include_hidden_settings = 'false', $include_secret_settings = 'false', $process_replacement_tokens = 'true')
     {
-        $returnType = '\Swagger\Client\Model\SettingListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\SettingListSchema';
         $request = $this->getRegistrationInstanceConfigurationRequest($engine_tenant_name, $registration_id, $instance_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens);
 
         return $this->client
@@ -4803,9 +4803,9 @@ class RegistrationApi
      * @param  int $instance_id the instance of this registration (required)
      * @param  bool $include_history_log Whether to include the history log in the launch history (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LaunchHistoryListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema
      */
     public function getRegistrationInstanceLaunchHistory($engine_tenant_name, $registration_id, $instance_id, $include_history_log = 'false')
     {
@@ -4823,13 +4823,13 @@ class RegistrationApi
      * @param  int $instance_id the instance of this registration (required)
      * @param  bool $include_history_log Whether to include the history log in the launch history (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LaunchHistoryListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationInstanceLaunchHistoryWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $include_history_log = 'false')
     {
-        $returnType = '\Swagger\Client\Model\LaunchHistoryListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema';
         $request = $this->getRegistrationInstanceLaunchHistoryRequest($engine_tenant_name, $registration_id, $instance_id, $include_history_log);
 
         try {
@@ -4881,7 +4881,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LaunchHistoryListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4889,7 +4889,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4897,7 +4897,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4945,7 +4945,7 @@ class RegistrationApi
      */
     public function getRegistrationInstanceLaunchHistoryAsyncWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $include_history_log = 'false')
     {
-        $returnType = '\Swagger\Client\Model\LaunchHistoryListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema';
         $request = $this->getRegistrationInstanceLaunchHistoryRequest($engine_tenant_name, $registration_id, $instance_id, $include_history_log);
 
         return $this->client
@@ -5142,9 +5142,9 @@ class RegistrationApi
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      * @param  bool $create_xapi_registration_id_if_absent create the xAPI registration ID for this registration if one does not already exist (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RegistrationSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationSchema
      */
     public function getRegistrationInstanceProgress($engine_tenant_name, $registration_id, $instance_id, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false', $create_xapi_registration_id_if_absent = 'false')
     {
@@ -5165,13 +5165,13 @@ class RegistrationApi
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      * @param  bool $create_xapi_registration_id_if_absent create the xAPI registration ID for this registration if one does not already exist (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RegistrationSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\RegistrationSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationInstanceProgressWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false', $create_xapi_registration_id_if_absent = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationSchema';
         $request = $this->getRegistrationInstanceProgressRequest($engine_tenant_name, $registration_id, $instance_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent);
 
         try {
@@ -5223,7 +5223,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RegistrationSchema',
+                        '\RusticiSoftware\Engine\V2\Model\RegistrationSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5231,7 +5231,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5239,7 +5239,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5293,7 +5293,7 @@ class RegistrationApi
      */
     public function getRegistrationInstanceProgressAsyncWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false', $create_xapi_registration_id_if_absent = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationSchema';
         $request = $this->getRegistrationInstanceProgressRequest($engine_tenant_name, $registration_id, $instance_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent);
 
         return $this->client
@@ -5504,9 +5504,9 @@ class RegistrationApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiStatementResult
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementResult
      */
     public function getRegistrationInstanceStatements($engine_tenant_name, $registration_id, $instance_id, $since = null, $until = null, $more = null)
     {
@@ -5526,13 +5526,13 @@ class RegistrationApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationInstanceStatementsWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getRegistrationInstanceStatementsRequest($engine_tenant_name, $registration_id, $instance_id, $since, $until, $more);
 
         try {
@@ -5584,7 +5584,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiStatementResult',
+                        '\RusticiSoftware\Engine\V2\Model\XapiStatementResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5592,7 +5592,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5600,7 +5600,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5652,7 +5652,7 @@ class RegistrationApi
      */
     public function getRegistrationInstanceStatementsAsyncWithHttpInfo($engine_tenant_name, $registration_id, $instance_id, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getRegistrationInstanceStatementsRequest($engine_tenant_name, $registration_id, $instance_id, $since, $until, $more);
 
         return $this->client
@@ -5860,9 +5860,9 @@ class RegistrationApi
      * @param  bool $include_interactions_and_objectives Include interactions and objectives in the results (optional, default to false)
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RegistrationListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationListSchema
      */
     public function getRegistrationInstances($engine_tenant_name, $registration_id, $since = null, $until = null, $more = null, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false')
     {
@@ -5884,13 +5884,13 @@ class RegistrationApi
      * @param  bool $include_interactions_and_objectives Include interactions and objectives in the results (optional, default to false)
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RegistrationListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\RegistrationListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationInstancesWithHttpInfo($engine_tenant_name, $registration_id, $since = null, $until = null, $more = null, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationListSchema';
         $request = $this->getRegistrationInstancesRequest($engine_tenant_name, $registration_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime);
 
         try {
@@ -5942,7 +5942,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RegistrationListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\RegistrationListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5950,7 +5950,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5958,7 +5958,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6014,7 +6014,7 @@ class RegistrationApi
      */
     public function getRegistrationInstancesAsyncWithHttpInfo($engine_tenant_name, $registration_id, $since = null, $until = null, $more = null, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationListSchema';
         $request = $this->getRegistrationInstancesRequest($engine_tenant_name, $registration_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime);
 
         return $this->client
@@ -6217,9 +6217,9 @@ class RegistrationApi
      * @param  string $registration_id id for this registration (required)
      * @param  bool $include_history_log Whether to include the history log in the launch history (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\LaunchHistoryListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema
      */
     public function getRegistrationLaunchHistory($engine_tenant_name, $registration_id, $include_history_log = 'false')
     {
@@ -6236,13 +6236,13 @@ class RegistrationApi
      * @param  string $registration_id id for this registration (required)
      * @param  bool $include_history_log Whether to include the history log in the launch history (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\LaunchHistoryListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationLaunchHistoryWithHttpInfo($engine_tenant_name, $registration_id, $include_history_log = 'false')
     {
-        $returnType = '\Swagger\Client\Model\LaunchHistoryListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema';
         $request = $this->getRegistrationLaunchHistoryRequest($engine_tenant_name, $registration_id, $include_history_log);
 
         try {
@@ -6294,7 +6294,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\LaunchHistoryListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6302,7 +6302,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6310,7 +6310,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6356,7 +6356,7 @@ class RegistrationApi
      */
     public function getRegistrationLaunchHistoryAsyncWithHttpInfo($engine_tenant_name, $registration_id, $include_history_log = 'false')
     {
-        $returnType = '\Swagger\Client\Model\LaunchHistoryListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\LaunchHistoryListSchema';
         $request = $this->getRegistrationLaunchHistoryRequest($engine_tenant_name, $registration_id, $include_history_log);
 
         return $this->client
@@ -6537,9 +6537,9 @@ class RegistrationApi
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      * @param  bool $create_xapi_registration_id_if_absent create the xAPI registration ID for this registration if one does not already exist (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RegistrationSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationSchema
      */
     public function getRegistrationProgress($engine_tenant_name, $registration_id, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false', $create_xapi_registration_id_if_absent = 'false')
     {
@@ -6559,13 +6559,13 @@ class RegistrationApi
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      * @param  bool $create_xapi_registration_id_if_absent create the xAPI registration ID for this registration if one does not already exist (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RegistrationSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\RegistrationSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationProgressWithHttpInfo($engine_tenant_name, $registration_id, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false', $create_xapi_registration_id_if_absent = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationSchema';
         $request = $this->getRegistrationProgressRequest($engine_tenant_name, $registration_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent);
 
         try {
@@ -6617,7 +6617,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RegistrationSchema',
+                        '\RusticiSoftware\Engine\V2\Model\RegistrationSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6625,7 +6625,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6633,7 +6633,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6685,7 +6685,7 @@ class RegistrationApi
      */
     public function getRegistrationProgressAsyncWithHttpInfo($engine_tenant_name, $registration_id, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false', $create_xapi_registration_id_if_absent = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationSchema';
         $request = $this->getRegistrationProgressRequest($engine_tenant_name, $registration_id, $include_child_results, $include_interactions_and_objectives, $include_runtime, $create_xapi_registration_id_if_absent);
 
         return $this->client
@@ -6880,9 +6880,9 @@ class RegistrationApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\XapiStatementResult
+     * @return \RusticiSoftware\Engine\V2\Model\XapiStatementResult
      */
     public function getRegistrationStatements($engine_tenant_name, $registration_id, $since = null, $until = null, $more = null)
     {
@@ -6901,13 +6901,13 @@ class RegistrationApi
      * @param  \DateTime $until Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. (optional)
      * @param  string $more Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\XapiStatementResult, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationStatementsWithHttpInfo($engine_tenant_name, $registration_id, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getRegistrationStatementsRequest($engine_tenant_name, $registration_id, $since, $until, $more);
 
         try {
@@ -6959,7 +6959,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\XapiStatementResult',
+                        '\RusticiSoftware\Engine\V2\Model\XapiStatementResult',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6967,7 +6967,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6975,7 +6975,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7025,7 +7025,7 @@ class RegistrationApi
      */
     public function getRegistrationStatementsAsyncWithHttpInfo($engine_tenant_name, $registration_id, $since = null, $until = null, $more = null)
     {
-        $returnType = '\Swagger\Client\Model\XapiStatementResult';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\XapiStatementResult';
         $request = $this->getRegistrationStatementsRequest($engine_tenant_name, $registration_id, $since, $until, $more);
 
         return $this->client
@@ -7219,9 +7219,9 @@ class RegistrationApi
      * @param  bool $include_interactions_and_objectives Include interactions and objectives in the results (optional, default to false)
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RegistrationListSchema
+     * @return \RusticiSoftware\Engine\V2\Model\RegistrationListSchema
      */
     public function getRegistrations($engine_tenant_name, $course_id = null, $learner_id = null, $since = null, $until = null, $more = null, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false')
     {
@@ -7244,13 +7244,13 @@ class RegistrationApi
      * @param  bool $include_interactions_and_objectives Include interactions and objectives in the results (optional, default to false)
      * @param  bool $include_runtime Include runtime details in the results (optional, default to false)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RegistrationListSchema, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \RusticiSoftware\Engine\V2\Model\RegistrationListSchema, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRegistrationsWithHttpInfo($engine_tenant_name, $course_id = null, $learner_id = null, $since = null, $until = null, $more = null, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationListSchema';
         $request = $this->getRegistrationsRequest($engine_tenant_name, $course_id, $learner_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime);
 
         try {
@@ -7302,7 +7302,7 @@ class RegistrationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RegistrationListSchema',
+                        '\RusticiSoftware\Engine\V2\Model\RegistrationListSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7310,7 +7310,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7368,7 +7368,7 @@ class RegistrationApi
      */
     public function getRegistrationsAsyncWithHttpInfo($engine_tenant_name, $course_id = null, $learner_id = null, $since = null, $until = null, $more = null, $include_child_results = 'false', $include_interactions_and_objectives = 'false', $include_runtime = 'false')
     {
-        $returnType = '\Swagger\Client\Model\RegistrationListSchema';
+        $returnType = '\RusticiSoftware\Engine\V2\Model\RegistrationListSchema';
         $request = $this->getRegistrationsRequest($engine_tenant_name, $course_id, $learner_id, $since, $until, $more, $include_child_results, $include_interactions_and_objectives, $include_runtime);
 
         return $this->client
@@ -7564,7 +7564,7 @@ class RegistrationApi
      *
      * @param  string $outcomes_request outcomes_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return string
      */
@@ -7581,7 +7581,7 @@ class RegistrationApi
      *
      * @param  string $outcomes_request (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of string, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7828,9 +7828,9 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7846,9 +7846,9 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7892,7 +7892,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7900,7 +7900,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7917,7 +7917,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7939,7 +7939,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7977,7 +7977,7 @@ class RegistrationApi
      *
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8114,9 +8114,9 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8133,9 +8133,9 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \RusticiSoftware\Engine\V2\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8179,7 +8179,7 @@ class RegistrationApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8187,7 +8187,7 @@ class RegistrationApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MessageSchema',
+                        '\RusticiSoftware\Engine\V2\Model\MessageSchema',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8205,7 +8205,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8228,7 +8228,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8267,7 +8267,7 @@ class RegistrationApi
      * @param  string $engine_tenant_name tenant for this request (required)
      * @param  string $registration_id id for this registration (required)
      * @param  int $instance_id the instance of this registration (required)
-     * @param  \Swagger\Client\Model\SettingsPostSchema $configuration_settings (required)
+     * @param  \RusticiSoftware\Engine\V2\Model\SettingsPostSchema $configuration_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * LtiReporterSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class LtiReporterSchema implements ModelInterface, ArrayAccess
         'sourced_id' => 'string',
         'version' => 'string',
         'outcome_url' => 'string',
-        'credentials' => '\Swagger\Client\Model\OAuthCredentialsSchema'
+        'credentials' => '\RusticiSoftware\Engine\V2\Model\OAuthCredentialsSchema'
     ];
 
     /**
@@ -309,7 +309,7 @@ class LtiReporterSchema implements ModelInterface, ArrayAccess
     /**
      * Gets credentials
      *
-     * @return \Swagger\Client\Model\OAuthCredentialsSchema
+     * @return \RusticiSoftware\Engine\V2\Model\OAuthCredentialsSchema
      */
     public function getCredentials()
     {
@@ -319,7 +319,7 @@ class LtiReporterSchema implements ModelInterface, ArrayAccess
     /**
      * Sets credentials
      *
-     * @param \Swagger\Client\Model\OAuthCredentialsSchema $credentials credentials
+     * @param \RusticiSoftware\Engine\V2\Model\OAuthCredentialsSchema $credentials credentials
      *
      * @return $this
      */

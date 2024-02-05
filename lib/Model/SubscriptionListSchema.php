@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SubscriptionListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class SubscriptionListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subscriptions' => '\Swagger\Client\Model\SubscriptionEntrySchema[]',
+        'subscriptions' => '\RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema[]',
         'more' => 'string'
     ];
 
@@ -213,7 +213,7 @@ class SubscriptionListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets subscriptions
      *
-     * @return \Swagger\Client\Model\SubscriptionEntrySchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema[]
      */
     public function getSubscriptions()
     {
@@ -223,7 +223,7 @@ class SubscriptionListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets subscriptions
      *
-     * @param \Swagger\Client\Model\SubscriptionEntrySchema[] $subscriptions subscriptions
+     * @param \RusticiSoftware\Engine\V2\Model\SubscriptionEntrySchema[] $subscriptions subscriptions
      *
      * @return $this
      */

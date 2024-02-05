@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,14 +30,14 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * XapiAgentGroup Class Doc Comment
  *
  * @category Class
  * @description YAML 2.0 does not support oneOf so this is used when object can be an Agent or a Group.
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,8 +63,8 @@ class XapiAgentGroup implements ModelInterface, ArrayAccess
         'mbox' => 'string',
         'mbox_sha1sum' => 'string',
         'openid' => 'string',
-        'account' => '\Swagger\Client\Model\XapiAccount',
-        'member' => '\Swagger\Client\Model\XapiAgentGroup[]'
+        'account' => '\RusticiSoftware\Engine\V2\Model\XapiAccount',
+        'member' => '\RusticiSoftware\Engine\V2\Model\XapiAgentGroup[]'
     ];
 
     /**
@@ -399,7 +399,7 @@ class XapiAgentGroup implements ModelInterface, ArrayAccess
     /**
      * Gets account
      *
-     * @return \Swagger\Client\Model\XapiAccount
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAccount
      */
     public function getAccount()
     {
@@ -409,7 +409,7 @@ class XapiAgentGroup implements ModelInterface, ArrayAccess
     /**
      * Sets account
      *
-     * @param \Swagger\Client\Model\XapiAccount $account account
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAccount $account account
      *
      * @return $this
      */
@@ -423,7 +423,7 @@ class XapiAgentGroup implements ModelInterface, ArrayAccess
     /**
      * Gets member
      *
-     * @return \Swagger\Client\Model\XapiAgentGroup[]
+     * @return \RusticiSoftware\Engine\V2\Model\XapiAgentGroup[]
      */
     public function getMember()
     {
@@ -433,7 +433,7 @@ class XapiAgentGroup implements ModelInterface, ArrayAccess
     /**
      * Sets member
      *
-     * @param \Swagger\Client\Model\XapiAgentGroup[] $member member
+     * @param \RusticiSoftware\Engine\V2\Model\XapiAgentGroup[] $member member
      *
      * @return $this
      */

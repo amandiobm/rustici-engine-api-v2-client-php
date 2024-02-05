@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * SettingListSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class SettingListSchema implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'setting_items' => '\Swagger\Client\Model\SettingItem[]'
+        'setting_items' => '\RusticiSoftware\Engine\V2\Model\SettingItem[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class SettingListSchema implements ModelInterface, ArrayAccess
     /**
      * Gets setting_items
      *
-     * @return \Swagger\Client\Model\SettingItem[]
+     * @return \RusticiSoftware\Engine\V2\Model\SettingItem[]
      */
     public function getSettingItems()
     {
@@ -220,7 +220,7 @@ class SettingListSchema implements ModelInterface, ArrayAccess
     /**
      * Sets setting_items
      *
-     * @param \Swagger\Client\Model\SettingItem[] $setting_items setting_items
+     * @param \RusticiSoftware\Engine\V2\Model\SettingItem[] $setting_items setting_items
      *
      * @return $this
      */

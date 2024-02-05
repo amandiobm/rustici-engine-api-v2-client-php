@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -30,13 +30,13 @@
 namespace RusticiSoftware\Engine\V2\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \RusticiSoftware\Engine\V2\ObjectSerializer;
 
 /**
  * AboutSchema Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  RusticiSoftware\Engine\V2
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,12 +58,12 @@ class AboutSchema implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'version' => 'string',
-        'player' => '\Swagger\Client\Model\AboutPlayerSchema',
+        'player' => '\RusticiSoftware\Engine\V2\Model\AboutPlayerSchema',
         'platform' => 'string',
         'distribution' => 'string',
         'integration' => 'string',
-        'content_connector_types' => '\Swagger\Client\Model\ConnectorTypeSchema[]',
-        'plugins' => '\Swagger\Client\Model\PluginInformationSchema[]',
+        'content_connector_types' => '\RusticiSoftware\Engine\V2\Model\ConnectorTypeSchema[]',
+        'plugins' => '\RusticiSoftware\Engine\V2\Model\PluginInformationSchema[]',
         'valid_scopes' => 'string[]'
     ];
 
@@ -279,7 +279,7 @@ class AboutSchema implements ModelInterface, ArrayAccess
     /**
      * Gets player
      *
-     * @return \Swagger\Client\Model\AboutPlayerSchema
+     * @return \RusticiSoftware\Engine\V2\Model\AboutPlayerSchema
      */
     public function getPlayer()
     {
@@ -289,7 +289,7 @@ class AboutSchema implements ModelInterface, ArrayAccess
     /**
      * Sets player
      *
-     * @param \Swagger\Client\Model\AboutPlayerSchema $player player
+     * @param \RusticiSoftware\Engine\V2\Model\AboutPlayerSchema $player player
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class AboutSchema implements ModelInterface, ArrayAccess
     /**
      * Gets content_connector_types
      *
-     * @return \Swagger\Client\Model\ConnectorTypeSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\ConnectorTypeSchema[]
      */
     public function getContentConnectorTypes()
     {
@@ -385,7 +385,7 @@ class AboutSchema implements ModelInterface, ArrayAccess
     /**
      * Sets content_connector_types
      *
-     * @param \Swagger\Client\Model\ConnectorTypeSchema[] $content_connector_types content_connector_types
+     * @param \RusticiSoftware\Engine\V2\Model\ConnectorTypeSchema[] $content_connector_types content_connector_types
      *
      * @return $this
      */
@@ -399,7 +399,7 @@ class AboutSchema implements ModelInterface, ArrayAccess
     /**
      * Gets plugins
      *
-     * @return \Swagger\Client\Model\PluginInformationSchema[]
+     * @return \RusticiSoftware\Engine\V2\Model\PluginInformationSchema[]
      */
     public function getPlugins()
     {
@@ -409,7 +409,7 @@ class AboutSchema implements ModelInterface, ArrayAccess
     /**
      * Sets plugins
      *
-     * @param \Swagger\Client\Model\PluginInformationSchema[] $plugins plugins
+     * @param \RusticiSoftware\Engine\V2\Model\PluginInformationSchema[] $plugins plugins
      *
      * @return $this
      */
