@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**score** | [**\RusticiSoftware\Engine\V2\Model\XapiScore**](XapiScore.md) |  | [optional] 
+**score** | [**\Swagger\Client\Model\XapiScore**](XapiScore.md) |  | [optional] 
 **success** | **bool** |  | [optional] 
 **completion** | **bool** |  | [optional] 
 **response** | **string** |  | [optional] 

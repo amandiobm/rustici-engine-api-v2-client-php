@@ -9,7 +9,7 @@
         "rustici",
         "engine"
     ],
-    "homepage": "https://rustici-docs.s3.amazonaws.com/engine/2019.1.x/api/apiV2.html",
+    "homepage": "https://rustici-docs.s3.amazonaws.com/engine/22.x/api/apiV2.html",
     "license": "proprietary",
     "authors": [
         {

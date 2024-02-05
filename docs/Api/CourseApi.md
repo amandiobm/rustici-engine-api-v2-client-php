@@ -1,4 +1,4 @@
-# RusticiSoftware\Engine\V2\CourseApi
+# Swagger\Client\CourseApi
 
 All URIs are relative to *http://localhost/api/v2/*
 
@@ -9,27 +9,43 @@ Method | HTTP request | Description
 [**createFetchAndImportCourseJob**](CourseApi.md#createFetchAndImportCourseJob) | **POST** /courses/importJobs | Start a job to fetch and import a course.
 [**createUploadAndImportCourseJob**](CourseApi.md#createUploadAndImportCourseJob) | **POST** /courses/importJobs/upload | Upload a course and start an import job for it.
 [**deleteCourse**](CourseApi.md#deleteCourse) | **DELETE** /courses/{courseId} | Delete &#x60;courseId&#x60;
+[**deleteCourseAsset**](CourseApi.md#deleteCourseAsset) | **DELETE** /courses/{courseId}/asset | Delete the specified asset in the current version of the specified course
 [**deleteCourseConfigurationSetting**](CourseApi.md#deleteCourseConfigurationSetting) | **DELETE** /courses/{courseId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course
 [**deleteCourseVersion**](CourseApi.md#deleteCourseVersion) | **DELETE** /courses/{courseId}/versions/{versionId} | Delete version &#x60;versionId&#x60; of &#x60;courseId&#x60;
+[**deleteCourseVersionAsset**](CourseApi.md#deleteCourseVersionAsset) | **DELETE** /courses/{courseId}/versions/{versionId}/asset | Delete the specified asset in the current version of the specified course
 [**deleteCourseVersionConfigurationSetting**](CourseApi.md#deleteCourseVersionConfigurationSetting) | **DELETE** /courses/{courseId}/versions/{versionId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course and version.
+[**deleteCourseVersionsConfigurationSetting**](CourseApi.md#deleteCourseVersionsConfigurationSetting) | **DELETE** /courses/{courseId}/versions/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for all versions of this course.
+[**deleteCourseZip**](CourseApi.md#deleteCourseZip) | **DELETE** /courses/{courseId}/zip | Deletes the exported zip for the latest version of the specified course
+[**deleteVersionedCourseZip**](CourseApi.md#deleteVersionedCourseZip) | **DELETE** /courses/{courseId}/versions/{versionId}/zip | Deletes the exported zip for the specified course version
 [**getCourse**](CourseApi.md#getCourse) | **GET** /courses/{courseId} | Get information about &#x60;courseId&#x60;
+[**getCourseAsset**](CourseApi.md#getCourseAsset) | **GET** /courses/{courseId}/asset | Get the specified asset in the current version of the specified course
 [**getCourseConfiguration**](CourseApi.md#getCourseConfiguration) | **GET** /courses/{courseId}/configuration | Returns all configuration settings for this course
+[**getCourseFileList**](CourseApi.md#getCourseFileList) | **GET** /courses/{courseId}/asset/list | Get the list of files in the current version of the specified course
 [**getCourseStatements**](CourseApi.md#getCourseStatements) | **GET** /courses/{courseId}/xAPIStatements | Get xAPI statements for &#x60;courseId&#x60;
+[**getCourseVersionAsset**](CourseApi.md#getCourseVersionAsset) | **GET** /courses/{courseId}/versions/{versionId}/asset | Get the specified asset for this course version
 [**getCourseVersionConfiguration**](CourseApi.md#getCourseVersionConfiguration) | **GET** /courses/{courseId}/versions/{versionId}/configuration | Returns all configuration settings for this course and version.
+[**getCourseVersionFileList**](CourseApi.md#getCourseVersionFileList) | **GET** /courses/{courseId}/versions/{versionId}/asset/list | Get the list of files in the specified version of the specified course
 [**getCourseVersionInfo**](CourseApi.md#getCourseVersionInfo) | **GET** /courses/{courseId}/versions/{versionId} | Get version &#x60;versionId&#x60; of &#x60;courseId&#x60;
 [**getCourseVersionStatements**](CourseApi.md#getCourseVersionStatements) | **GET** /courses/{courseId}/versions/{versionId}/xAPIStatements | Get xAPI statements for version &#x60;versionId&#x60; of &#x60;courseId&#x60;
 [**getCourseVersions**](CourseApi.md#getCourseVersions) | **GET** /courses/{courseId}/versions | Get all versions of &#x60;courseId&#x60;
+[**getCourseZip**](CourseApi.md#getCourseZip) | **GET** /courses/{courseId}/zip | Get the zip package for the latest course version
 [**getCourses**](CourseApi.md#getCourses) | **GET** /courses | Get a list of all courses for the specified tenant
 [**getImportJobStatus**](CourseApi.md#getImportJobStatus) | **GET** /courses/importJobs/{importJobId} | Check the status of an import job.
+[**getVersionedCourseZip**](CourseApi.md#getVersionedCourseZip) | **GET** /courses/{courseId}/versions/{versionId}/zip | Get the zip package for the specified course version
+[**importCourseAssetFile**](CourseApi.md#importCourseAssetFile) | **POST** /courses/{courseId}/asset | Import an asset file for this course.
+[**importCourseVersionAssetFile**](CourseApi.md#importCourseVersionAssetFile) | **POST** /courses/{courseId}/versions/{versionId}/asset | Import an asset file for this course version.
 [**importCourseWithoutUpload**](CourseApi.md#importCourseWithoutUpload) | **POST** /courses | Create a course
 [**setCourseConfiguration**](CourseApi.md#setCourseConfiguration) | **POST** /courses/{courseId}/configuration | Set configuration settings for this course.
 [**setCourseTitle**](CourseApi.md#setCourseTitle) | **PUT** /courses/{courseId}/title | Sets the course title for &#x60;courseId&#x60;
 [**setCourseVersionConfiguration**](CourseApi.md#setCourseVersionConfiguration) | **POST** /courses/{courseId}/versions/{versionId}/configuration | Set configuration settings for this course and version.
+[**setCourseVersionsConfiguration**](CourseApi.md#setCourseVersionsConfiguration) | **POST** /courses/{courseId}/versions/configuration | Set configuration settings for all versions of this course.
 [**uploadAndImportCourse**](CourseApi.md#uploadAndImportCourse) | **POST** /courses/upload | Upload a course to import
+[**uploadCourseAssetFile**](CourseApi.md#uploadCourseAssetFile) | **POST** /courses/{courseId}/asset/upload | Upload an asset file for this course.
+[**uploadCourseVersionAssetFile**](CourseApi.md#uploadCourseVersionAssetFile) | **POST** /courses/{courseId}/versions/{versionId}/asset/upload | Upload an asset file for this course version.
 
 
 # **buildCoursePreviewLaunchLink**
-> \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema buildCoursePreviewLaunchLink($engine_tenant_name, $course_id, $launch_link_request)
+> \Swagger\Client\Model\LaunchLinkSchema buildCoursePreviewLaunchLink($engine_tenant_name, $course_id, $launch_link_request)
 
 Returns the link to use to preview this course
 
@@ -39,14 +55,14 @@ Returns the link to use to preview this course
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -54,7 +70,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | 
-$launch_link_request = new \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema(); // \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema | 
+$launch_link_request = new \Swagger\Client\Model\LaunchLinkRequestSchema(); // \Swagger\Client\Model\LaunchLinkRequestSchema | 
 
 try {
     $result = $apiInstance->buildCoursePreviewLaunchLink($engine_tenant_name, $course_id, $launch_link_request);
@@ -71,11 +87,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**|  |
- **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
+ **launch_link_request** | [**\Swagger\Client\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
+[**\Swagger\Client\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
 
 ### Authorization
 
@@ -89,7 +105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **buildCoursePreviewLaunchLinkWithVersion**
-> \RusticiSoftware\Engine\V2\Model\LaunchLinkSchema buildCoursePreviewLaunchLinkWithVersion($engine_tenant_name, $course_id, $version_id, $launch_link_request)
+> \Swagger\Client\Model\LaunchLinkSchema buildCoursePreviewLaunchLinkWithVersion($engine_tenant_name, $course_id, $version_id, $launch_link_request)
 
 Returns the link to use to preview this course
 
@@ -99,14 +115,14 @@ Returns the link to use to preview this course
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +131,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | 
 $version_id = 56; // int | the course version
-$launch_link_request = new \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema(); // \RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema | 
+$launch_link_request = new \Swagger\Client\Model\LaunchLinkRequestSchema(); // \Swagger\Client\Model\LaunchLinkRequestSchema | 
 
 try {
     $result = $apiInstance->buildCoursePreviewLaunchLinkWithVersion($engine_tenant_name, $course_id, $version_id, $launch_link_request);
@@ -133,11 +149,11 @@ Name | Type | Description  | Notes
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**|  |
  **version_id** | **int**| the course version |
- **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
+ **launch_link_request** | [**\Swagger\Client\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
+[**\Swagger\Client\Model\LaunchLinkSchema**](../Model/LaunchLinkSchema.md)
 
 ### Authorization
 
@@ -151,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createFetchAndImportCourseJob**
-> \RusticiSoftware\Engine\V2\Model\StringResultSchema createFetchAndImportCourseJob($engine_tenant_name, $course_id, $import_request, $may_create_new_version)
+> \Swagger\Client\Model\StringResultSchema createFetchAndImportCourseJob($engine_tenant_name, $course_id, $import_request, $may_create_new_version)
 
 Start a job to fetch and import a course.
 
@@ -163,14 +179,14 @@ An import job will be started to fetch and import the referenced file, and the i
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,7 +194,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use.
-$import_request = new \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema(); // \RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema | 
+$import_request = new \Swagger\Client\Model\ImportFetchRequestSchema(); // \Swagger\Client\Model\ImportFetchRequestSchema | 
 $may_create_new_version = false; // bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
 
 try {
@@ -196,12 +212,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
- **import_request** | [**\RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema**](../Model/ImportFetchRequestSchema.md)|  |
+ **import_request** | [**\Swagger\Client\Model\ImportFetchRequestSchema**](../Model/ImportFetchRequestSchema.md)|  |
  **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -215,7 +231,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createUploadAndImportCourseJob**
-> \RusticiSoftware\Engine\V2\Model\StringResultSchema createUploadAndImportCourseJob($engine_tenant_name, $course_id, $may_create_new_version, $file, $uploaded_content_type)
+> \Swagger\Client\Model\StringResultSchema createUploadAndImportCourseJob($engine_tenant_name, $course_id, $may_create_new_version, $file, $content_metadata, $uploaded_content_type)
 
 Upload a course and start an import job for it.
 
@@ -227,14 +243,14 @@ An import job will be started to import the posted file, and the import job ID w
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -244,10 +260,11 @@ $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this 
 $course_id = "course_id_example"; // string | A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use.
 $may_create_new_version = false; // bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
 $file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
+$content_metadata = "content_metadata_example"; // string | Serialized 'mediaFileMetadata' schema.
 $uploaded_content_type = "application/zip"; // string | The MIME type identifier for the content to be uploaded
 
 try {
-    $result = $apiInstance->createUploadAndImportCourseJob($engine_tenant_name, $course_id, $may_create_new_version, $file, $uploaded_content_type);
+    $result = $apiInstance->createUploadAndImportCourseJob($engine_tenant_name, $course_id, $may_create_new_version, $file, $content_metadata, $uploaded_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CourseApi->createUploadAndImportCourseJob: ', $e->getMessage(), PHP_EOL;
@@ -263,11 +280,12 @@ Name | Type | Description  | Notes
  **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
  **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
  **file** | **\SplFileObject**| The course content file to import. | [optional]
+ **content_metadata** | **string**| Serialized &#39;mediaFileMetadata&#39; schema. | [optional]
  **uploaded_content_type** | **string**| The MIME type identifier for the content to be uploaded | [optional] [default to application/zip]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\StringResultSchema**](../Model/StringResultSchema.md)
+[**\Swagger\Client\Model\StringResultSchema**](../Model/StringResultSchema.md)
 
 ### Authorization
 
@@ -291,14 +309,14 @@ Delete `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -337,6 +355,65 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **deleteCourseAsset**
+> deleteCourseAsset($engine_tenant_name, $course_id, $relative_path)
+
+Delete the specified asset in the current version of the specified course
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$relative_path = "relative_path_example"; // string | Relative path of the asset within the course.
+
+try {
+    $apiInstance->deleteCourseAsset($engine_tenant_name, $course_id, $relative_path);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->deleteCourseAsset: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **relative_path** | **string**| Relative path of the asset within the course. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **deleteCourseConfigurationSetting**
 > deleteCourseConfigurationSetting($engine_tenant_name, $course_id, $setting_id)
 
@@ -348,14 +425,14 @@ Clears the `settingId` value for this course
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -407,14 +484,14 @@ Delete version `versionId` of `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -455,6 +532,67 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **deleteCourseVersionAsset**
+> deleteCourseVersionAsset($engine_tenant_name, $course_id, $version_id, $relative_path)
+
+Delete the specified asset in the current version of the specified course
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+$relative_path = "relative_path_example"; // string | Relative path of the asset within the course.
+
+try {
+    $apiInstance->deleteCourseVersionAsset($engine_tenant_name, $course_id, $version_id, $relative_path);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->deleteCourseVersionAsset: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **relative_path** | **string**| Relative path of the asset within the course. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **deleteCourseVersionConfigurationSetting**
 > deleteCourseVersionConfigurationSetting($engine_tenant_name, $course_id, $version_id, $setting_id)
 
@@ -466,14 +604,14 @@ Clears the `settingId` value for this course and version.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -516,8 +654,187 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **deleteCourseVersionsConfigurationSetting**
+> deleteCourseVersionsConfigurationSetting($engine_tenant_name, $course_id, $setting_id)
+
+Clears the `settingId` value for all versions of this course.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$setting_id = "setting_id_example"; // string | 
+
+try {
+    $apiInstance->deleteCourseVersionsConfigurationSetting($engine_tenant_name, $course_id, $setting_id);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->deleteCourseVersionsConfigurationSetting: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **setting_id** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteCourseZip**
+> deleteCourseZip($engine_tenant_name, $course_id, $export_type)
+
+Deletes the exported zip for the latest version of the specified course
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$export_type = "export_type_example"; // string | 
+
+try {
+    $apiInstance->deleteCourseZip($engine_tenant_name, $course_id, $export_type);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->deleteCourseZip: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **export_type** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **deleteVersionedCourseZip**
+> deleteVersionedCourseZip($engine_tenant_name, $course_id, $version_id, $export_type)
+
+Deletes the exported zip for the specified course version
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+$export_type = "export_type_example"; // string | 
+
+try {
+    $apiInstance->deleteVersionedCourseZip($engine_tenant_name, $course_id, $version_id, $export_type);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->deleteVersionedCourseZip: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **export_type** | **string**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getCourse**
-> \RusticiSoftware\Engine\V2\Model\CourseSchema getCourse($engine_tenant_name, $course_id, $include_registration_count, $include_course_metadata)
+> \Swagger\Client\Model\CourseSchema getCourse($engine_tenant_name, $course_id, $include_registration_count, $include_course_metadata)
 
 Get information about `courseId`
 
@@ -527,14 +844,14 @@ Get information about `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -565,7 +882,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\CourseSchema**](../Model/CourseSchema.md)
+[**\Swagger\Client\Model\CourseSchema**](../Model/CourseSchema.md)
 
 ### Authorization
 
@@ -578,8 +895,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getCourseAsset**
+> \SplFileObject getCourseAsset($engine_tenant_name, $course_id, $relative_path)
+
+Get the specified asset in the current version of the specified course
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$relative_path = "relative_path_example"; // string | Relative path of the asset within the course.
+
+try {
+    $result = $apiInstance->getCourseAsset($engine_tenant_name, $course_id, $relative_path);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->getCourseAsset: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **relative_path** | **string**| Relative path of the asset within the course. |
+
+### Return type
+
+[**\SplFileObject**](../Model/\SplFileObject.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getCourseConfiguration**
-> \RusticiSoftware\Engine\V2\Model\SettingListSchema getCourseConfiguration($engine_tenant_name, $course_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
+> \Swagger\Client\Model\SettingListSchema getCourseConfiguration($engine_tenant_name, $course_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
 
 Returns all configuration settings for this course
 
@@ -589,14 +966,14 @@ Returns all configuration settings for this course
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -631,7 +1008,65 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\SettingListSchema**](../Model/SettingListSchema.md)
+[**\Swagger\Client\Model\SettingListSchema**](../Model/SettingListSchema.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCourseFileList**
+> \Swagger\Client\Model\FileListSchema getCourseFileList($engine_tenant_name, $course_id)
+
+Get the list of files in the current version of the specified course
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+
+try {
+    $result = $apiInstance->getCourseFileList($engine_tenant_name, $course_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->getCourseFileList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+
+### Return type
+
+[**\Swagger\Client\Model\FileListSchema**](../Model/FileListSchema.md)
 
 ### Authorization
 
@@ -645,7 +1080,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCourseStatements**
-> \RusticiSoftware\Engine\V2\Model\XapiStatementResult getCourseStatements($engine_tenant_name, $course_id, $learner_id, $since, $until, $more)
+> \Swagger\Client\Model\XapiStatementResult getCourseStatements($engine_tenant_name, $course_id, $learner_id, $since, $until, $more)
 
 Get xAPI statements for `courseId`
 
@@ -655,14 +1090,14 @@ Get xAPI statements for `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -697,7 +1132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
+[**\Swagger\Client\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
 
 ### Authorization
 
@@ -710,8 +1145,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getCourseVersionAsset**
+> \SplFileObject getCourseVersionAsset($engine_tenant_name, $course_id, $version_id, $relative_path)
+
+Get the specified asset for this course version
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+$relative_path = "relative_path_example"; // string | Relative path of the asset within the course.
+
+try {
+    $result = $apiInstance->getCourseVersionAsset($engine_tenant_name, $course_id, $version_id, $relative_path);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->getCourseVersionAsset: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **relative_path** | **string**| Relative path of the asset within the course. |
+
+### Return type
+
+[**\SplFileObject**](../Model/\SplFileObject.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/octet-stream
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getCourseVersionConfiguration**
-> \RusticiSoftware\Engine\V2\Model\SettingListSchema getCourseVersionConfiguration($engine_tenant_name, $course_id, $version_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
+> \Swagger\Client\Model\SettingListSchema getCourseVersionConfiguration($engine_tenant_name, $course_id, $version_id, $include_metadata, $include_hidden_settings, $include_secret_settings, $process_replacement_tokens)
 
 Returns all configuration settings for this course and version.
 
@@ -721,14 +1218,14 @@ Returns all configuration settings for this course and version.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -765,7 +1262,67 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\SettingListSchema**](../Model/SettingListSchema.md)
+[**\Swagger\Client\Model\SettingListSchema**](../Model/SettingListSchema.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getCourseVersionFileList**
+> \Swagger\Client\Model\FileListSchema getCourseVersionFileList($engine_tenant_name, $course_id, $version_id)
+
+Get the list of files in the specified version of the specified course
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+
+try {
+    $result = $apiInstance->getCourseVersionFileList($engine_tenant_name, $course_id, $version_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->getCourseVersionFileList: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+
+### Return type
+
+[**\Swagger\Client\Model\FileListSchema**](../Model/FileListSchema.md)
 
 ### Authorization
 
@@ -779,7 +1336,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCourseVersionInfo**
-> \RusticiSoftware\Engine\V2\Model\CourseSchema getCourseVersionInfo($engine_tenant_name, $course_id, $version_id, $include_registration_count, $include_course_metadata)
+> \Swagger\Client\Model\CourseSchema getCourseVersionInfo($engine_tenant_name, $course_id, $version_id, $include_registration_count, $include_course_metadata)
 
 Get version `versionId` of `courseId`
 
@@ -789,14 +1346,14 @@ Get version `versionId` of `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -829,7 +1386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\CourseSchema**](../Model/CourseSchema.md)
+[**\Swagger\Client\Model\CourseSchema**](../Model/CourseSchema.md)
 
 ### Authorization
 
@@ -843,7 +1400,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCourseVersionStatements**
-> \RusticiSoftware\Engine\V2\Model\XapiStatementResult getCourseVersionStatements($engine_tenant_name, $course_id, $version_id, $learner_id, $since, $until, $more)
+> \Swagger\Client\Model\XapiStatementResult getCourseVersionStatements($engine_tenant_name, $course_id, $version_id, $learner_id, $since, $until, $more)
 
 Get xAPI statements for version `versionId` of `courseId`
 
@@ -853,14 +1410,14 @@ Get xAPI statements for version `versionId` of `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -897,7 +1454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
+[**\Swagger\Client\Model\XapiStatementResult**](../Model/XapiStatementResult.md)
 
 ### Authorization
 
@@ -911,7 +1468,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCourseVersions**
-> \RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema getCourseVersions($engine_tenant_name, $course_id, $since, $until, $include_registration_count, $include_course_metadata)
+> \Swagger\Client\Model\CourseListNonPagedSchema getCourseVersions($engine_tenant_name, $course_id, $since, $until, $include_registration_count, $include_course_metadata)
 
 Get all versions of `courseId`
 
@@ -921,14 +1478,14 @@ Get all versions of `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -963,7 +1520,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\CourseListNonPagedSchema**](../Model/CourseListNonPagedSchema.md)
+[**\Swagger\Client\Model\CourseListNonPagedSchema**](../Model/CourseListNonPagedSchema.md)
 
 ### Authorization
 
@@ -976,8 +1533,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **getCourseZip**
+> \SplFileObject getCourseZip($engine_tenant_name, $course_id, $export_type)
+
+Get the zip package for the latest course version
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$export_type = "export_type_example"; // string | 
+
+try {
+    $result = $apiInstance->getCourseZip($engine_tenant_name, $course_id, $export_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->getCourseZip: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **export_type** | **string**|  |
+
+### Return type
+
+[**\SplFileObject**](../Model/\SplFileObject.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **getCourses**
-> \RusticiSoftware\Engine\V2\Model\CourseListSchema getCourses($engine_tenant_name, $more, $since, $until, $include_registration_count, $include_course_metadata)
+> \Swagger\Client\Model\CourseListSchema getCourses($engine_tenant_name, $more, $since, $until, $include_registration_count, $include_course_metadata)
 
 Get a list of all courses for the specified tenant
 
@@ -987,14 +1604,14 @@ Get a list of all courses for the specified tenant
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1029,7 +1646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\CourseListSchema**](../Model/CourseListSchema.md)
+[**\Swagger\Client\Model\CourseListSchema**](../Model/CourseListSchema.md)
 
 ### Authorization
 
@@ -1043,7 +1660,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getImportJobStatus**
-> \RusticiSoftware\Engine\V2\Model\ImportJobResultSchema getImportJobStatus($engine_tenant_name, $import_job_id)
+> \Swagger\Client\Model\ImportJobResultSchema getImportJobStatus($engine_tenant_name, $import_job_id)
 
 Check the status of an import job.
 
@@ -1053,14 +1670,14 @@ Check the status of an import job.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1087,7 +1704,195 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\ImportJobResultSchema**](../Model/ImportJobResultSchema.md)
+[**\Swagger\Client\Model\ImportJobResultSchema**](../Model/ImportJobResultSchema.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **getVersionedCourseZip**
+> \SplFileObject getVersionedCourseZip($engine_tenant_name, $course_id, $version_id, $export_type)
+
+Get the zip package for the specified course version
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+$export_type = "export_type_example"; // string | 
+
+try {
+    $result = $apiInstance->getVersionedCourseZip($engine_tenant_name, $course_id, $version_id, $export_type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->getVersionedCourseZip: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **export_type** | **string**|  |
+
+### Return type
+
+[**\SplFileObject**](../Model/\SplFileObject.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/zip
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **importCourseAssetFile**
+> \Swagger\Client\Model\AssetFileSchema importCourseAssetFile($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy)
+
+Import an asset file for this course.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$asset_schema = new \Swagger\Client\Model\ImportAssetRequestSchema(); // \Swagger\Client\Model\ImportAssetRequestSchema | 
+$update_asset_policy = "lax"; // string | Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases).
+
+try {
+    $result = $apiInstance->importCourseAssetFile($engine_tenant_name, $course_id, $asset_schema, $update_asset_policy);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->importCourseAssetFile: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **asset_schema** | [**\Swagger\Client\Model\ImportAssetRequestSchema**](../Model/ImportAssetRequestSchema.md)|  |
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to lax]
+
+### Return type
+
+[**\Swagger\Client\Model\AssetFileSchema**](../Model/AssetFileSchema.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **importCourseVersionAssetFile**
+> \Swagger\Client\Model\AssetFileSchema importCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy)
+
+Import an asset file for this course version.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+$asset_schema = new \Swagger\Client\Model\ImportAssetRequestSchema(); // \Swagger\Client\Model\ImportAssetRequestSchema | 
+$update_asset_policy = "lax"; // string | Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases).
+
+try {
+    $result = $apiInstance->importCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $asset_schema, $update_asset_policy);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->importCourseVersionAssetFile: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **asset_schema** | [**\Swagger\Client\Model\ImportAssetRequestSchema**](../Model/ImportAssetRequestSchema.md)|  |
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to lax]
+
+### Return type
+
+[**\Swagger\Client\Model\AssetFileSchema**](../Model/AssetFileSchema.md)
 
 ### Authorization
 
@@ -1101,7 +1906,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **importCourseWithoutUpload**
-> \RusticiSoftware\Engine\V2\Model\ImportResultSchema importCourseWithoutUpload($engine_tenant_name, $course_id, $import_request, $may_create_new_version, $dry_run)
+> \Swagger\Client\Model\ImportResultSchema importCourseWithoutUpload($engine_tenant_name, $course_id, $import_request, $may_create_new_version, $dry_run)
 
 Create a course
 
@@ -1113,14 +1918,14 @@ Import the specified course and return the results of the import. For large impo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1128,7 +1933,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use.
-$import_request = new \RusticiSoftware\Engine\V2\Model\ImportRequestSchema(); // \RusticiSoftware\Engine\V2\Model\ImportRequestSchema | 
+$import_request = new \Swagger\Client\Model\ImportRequestSchema(); // \Swagger\Client\Model\ImportRequestSchema | 
 $may_create_new_version = false; // bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
 $dry_run = false; // bool | Validate the course can be imported (mainly by validating the manifest), but don't actually import it.
 
@@ -1147,13 +1952,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
- **import_request** | [**\RusticiSoftware\Engine\V2\Model\ImportRequestSchema**](../Model/ImportRequestSchema.md)|  |
+ **import_request** | [**\Swagger\Client\Model\ImportRequestSchema**](../Model/ImportRequestSchema.md)|  |
  **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
  **dry_run** | **bool**| Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. | [optional] [default to false]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\ImportResultSchema**](../Model/ImportResultSchema.md)
+[**\Swagger\Client\Model\ImportResultSchema**](../Model/ImportResultSchema.md)
 
 ### Authorization
 
@@ -1177,14 +1982,14 @@ Set configuration settings for this course.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1192,7 +1997,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | 
-$configuration_settings = new \RusticiSoftware\Engine\V2\Model\SettingsPostSchema(); // \RusticiSoftware\Engine\V2\Model\SettingsPostSchema | 
+$configuration_settings = new \Swagger\Client\Model\SettingsPostSchema(); // \Swagger\Client\Model\SettingsPostSchema | 
 
 try {
     $apiInstance->setCourseConfiguration($engine_tenant_name, $course_id, $configuration_settings);
@@ -1208,7 +2013,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**|  |
- **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+ **configuration_settings** | [**\Swagger\Client\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -1236,14 +2041,14 @@ Sets the course title for `courseId`
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1251,7 +2056,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | 
-$title = new \RusticiSoftware\Engine\V2\Model\TitleSchema(); // \RusticiSoftware\Engine\V2\Model\TitleSchema | 
+$title = new \Swagger\Client\Model\TitleSchema(); // \Swagger\Client\Model\TitleSchema | 
 
 try {
     $apiInstance->setCourseTitle($engine_tenant_name, $course_id, $title);
@@ -1267,7 +2072,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**|  |
- **title** | [**\RusticiSoftware\Engine\V2\Model\TitleSchema**](../Model/TitleSchema.md)|  |
+ **title** | [**\Swagger\Client\Model\TitleSchema**](../Model/TitleSchema.md)|  |
 
 ### Return type
 
@@ -1295,14 +2100,14 @@ Set configuration settings for this course and version.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1311,7 +2116,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 $engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
 $course_id = "course_id_example"; // string | 
 $version_id = 56; // int | the course version
-$configuration_settings = new \RusticiSoftware\Engine\V2\Model\SettingsPostSchema(); // \RusticiSoftware\Engine\V2\Model\SettingsPostSchema | 
+$configuration_settings = new \Swagger\Client\Model\SettingsPostSchema(); // \Swagger\Client\Model\SettingsPostSchema | 
 
 try {
     $apiInstance->setCourseVersionConfiguration($engine_tenant_name, $course_id, $version_id, $configuration_settings);
@@ -1328,7 +2133,66 @@ Name | Type | Description  | Notes
  **engine_tenant_name** | **string**| tenant for this request |
  **course_id** | **string**|  |
  **version_id** | **int**| the course version |
- **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+ **configuration_settings** | [**\Swagger\Client\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **setCourseVersionsConfiguration**
+> setCourseVersionsConfiguration($engine_tenant_name, $course_id, $configuration_settings)
+
+Set configuration settings for all versions of this course.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$configuration_settings = new \Swagger\Client\Model\SettingsPostSchema(); // \Swagger\Client\Model\SettingsPostSchema | 
+
+try {
+    $apiInstance->setCourseVersionsConfiguration($engine_tenant_name, $course_id, $configuration_settings);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->setCourseVersionsConfiguration: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **configuration_settings** | [**\Swagger\Client\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -1346,7 +2210,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **uploadAndImportCourse**
-> \RusticiSoftware\Engine\V2\Model\ImportResultSchema uploadAndImportCourse($engine_tenant_name, $course_id, $may_create_new_version, $dry_run, $file, $uploaded_content_type)
+> \Swagger\Client\Model\ImportResultSchema uploadAndImportCourse($engine_tenant_name, $course_id, $may_create_new_version, $dry_run, $file, $content_metadata, $uploaded_content_type)
 
 Upload a course to import
 
@@ -1358,14 +2222,14 @@ Upload and import the specified course and return the results of the import. For
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure HTTP basic authorization: basic
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
               ->setUsername('YOUR_USERNAME')
               ->setPassword('YOUR_PASSWORD');
 
 // Configure OAuth2 access token for authorization: oauth
-$config = RusticiSoftware\Engine\V2\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
+$apiInstance = new Swagger\Client\Api\CourseApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1376,10 +2240,11 @@ $course_id = "course_id_example"; // string | A unique identifier your applicati
 $may_create_new_version = false; // bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
 $dry_run = false; // bool | Validate the course can be imported (mainly by validating the manifest), but don't actually import it.
 $file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
+$content_metadata = "content_metadata_example"; // string | Serialized 'mediaFileMetadata' schema.
 $uploaded_content_type = "application/zip"; // string | The MIME type identifier for the content to be uploaded
 
 try {
-    $result = $apiInstance->uploadAndImportCourse($engine_tenant_name, $course_id, $may_create_new_version, $dry_run, $file, $uploaded_content_type);
+    $result = $apiInstance->uploadAndImportCourse($engine_tenant_name, $course_id, $may_create_new_version, $dry_run, $file, $content_metadata, $uploaded_content_type);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CourseApi->uploadAndImportCourse: ', $e->getMessage(), PHP_EOL;
@@ -1396,11 +2261,142 @@ Name | Type | Description  | Notes
  **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
  **dry_run** | **bool**| Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. | [optional] [default to false]
  **file** | **\SplFileObject**| The course content file to import. | [optional]
+ **content_metadata** | **string**| Serialized &#39;mediaFileMetadata&#39; schema. | [optional]
  **uploaded_content_type** | **string**| The MIME type identifier for the content to be uploaded | [optional] [default to application/zip]
 
 ### Return type
 
-[**\RusticiSoftware\Engine\V2\Model\ImportResultSchema**](../Model/ImportResultSchema.md)
+[**\Swagger\Client\Model\ImportResultSchema**](../Model/ImportResultSchema.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **uploadCourseAssetFile**
+> \Swagger\Client\Model\AssetFileSchema uploadCourseAssetFile($engine_tenant_name, $course_id, $destination, $file, $update_asset_policy)
+
+Upload an asset file for this course.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$destination = "destination_example"; // string | Path, relative to the course's Content Directory, that indicates where to store the uploaded asset file.
+$file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
+$update_asset_policy = "lax"; // string | Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases).
+
+try {
+    $result = $apiInstance->uploadCourseAssetFile($engine_tenant_name, $course_id, $destination, $file, $update_asset_policy);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->uploadCourseAssetFile: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **destination** | **string**| Path, relative to the course&#39;s Content Directory, that indicates where to store the uploaded asset file. |
+ **file** | **\SplFileObject**| The course content file to import. | [optional]
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to lax]
+
+### Return type
+
+[**\Swagger\Client\Model\AssetFileSchema**](../Model/AssetFileSchema.md)
+
+### Authorization
+
+[basic](../../README.md#basic), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **uploadCourseVersionAssetFile**
+> \Swagger\Client\Model\AssetFileSchema uploadCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $destination, $file, $update_asset_policy)
+
+Upload an asset file for this course version.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure HTTP basic authorization: basic
+$config = Swagger\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\CourseApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$engine_tenant_name = "engine_tenant_name_example"; // string | tenant for this request
+$course_id = "course_id_example"; // string | 
+$version_id = 56; // int | the course version
+$destination = "destination_example"; // string | Path, relative to the course's Content Directory, that indicates where to store the uploaded asset file.
+$file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
+$update_asset_policy = "lax"; // string | Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases).
+
+try {
+    $result = $apiInstance->uploadCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $destination, $file, $update_asset_policy);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling CourseApi->uploadCourseVersionAssetFile: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **destination** | **string**| Path, relative to the course&#39;s Content Directory, that indicates where to store the uploaded asset file. |
+ **file** | **\SplFileObject**| The course content file to import. | [optional]
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to lax]
+
+### Return type
+
+[**\Swagger\Client\Model\AssetFileSchema**](../Model/AssetFileSchema.md)
 
 ### Authorization
 
