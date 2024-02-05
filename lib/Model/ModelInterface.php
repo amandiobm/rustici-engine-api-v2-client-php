@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace RusticiSoftware\Engine\V2\Model;
 
 /**
  * Interface abstracting model access.

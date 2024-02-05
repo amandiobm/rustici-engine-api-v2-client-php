@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace RusticiSoftware\Engine\V2;
 
 /**
  * SettingMetadataTest Class Doc Comment

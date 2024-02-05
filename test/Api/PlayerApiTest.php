@@ -26,7 +26,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace Swagger\Client;
+namespace RusticiSoftware\Engine\V2;
 
 use \Swagger\Client\Configuration;
 use \Swagger\Client\ApiException;

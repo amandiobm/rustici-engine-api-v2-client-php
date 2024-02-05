@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client;
+namespace RusticiSoftware\Engine\V2;
 
 /**
  * ObjectSerializer Class Doc Comment
