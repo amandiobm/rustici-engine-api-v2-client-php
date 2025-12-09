@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **completion_status** | **string** |  | [optional] [default to 'UNKNOWN']
 **success_status** | **string** |  | [optional] [default to 'UNKNOWN']
 **history_log** | **string** |  | [optional]
-**total_seconds_tracked** | **float** |  | [optional]
+**total_seconds_tracked** | **double** |  | [optional]
 **launch_time** | **\DateTime** | The time of the launch in UTC | [optional]
 **exit_time** | **\DateTime** | The time of the exit in UTC | [optional]
 **last_runtime_update** | **\DateTime** | The time of the last runtime update in UTC | [optional]

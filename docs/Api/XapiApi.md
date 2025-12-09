@@ -1,21 +1,19 @@
 # RusticiSoftware\Engine\V2\XapiApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createStatementPipe()**](XapiApi.md#createStatementPipe) | **POST** /xapi/statementPipes | Create an xAPI statement pipe. |
-| [**createXapiCredential()**](XapiApi.md#createXapiCredential) | **POST** /xapi/credentials | Create an xAPI credential |
-| [**deleteStatementPipe()**](XapiApi.md#deleteStatementPipe) | **DELETE** /xapi/statementPipes/{statementPipeId} | Deletes the xAPI statement pipe specified with the id &#x60;statementPipeId&#x60; |
-| [**deleteXapiCredential()**](XapiApi.md#deleteXapiCredential) | **DELETE** /xapi/credentials/{xapiCredentialId} | Deletes the xAPI credential specified with the id &#x60;xapiCredentialId&#x60; |
-| [**getStatementPipe()**](XapiApi.md#getStatementPipe) | **GET** /xapi/statementPipes/{statementPipeId} | Retrieves xAPI statement pipe specified by id &#x60;statementPipeId.&#x60; |
-| [**getStatementPipes()**](XapiApi.md#getStatementPipes) | **GET** /xapi/statementPipes | Get a list of all xAPI statement pipes |
-| [**getXapiCredential()**](XapiApi.md#getXapiCredential) | **GET** /xapi/credentials/{xapiCredentialId} | Retrieves the xAPI credential specified by id &#x60;xapiCredentialId&#x60; |
-| [**getXapiCredentials()**](XapiApi.md#getXapiCredentials) | **GET** /xapi/credentials | Get a list of all xAPI credentials |
-| [**setStatementPipe()**](XapiApi.md#setStatementPipe) | **PUT** /xapi/statementPipes/{statementPipeId} | Either edits an existing xAPI statement pipe or creates a new one, specified by id &#x60;statementPipeId&#x60; |
-| [**setXapiCredential()**](XapiApi.md#setXapiCredential) | **PUT** /xapi/credentials/{xapiCredentialId} | Either edits an existing xAPI credential or creates a new one, specified by id &#x60;xapiCredentialId&#x60; |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createStatementPipe()**](XapiApi.md#createStatementPipe) | **POST** /xapi/statementPipes | Create an xAPI statement pipe.
+[**createXapiCredential()**](XapiApi.md#createXapiCredential) | **POST** /xapi/credentials | Create an xAPI credential
+[**deleteStatementPipe()**](XapiApi.md#deleteStatementPipe) | **DELETE** /xapi/statementPipes/{statementPipeId} | Deletes the xAPI statement pipe specified with the id &#x60;statementPipeId&#x60;
+[**deleteXapiCredential()**](XapiApi.md#deleteXapiCredential) | **DELETE** /xapi/credentials/{xapiCredentialId} | Deletes the xAPI credential specified with the id &#x60;xapiCredentialId&#x60;
+[**getStatementPipe()**](XapiApi.md#getStatementPipe) | **GET** /xapi/statementPipes/{statementPipeId} | Retrieves xAPI statement pipe specified by id &#x60;statementPipeId.&#x60;
+[**getStatementPipes()**](XapiApi.md#getStatementPipes) | **GET** /xapi/statementPipes | Get a list of all xAPI statement pipes
+[**getXapiCredential()**](XapiApi.md#getXapiCredential) | **GET** /xapi/credentials/{xapiCredentialId} | Retrieves the xAPI credential specified by id &#x60;xapiCredentialId&#x60;
+[**getXapiCredentials()**](XapiApi.md#getXapiCredentials) | **GET** /xapi/credentials | Get a list of all xAPI credentials
+[**setStatementPipe()**](XapiApi.md#setStatementPipe) | **PUT** /xapi/statementPipes/{statementPipeId} | Either edits an existing xAPI statement pipe or creates a new one, specified by id &#x60;statementPipeId&#x60;
+[**setXapiCredential()**](XapiApi.md#setXapiCredential) | **PUT** /xapi/credentials/{xapiCredentialId} | Either edits an existing xAPI credential or creates a new one, specified by id &#x60;xapiCredentialId&#x60;
 
 
 ## `createStatementPipe()`
@@ -61,10 +59,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **xapi_statement_pipe** | [**\RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema**](../Model/XapiStatementPipePostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **xapi_statement_pipe** | [**\RusticiSoftware\Engine\V2\Model\XapiStatementPipePostSchema**](../Model/XapiStatementPipePostSchema.md)|  |
 
 ### Return type
 
@@ -126,10 +124,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **xapi_credential** | [**\RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema**](../Model/XapiCredentialPostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **xapi_credential** | [**\RusticiSoftware\Engine\V2\Model\XapiCredentialPostSchema**](../Model/XapiCredentialPostSchema.md)|  |
 
 ### Return type
 
@@ -192,10 +190,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **statement_pipe_id** | **string**| id for this xAPI statement pipe | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **statement_pipe_id** | **string**| id for this xAPI statement pipe |
 
 ### Return type
 
@@ -256,10 +254,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **xapi_credential_id** | **string**| id for this xAPI credential | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **xapi_credential_id** | **string**| id for this xAPI credential |
 
 ### Return type
 
@@ -321,10 +319,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **statement_pipe_id** | **string**| id for this xAPI statement pipe | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **statement_pipe_id** | **string**| id for this xAPI statement pipe |
 
 ### Return type
 
@@ -385,9 +383,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
 
 ### Return type
 
@@ -449,10 +447,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **xapi_credential_id** | **string**| id for this xAPI credential | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **xapi_credential_id** | **string**| id for this xAPI credential |
 
 ### Return type
 
@@ -514,10 +512,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
 
 ### Return type
 
@@ -581,11 +579,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **statement_pipe_id** | **string**| id for this xAPI statement pipe | |
-| **xapi_statement_pipe** | [**\RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema**](../Model/XapiStatementPipePutSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **statement_pipe_id** | **string**| id for this xAPI statement pipe |
+ **xapi_statement_pipe** | [**\RusticiSoftware\Engine\V2\Model\XapiStatementPipePutSchema**](../Model/XapiStatementPipePutSchema.md)|  |
 
 ### Return type
 
@@ -647,11 +645,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **xapi_credential_id** | **string**| id for this xAPI credential | |
-| **xapi_credential** | [**\RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema**](../Model/XapiCredentialPutSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **xapi_credential_id** | **string**| id for this xAPI credential |
+ **xapi_credential** | [**\RusticiSoftware\Engine\V2\Model\XapiCredentialPutSchema**](../Model/XapiCredentialPutSchema.md)|  |
 
 ### Return type
 

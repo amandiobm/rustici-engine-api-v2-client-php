@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **registration_completion** | **string** |  | [optional] [default to 'UNKNOWN']
 **registration_success** | **string** |  | [optional] [default to 'UNKNOWN']
 **score** | [**\RusticiSoftware\Engine\V2\Model\ScoreSchema**](ScoreSchema.md) |  | [optional]
-**total_seconds_tracked** | **float** |  | [optional]
+**total_seconds_tracked** | **double** |  | [optional]
 **first_access_date** | **\DateTime** |  | [optional]
 **last_access_date** | **\DateTime** |  | [optional]
 **completed_date** | **\DateTime** |  | [optional]
@@ -25,6 +25,6 @@ Name | Type | Description | Notes
 **activity_details** | [**\RusticiSoftware\Engine\V2\Model\ActivityResultSchema**](ActivityResultSchema.md) |  | [optional]
 **shared_data** | [**\RusticiSoftware\Engine\V2\Model\SharedDataEntrySchema[]**](SharedDataEntrySchema.md) |  | [optional]
 **suspended_activity_id** | **string** |  | [optional]
-**registration_completion_amount** | **float** | A decimal value between 0 and 1 representing the percentage of this course that the learner has completed so far, if known. Note: for learning standards other than SCORM 2004 4th Edition, this value is based on the percentage of activities completed/passed. This means that single-activity courses in those standards will always return either 0 or 1. | [optional]
+**registration_completion_amount** | **double** | A decimal value between 0 and 1 representing the percentage of this course that the learner has completed so far, if known. Note: for learning standards other than SCORM 2004 4th Edition, this value is based on the percentage of activities completed/passed. This means that single-activity courses in those standards will always return either 0 or 1. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

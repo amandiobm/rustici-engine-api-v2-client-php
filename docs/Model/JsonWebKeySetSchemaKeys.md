@@ -1,4 +1,4 @@
-# # JsonWebKeySetSchemaKeysInner
+# # JsonWebKeySetSchemaKeys
 
 ## Properties
 

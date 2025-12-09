@@ -1,40 +1,38 @@
 # RusticiSoftware\Engine\V2\AppManagementApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createCredential()**](AppManagementApi.md#createCredential) | **POST** /appManagement/credentials | Create credential |
-| [**createOrUpdateTenant()**](AppManagementApi.md#createOrUpdateTenant) | **PUT** /appManagement/tenants/{tenantName} | Create or update tenant |
-| [**createSubscription()**](AppManagementApi.md#createSubscription) | **POST** /appManagement/subscriptions | Create subscription |
-| [**createSubscriptionAuth()**](AppManagementApi.md#createSubscriptionAuth) | **POST** /appManagement/subscriptions/authConfigurations | Create subscription authentication configurations |
-| [**createToken()**](AppManagementApi.md#createToken) | **POST** /appManagement/token | Create token |
-| [**deleteApplicationConfigurationSetting()**](AppManagementApi.md#deleteApplicationConfigurationSetting) | **DELETE** /appManagement/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this level |
-| [**deleteCredential()**](AppManagementApi.md#deleteCredential) | **DELETE** /appManagement/credentials/{credentialId} | Removes &#x60;credentialId&#x60; credentials |
-| [**deleteSubscription()**](AppManagementApi.md#deleteSubscription) | **DELETE** /appManagement/subscriptions/{subscriptionId} | Delete subscription |
-| [**deleteSubscriptionAuth()**](AppManagementApi.md#deleteSubscriptionAuth) | **DELETE** /appManagement/subscriptions/authConfigurations/{subscriptionAuthId} | Delete subscription authentication configuration. Any subscription using this authentication configuration will be disabled. |
-| [**deleteTenant()**](AppManagementApi.md#deleteTenant) | **DELETE** /appManagement/tenants/{tenantName} | Delete a tenant. Warning: If tenant data is not deleted first, this will leave orphaned rows that can only be deleted manually. Does not remove any data, but does remove mapping between name and key used to store data. Consider deactivating instead. |
-| [**deleteTenantData()**](AppManagementApi.md#deleteTenantData) | **DELETE** /appManagement/tenants/{tenantName}/data | Delete all of a tenant&#39;s data. |
-| [**getApplicationConfiguration()**](AppManagementApi.md#getApplicationConfiguration) | **GET** /appManagement/configuration | Returns all configuration settings for this level |
-| [**getAuthenticatedCredential()**](AppManagementApi.md#getAuthenticatedCredential) | **GET** /appManagement/authenticatedCredential | Get information about the credential used to authenticate this request. |
-| [**getCredential()**](AppManagementApi.md#getCredential) | **GET** /appManagement/credentials/{credentialId} | Get information on &#x60;credentialId&#x60; credential |
-| [**getCredentials()**](AppManagementApi.md#getCredentials) | **GET** /appManagement/credentials | List of credentials |
-| [**getPIIDeletionJob()**](AppManagementApi.md#getPIIDeletionJob) | **GET** /appManagement/PII/deletionJob/{jobId} | Check the status of a PII deletion job with the provided job id. |
-| [**getSubscription()**](AppManagementApi.md#getSubscription) | **GET** /appManagement/subscriptions/{subscriptionId} | Returns a specific subscription |
-| [**getSubscriptionAuth()**](AppManagementApi.md#getSubscriptionAuth) | **GET** /appManagement/subscriptions/authConfigurations/{subscriptionAuthId} | Returns a specific subscription authentication configuration. |
-| [**getSubscriptionAuths()**](AppManagementApi.md#getSubscriptionAuths) | **GET** /appManagement/subscriptions/authConfigurations | Returns list of subscription authentication configurations |
-| [**getSubscriptions()**](AppManagementApi.md#getSubscriptions) | **GET** /appManagement/subscriptions | Returns list of subscriptions |
-| [**getTenantList()**](AppManagementApi.md#getTenantList) | **GET** /appManagement/tenants | Get list of all tenants |
-| [**inspectToken()**](AppManagementApi.md#inspectToken) | **GET** /appManagement/token | Inspect token |
-| [**postPIIDeletionJob()**](AppManagementApi.md#postPIIDeletionJob) | **POST** /appManagement/PII/deletionJob | Initiate a job to delete a user&#39;s Personal Identifying Information from the system. |
-| [**postUpdateEncryptedSetting()**](AppManagementApi.md#postUpdateEncryptedSetting) | **POST** /appManagement/configuration/updateEncryptedSettings | Re-write settings, and statement pipe passwords using the current encryption settings. For password rotation. |
-| [**resetCredentialSecret()**](AppManagementApi.md#resetCredentialSecret) | **POST** /appManagement/credentials/{credentialId}/resetSecret | Reset credential secret |
-| [**setApplicationConfiguration()**](AppManagementApi.md#setApplicationConfiguration) | **POST** /appManagement/configuration | Set configuration settings for this level. |
-| [**updateCredential()**](AppManagementApi.md#updateCredential) | **PUT** /appManagement/credentials/{credentialId} | Update &#x60;credentialId&#x60; credentials |
-| [**updateSubscription()**](AppManagementApi.md#updateSubscription) | **PUT** /appManagement/subscriptions/{subscriptionId} | Update subscription. Partial updates not supported. |
-| [**updateSubscriptionAuth()**](AppManagementApi.md#updateSubscriptionAuth) | **PUT** /appManagement/subscriptions/authConfigurations/{subscriptionAuthId} | Update subscription authentication configuration. Partial updates not supported. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createCredential()**](AppManagementApi.md#createCredential) | **POST** /appManagement/credentials | Create credential
+[**createOrUpdateTenant()**](AppManagementApi.md#createOrUpdateTenant) | **PUT** /appManagement/tenants/{tenantName} | Create or update tenant
+[**createSubscription()**](AppManagementApi.md#createSubscription) | **POST** /appManagement/subscriptions | Create subscription
+[**createSubscriptionAuth()**](AppManagementApi.md#createSubscriptionAuth) | **POST** /appManagement/subscriptions/authConfigurations | Create subscription authentication configurations
+[**createToken()**](AppManagementApi.md#createToken) | **POST** /appManagement/token | Create token
+[**deleteApplicationConfigurationSetting()**](AppManagementApi.md#deleteApplicationConfigurationSetting) | **DELETE** /appManagement/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this level
+[**deleteCredential()**](AppManagementApi.md#deleteCredential) | **DELETE** /appManagement/credentials/{credentialId} | Removes &#x60;credentialId&#x60; credentials
+[**deleteSubscription()**](AppManagementApi.md#deleteSubscription) | **DELETE** /appManagement/subscriptions/{subscriptionId} | Delete subscription
+[**deleteSubscriptionAuth()**](AppManagementApi.md#deleteSubscriptionAuth) | **DELETE** /appManagement/subscriptions/authConfigurations/{subscriptionAuthId} | Delete subscription authentication configuration. Any subscription using this authentication configuration will be disabled.
+[**deleteTenant()**](AppManagementApi.md#deleteTenant) | **DELETE** /appManagement/tenants/{tenantName} | Delete a tenant. Warning: If tenant data is not deleted first, this will leave orphaned rows that can only be deleted manually. Does not remove any data, but does remove mapping between name and key used to store data. Consider deactivating instead.
+[**deleteTenantData()**](AppManagementApi.md#deleteTenantData) | **DELETE** /appManagement/tenants/{tenantName}/data | Delete all of a tenant&#39;s data.
+[**getApplicationConfiguration()**](AppManagementApi.md#getApplicationConfiguration) | **GET** /appManagement/configuration | Returns all configuration settings for this level
+[**getAuthenticatedCredential()**](AppManagementApi.md#getAuthenticatedCredential) | **GET** /appManagement/authenticatedCredential | Get information about the credential used to authenticate this request.
+[**getCredential()**](AppManagementApi.md#getCredential) | **GET** /appManagement/credentials/{credentialId} | Get information on &#x60;credentialId&#x60; credential
+[**getCredentials()**](AppManagementApi.md#getCredentials) | **GET** /appManagement/credentials | List of credentials
+[**getPIIDeletionJob()**](AppManagementApi.md#getPIIDeletionJob) | **GET** /appManagement/PII/deletionJob/{jobId} | Check the status of a PII deletion job with the provided job id.
+[**getSubscription()**](AppManagementApi.md#getSubscription) | **GET** /appManagement/subscriptions/{subscriptionId} | Returns a specific subscription
+[**getSubscriptionAuth()**](AppManagementApi.md#getSubscriptionAuth) | **GET** /appManagement/subscriptions/authConfigurations/{subscriptionAuthId} | Returns a specific subscription authentication configuration.
+[**getSubscriptionAuths()**](AppManagementApi.md#getSubscriptionAuths) | **GET** /appManagement/subscriptions/authConfigurations | Returns list of subscription authentication configurations
+[**getSubscriptions()**](AppManagementApi.md#getSubscriptions) | **GET** /appManagement/subscriptions | Returns list of subscriptions
+[**getTenantList()**](AppManagementApi.md#getTenantList) | **GET** /appManagement/tenants | Get list of all tenants
+[**inspectToken()**](AppManagementApi.md#inspectToken) | **GET** /appManagement/token | Inspect token
+[**postPIIDeletionJob()**](AppManagementApi.md#postPIIDeletionJob) | **POST** /appManagement/PII/deletionJob | Initiate a job to delete a user&#39;s Personal Identifying Information from the system.
+[**postUpdateEncryptedSetting()**](AppManagementApi.md#postUpdateEncryptedSetting) | **POST** /appManagement/configuration/updateEncryptedSettings | Re-write settings, and statement pipe passwords using the current encryption settings. For password rotation.
+[**resetCredentialSecret()**](AppManagementApi.md#resetCredentialSecret) | **POST** /appManagement/credentials/{credentialId}/resetSecret | Reset credential secret
+[**setApplicationConfiguration()**](AppManagementApi.md#setApplicationConfiguration) | **POST** /appManagement/configuration | Set configuration settings for this level.
+[**updateCredential()**](AppManagementApi.md#updateCredential) | **PUT** /appManagement/credentials/{credentialId} | Update &#x60;credentialId&#x60; credentials
+[**updateSubscription()**](AppManagementApi.md#updateSubscription) | **PUT** /appManagement/subscriptions/{subscriptionId} | Update subscription. Partial updates not supported.
+[**updateSubscriptionAuth()**](AppManagementApi.md#updateSubscriptionAuth) | **PUT** /appManagement/subscriptions/authConfigurations/{subscriptionAuthId} | Update subscription authentication configuration. Partial updates not supported.
 
 
 ## `createCredential()`
@@ -80,10 +78,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **credential_request** | [**\RusticiSoftware\Engine\V2\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_request** | [**\RusticiSoftware\Engine\V2\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -144,10 +142,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **tenant_name** | **string**|  | |
-| **tenant_properties** | [**\RusticiSoftware\Engine\V2\Model\TenantProperties**](../Model/TenantProperties.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant_name** | **string**|  |
+ **tenant_properties** | [**\RusticiSoftware\Engine\V2\Model\TenantProperties**](../Model/TenantProperties.md)|  |
 
 ### Return type
 
@@ -209,10 +207,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -274,10 +272,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_auth_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_auth_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -341,10 +339,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **token_request** | [**\RusticiSoftware\Engine\V2\Model\TokenRequestSchema**](../Model/TokenRequestSchema.md)|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token_request** | [**\RusticiSoftware\Engine\V2\Model\TokenRequestSchema**](../Model/TokenRequestSchema.md)|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -407,12 +405,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **setting_id** | **string**|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional] |
-| **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setting_id** | **string**|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional]
+ **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional]
 
 ### Return type
 
@@ -473,10 +471,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **credential_id** | **string**|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **string**|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -537,10 +535,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_id** | **string**|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_id** | **string**|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -601,10 +599,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_auth_id** | **string**|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_auth_id** | **string**|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -664,9 +662,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **tenant_name** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant_name** | **string**|  |
 
 ### Return type
 
@@ -727,10 +725,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **tenant_name** | **string**|  | |
-| **system_schema_only** | **bool**| Deletes tenant data from the system schema only. This does not remove the mapping between the tenant name and key. | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **tenant_name** | **string**|  |
+ **system_schema_only** | **bool**| Deletes tenant data from the system schema only. This does not remove the mapping between the tenant name and key. | [optional] [default to false]
 
 ### Return type
 
@@ -797,15 +795,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional] |
-| **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional] |
-| **include_metadata** | **bool**|  | [optional] [default to false] |
-| **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false] |
-| **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false] |
-| **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional]
+ **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional]
+ **include_metadata** | **bool**|  | [optional] [default to false]
+ **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false]
+ **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false]
+ **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true]
 
 ### Return type
 
@@ -866,9 +864,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -930,10 +928,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **credential_id** | **string**|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **string**|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -994,9 +992,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -1058,10 +1056,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **job_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **job_id** | **string**|  |
 
 ### Return type
 
@@ -1123,10 +1121,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_id** | **string**|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_id** | **string**|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -1188,10 +1186,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_auth_id** | **string**|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_auth_id** | **string**|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -1253,10 +1251,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
 
 ### Return type
 
@@ -1320,12 +1318,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
-| **topic** | **string**| Only subscriptions for the provided topic will be included | [optional] |
-| **subtopic** | **string**| Only subscriptions which specify the provided sub-topic will be included | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
+ **topic** | **string**| Only subscriptions for the provided topic will be included | [optional]
+ **subtopic** | **string**| Only subscriptions which specify the provided sub-topic will be included | [optional]
 
 ### Return type
 
@@ -1386,9 +1384,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **include_deactivated** | **bool**|  | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **include_deactivated** | **bool**|  | [optional] [default to false]
 
 ### Return type
 
@@ -1452,10 +1450,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **token** | **string**|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **string**|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -1517,10 +1515,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **entities** | [**\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema**](../Model/PIIDeletionRequestSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **entities** | [**\RusticiSoftware\Engine\V2\Model\PIIDeletionRequestSchema**](../Model/PIIDeletionRequestSchema.md)|  |
 
 ### Return type
 
@@ -1580,9 +1578,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
 
 ### Return type
 
@@ -1644,10 +1642,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **credential_id** | **string**|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **string**|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -1710,12 +1708,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional] |
-| **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **learning_standard** | **string**| Required if singleSco is specified. Scopes the request to the provided learning standard. | [optional]
+ **single_sco** | **bool**| Required if learningStandard is specified. Scopes settings to whether a package has only one SCO or assignable unit within it or not. To apply a configuration setting to a learning standard for single and multi-SCO content, it must be set for both scopes. | [optional]
 
 ### Return type
 
@@ -1777,11 +1775,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **credential_id** | **string**|  | |
-| **credential_update** | [**\RusticiSoftware\Engine\V2\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  | |
-| **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **credential_id** | **string**|  |
+ **credential_update** | [**\RusticiSoftware\Engine\V2\Model\CredentialRequestSchema**](../Model/CredentialRequestSchema.md)|  |
+ **engine_tenant_name** | **string**| If specified, the tenant that will be used to store or validate the credentials or token. If not specified, the system data store / settings will be used. Note that PermissionsSchema contains &#39;tenantName&#39; which should be used for any permissions that need to be scoped to a particular tenant. | [optional]
 
 ### Return type
 
@@ -1843,11 +1841,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_id** | **string**|  | |
-| **subscription_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_id** | **string**|  |
+ **subscription_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionDefinitionSchema**](../Model/SubscriptionDefinitionSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -1909,11 +1907,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **subscription_auth_id** | **string**|  | |
-| **subscription_auth_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **subscription_auth_id** | **string**|  |
+ **subscription_auth_definition** | [**\RusticiSoftware\Engine\V2\Model\SubscriptionAuthDefinitionSchema**](../Model/SubscriptionAuthDefinitionSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 

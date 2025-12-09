@@ -374,6 +374,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: HTTP basic authentication
 
+
 ### oauth
 
 - **Type**: `OAuth`

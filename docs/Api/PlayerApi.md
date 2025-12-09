@@ -1,15 +1,13 @@
 # RusticiSoftware\Engine\V2\PlayerApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**buildPlayerConfiguration()**](PlayerApi.md#buildPlayerConfiguration) | **POST** /player/configuration | Returns player configuration |
-| [**deletePlayerZip()**](PlayerApi.md#deletePlayerZip) | **DELETE** /player/zip | Deletes the current exported player zip |
-| [**getPlayerZip()**](PlayerApi.md#getPlayerZip) | **GET** /player/zip | Gets the customized player files for this system |
-| [**postPlayerResults()**](PlayerApi.md#postPlayerResults) | **POST** /player/results | Endpoint for player to send results |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**buildPlayerConfiguration()**](PlayerApi.md#buildPlayerConfiguration) | **POST** /player/configuration | Returns player configuration
+[**deletePlayerZip()**](PlayerApi.md#deletePlayerZip) | **DELETE** /player/zip | Deletes the current exported player zip
+[**getPlayerZip()**](PlayerApi.md#getPlayerZip) | **GET** /player/zip | Gets the customized player files for this system
+[**postPlayerResults()**](PlayerApi.md#postPlayerResults) | **POST** /player/results | Endpoint for player to send results
 
 
 ## `buildPlayerConfiguration()`
@@ -50,10 +48,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **player_configuration_schema** | [**\RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema**](../Model/PlayerConfigurationSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **player_configuration_schema** | [**\RusticiSoftware\Engine\V2\Model\PlayerConfigurationSchema**](../Model/PlayerConfigurationSchema.md)|  |
 
 ### Return type
 
@@ -109,10 +107,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **player** | **string**|  | [optional] [default to &#39;modern&#39;] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **player** | **string**|  | [optional] [default to &#39;modern&#39;]
 
 ### Return type
 
@@ -169,10 +167,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **player** | **string**|  | [optional] [default to &#39;modern&#39;] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **player** | **string**|  | [optional] [default to &#39;modern&#39;]
 
 ### Return type
 
@@ -228,10 +226,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **player_results_schema** | [**\RusticiSoftware\Engine\V2\Model\PlayerResultsSchema**](../Model/PlayerResultsSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **player_results_schema** | [**\RusticiSoftware\Engine\V2\Model\PlayerResultsSchema**](../Model/PlayerResultsSchema.md)|  |
 
 ### Return type
 
