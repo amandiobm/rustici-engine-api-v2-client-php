@@ -1,11 +1,10 @@
-# DispatchRegistrationCountSchema
+# # DispatchRegistrationCountSchema
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**registration_count** | **int** |  | [optional] 
-**last_reset_date** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**registration_count** | **int** |  | [optional]
+**last_reset_date** | **\DateTime** |  | [optional]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

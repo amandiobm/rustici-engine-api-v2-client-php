@@ -1,13 +1,12 @@
-# ConnectorContentItemSchema
+# # ConnectorContentItemSchema
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] 
-**title** | **string** |  | [optional] 
-**updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**metadata** | [**\RusticiSoftware\Engine\V2\Model\MetadataSchema**](MetadataSchema.md) |  | [optional] 
+**id** | **string** |  | [optional]
+**title** | **string** |  | [optional]
+**updated** | **\DateTime** |  | [optional]
+**metadata** | [**\RusticiSoftware\Engine\V2\Model\MetadataSchema**](MetadataSchema.md) |  | [optional]
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
