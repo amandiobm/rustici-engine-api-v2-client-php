@@ -1,4 +1,5 @@
 {
+    "name": "amandiobm/rustici-engine-api-v2-client-php",
     "description": "Rustici Engine API V2 Client (PHP)",
     "keywords": [
         "openapitools",
@@ -20,7 +21,7 @@
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^7.3",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
@@ -32,9 +33,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": { "RusticiSoftware\\Engine\\V2\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": { "RusticiSoftware\\Engine\\V2\\Test\\" : "test/" }
     }
 }
