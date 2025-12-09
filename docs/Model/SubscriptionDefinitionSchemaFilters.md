@@ -1,4 +1,4 @@
-# # SubscriptionDefinitionSchemaFiltersInner
+# # SubscriptionDefinitionSchemaFilters
 
 ## Properties
 

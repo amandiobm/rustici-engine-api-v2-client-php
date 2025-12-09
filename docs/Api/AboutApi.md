@@ -1,14 +1,12 @@
 # RusticiSoftware\Engine\V2\AboutApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**getAbout()**](AboutApi.md#getAbout) | **GET** /about | Get back the version and platform of the running instance of Engine |
-| [**getRegistrationCount()**](AboutApi.md#getRegistrationCount) | **GET** /about/registrationCount | Gets the number of created or launched registrations for the specified tenant or across all tenants when none is specified |
-| [**getUserCount()**](AboutApi.md#getUserCount) | **GET** /about/userCount | Gets the number of users for the specified tenant or across all tenants when none is specified |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getAbout()**](AboutApi.md#getAbout) | **GET** /about | Get back the version and platform of the running instance of Engine
+[**getRegistrationCount()**](AboutApi.md#getRegistrationCount) | **GET** /about/registrationCount | Gets the number of created or launched registrations for the specified tenant or across all tenants when none is specified
+[**getUserCount()**](AboutApi.md#getUserCount) | **GET** /about/userCount | Gets the number of users for the specified tenant or across all tenants when none is specified
 
 
 ## `getAbout()`
@@ -53,9 +51,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -105,8 +103,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\AboutApi(
     $config
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | optional tenant for this request
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 
 try {
     $result = $apiInstance->getRegistrationCount($engine_tenant_name, $since, $until);
@@ -118,11 +116,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
 
 ### Return type
 
@@ -172,8 +170,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\AboutApi(
     $config
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | optional tenant for this request
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $use_usage_statistics = false; // bool
 
 try {
@@ -186,12 +184,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **use_usage_statistics** | **bool**|  | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **use_usage_statistics** | **bool**|  | [optional] [default to false]
 
 ### Return type
 

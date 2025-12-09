@@ -1,49 +1,47 @@
 # RusticiSoftware\Engine\V2\CourseApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**buildCoursePreviewLaunchLink()**](CourseApi.md#buildCoursePreviewLaunchLink) | **POST** /courses/{courseId}/preview | Returns the link to use to preview this course |
-| [**buildCoursePreviewLaunchLinkWithVersion()**](CourseApi.md#buildCoursePreviewLaunchLinkWithVersion) | **POST** /courses/{courseId}/versions/{versionId}/preview | Returns the link to use to preview this course |
-| [**createFetchAndImportCourseJob()**](CourseApi.md#createFetchAndImportCourseJob) | **POST** /courses/importJobs | Start a job to fetch and import a course. |
-| [**createUploadAndImportCourseJob()**](CourseApi.md#createUploadAndImportCourseJob) | **POST** /courses/importJobs/upload | Upload a course and start an import job for it. |
-| [**deleteCourse()**](CourseApi.md#deleteCourse) | **DELETE** /courses/{courseId} | Delete &#x60;courseId&#x60; |
-| [**deleteCourseAsset()**](CourseApi.md#deleteCourseAsset) | **DELETE** /courses/{courseId}/asset | Delete the specified asset in the current version of the specified course |
-| [**deleteCourseConfigurationSetting()**](CourseApi.md#deleteCourseConfigurationSetting) | **DELETE** /courses/{courseId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course |
-| [**deleteCourseVersion()**](CourseApi.md#deleteCourseVersion) | **DELETE** /courses/{courseId}/versions/{versionId} | Delete version &#x60;versionId&#x60; of &#x60;courseId&#x60; |
-| [**deleteCourseVersionAsset()**](CourseApi.md#deleteCourseVersionAsset) | **DELETE** /courses/{courseId}/versions/{versionId}/asset | Delete the specified asset in the current version of the specified course |
-| [**deleteCourseVersionConfigurationSetting()**](CourseApi.md#deleteCourseVersionConfigurationSetting) | **DELETE** /courses/{courseId}/versions/{versionId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course and version. |
-| [**deleteCourseVersionsConfigurationSetting()**](CourseApi.md#deleteCourseVersionsConfigurationSetting) | **DELETE** /courses/{courseId}/versions/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for all versions of this course. |
-| [**deleteCourseZip()**](CourseApi.md#deleteCourseZip) | **DELETE** /courses/{courseId}/zip | Deletes the exported zip for the latest version of the specified course |
-| [**deleteVersionedCourseZip()**](CourseApi.md#deleteVersionedCourseZip) | **DELETE** /courses/{courseId}/versions/{versionId}/zip | Deletes the exported zip for the specified course version |
-| [**getCourse()**](CourseApi.md#getCourse) | **GET** /courses/{courseId} | Get information about &#x60;courseId&#x60; |
-| [**getCourseAsset()**](CourseApi.md#getCourseAsset) | **GET** /courses/{courseId}/asset | Get the specified asset in the current version of the specified course |
-| [**getCourseConfiguration()**](CourseApi.md#getCourseConfiguration) | **GET** /courses/{courseId}/configuration | Returns all configuration settings for this course |
-| [**getCourseFileList()**](CourseApi.md#getCourseFileList) | **GET** /courses/{courseId}/asset/list | Get the list of files in the current version of the specified course |
-| [**getCourseStatements()**](CourseApi.md#getCourseStatements) | **GET** /courses/{courseId}/xAPIStatements | Get xAPI statements for &#x60;courseId&#x60; |
-| [**getCourseVersionAsset()**](CourseApi.md#getCourseVersionAsset) | **GET** /courses/{courseId}/versions/{versionId}/asset | Get the specified asset for this course version |
-| [**getCourseVersionConfiguration()**](CourseApi.md#getCourseVersionConfiguration) | **GET** /courses/{courseId}/versions/{versionId}/configuration | Returns all configuration settings for this course and version. |
-| [**getCourseVersionFileList()**](CourseApi.md#getCourseVersionFileList) | **GET** /courses/{courseId}/versions/{versionId}/asset/list | Get the list of files in the specified version of the specified course |
-| [**getCourseVersionInfo()**](CourseApi.md#getCourseVersionInfo) | **GET** /courses/{courseId}/versions/{versionId} | Get version &#x60;versionId&#x60; of &#x60;courseId&#x60; |
-| [**getCourseVersionStatements()**](CourseApi.md#getCourseVersionStatements) | **GET** /courses/{courseId}/versions/{versionId}/xAPIStatements | Get xAPI statements for version &#x60;versionId&#x60; of &#x60;courseId&#x60; |
-| [**getCourseVersions()**](CourseApi.md#getCourseVersions) | **GET** /courses/{courseId}/versions | Get all versions of &#x60;courseId&#x60; |
-| [**getCourseZip()**](CourseApi.md#getCourseZip) | **GET** /courses/{courseId}/zip | Get the zip package for the latest course version |
-| [**getCourses()**](CourseApi.md#getCourses) | **GET** /courses | Get a list of all courses for the specified tenant |
-| [**getImportJobStatus()**](CourseApi.md#getImportJobStatus) | **GET** /courses/importJobs/{importJobId} | Check the status of an import job. |
-| [**getVersionedCourseZip()**](CourseApi.md#getVersionedCourseZip) | **GET** /courses/{courseId}/versions/{versionId}/zip | Get the zip package for the specified course version |
-| [**importCourseAssetFile()**](CourseApi.md#importCourseAssetFile) | **POST** /courses/{courseId}/asset | Import an asset file for this course. |
-| [**importCourseVersionAssetFile()**](CourseApi.md#importCourseVersionAssetFile) | **POST** /courses/{courseId}/versions/{versionId}/asset | Import an asset file for this course version. |
-| [**importCourseWithoutUpload()**](CourseApi.md#importCourseWithoutUpload) | **POST** /courses | Create a course |
-| [**setCourseConfiguration()**](CourseApi.md#setCourseConfiguration) | **POST** /courses/{courseId}/configuration | Set configuration settings for this course. |
-| [**setCourseTitle()**](CourseApi.md#setCourseTitle) | **PUT** /courses/{courseId}/title | Sets the course title for &#x60;courseId&#x60; |
-| [**setCourseVersionConfiguration()**](CourseApi.md#setCourseVersionConfiguration) | **POST** /courses/{courseId}/versions/{versionId}/configuration | Set configuration settings for this course and version. |
-| [**setCourseVersionsConfiguration()**](CourseApi.md#setCourseVersionsConfiguration) | **POST** /courses/{courseId}/versions/configuration | Set configuration settings for all versions of this course. |
-| [**uploadAndImportCourse()**](CourseApi.md#uploadAndImportCourse) | **POST** /courses/upload | Upload a course to import |
-| [**uploadCourseAssetFile()**](CourseApi.md#uploadCourseAssetFile) | **POST** /courses/{courseId}/asset/upload | Upload an asset file for this course. |
-| [**uploadCourseVersionAssetFile()**](CourseApi.md#uploadCourseVersionAssetFile) | **POST** /courses/{courseId}/versions/{versionId}/asset/upload | Upload an asset file for this course version. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**buildCoursePreviewLaunchLink()**](CourseApi.md#buildCoursePreviewLaunchLink) | **POST** /courses/{courseId}/preview | Returns the link to use to preview this course
+[**buildCoursePreviewLaunchLinkWithVersion()**](CourseApi.md#buildCoursePreviewLaunchLinkWithVersion) | **POST** /courses/{courseId}/versions/{versionId}/preview | Returns the link to use to preview this course
+[**createFetchAndImportCourseJob()**](CourseApi.md#createFetchAndImportCourseJob) | **POST** /courses/importJobs | Start a job to fetch and import a course.
+[**createUploadAndImportCourseJob()**](CourseApi.md#createUploadAndImportCourseJob) | **POST** /courses/importJobs/upload | Upload a course and start an import job for it.
+[**deleteCourse()**](CourseApi.md#deleteCourse) | **DELETE** /courses/{courseId} | Delete &#x60;courseId&#x60;
+[**deleteCourseAsset()**](CourseApi.md#deleteCourseAsset) | **DELETE** /courses/{courseId}/asset | Delete the specified asset in the current version of the specified course
+[**deleteCourseConfigurationSetting()**](CourseApi.md#deleteCourseConfigurationSetting) | **DELETE** /courses/{courseId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course
+[**deleteCourseVersion()**](CourseApi.md#deleteCourseVersion) | **DELETE** /courses/{courseId}/versions/{versionId} | Delete version &#x60;versionId&#x60; of &#x60;courseId&#x60;
+[**deleteCourseVersionAsset()**](CourseApi.md#deleteCourseVersionAsset) | **DELETE** /courses/{courseId}/versions/{versionId}/asset | Delete the specified asset in the current version of the specified course
+[**deleteCourseVersionConfigurationSetting()**](CourseApi.md#deleteCourseVersionConfigurationSetting) | **DELETE** /courses/{courseId}/versions/{versionId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this course and version.
+[**deleteCourseVersionsConfigurationSetting()**](CourseApi.md#deleteCourseVersionsConfigurationSetting) | **DELETE** /courses/{courseId}/versions/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for all versions of this course.
+[**deleteCourseZip()**](CourseApi.md#deleteCourseZip) | **DELETE** /courses/{courseId}/zip | Deletes the exported zip for the latest version of the specified course
+[**deleteVersionedCourseZip()**](CourseApi.md#deleteVersionedCourseZip) | **DELETE** /courses/{courseId}/versions/{versionId}/zip | Deletes the exported zip for the specified course version
+[**getCourse()**](CourseApi.md#getCourse) | **GET** /courses/{courseId} | Get information about &#x60;courseId&#x60;
+[**getCourseAsset()**](CourseApi.md#getCourseAsset) | **GET** /courses/{courseId}/asset | Get the specified asset in the current version of the specified course
+[**getCourseConfiguration()**](CourseApi.md#getCourseConfiguration) | **GET** /courses/{courseId}/configuration | Returns all configuration settings for this course
+[**getCourseFileList()**](CourseApi.md#getCourseFileList) | **GET** /courses/{courseId}/asset/list | Get the list of files in the current version of the specified course
+[**getCourseStatements()**](CourseApi.md#getCourseStatements) | **GET** /courses/{courseId}/xAPIStatements | Get xAPI statements for &#x60;courseId&#x60;
+[**getCourseVersionAsset()**](CourseApi.md#getCourseVersionAsset) | **GET** /courses/{courseId}/versions/{versionId}/asset | Get the specified asset for this course version
+[**getCourseVersionConfiguration()**](CourseApi.md#getCourseVersionConfiguration) | **GET** /courses/{courseId}/versions/{versionId}/configuration | Returns all configuration settings for this course and version.
+[**getCourseVersionFileList()**](CourseApi.md#getCourseVersionFileList) | **GET** /courses/{courseId}/versions/{versionId}/asset/list | Get the list of files in the specified version of the specified course
+[**getCourseVersionInfo()**](CourseApi.md#getCourseVersionInfo) | **GET** /courses/{courseId}/versions/{versionId} | Get version &#x60;versionId&#x60; of &#x60;courseId&#x60;
+[**getCourseVersionStatements()**](CourseApi.md#getCourseVersionStatements) | **GET** /courses/{courseId}/versions/{versionId}/xAPIStatements | Get xAPI statements for version &#x60;versionId&#x60; of &#x60;courseId&#x60;
+[**getCourseVersions()**](CourseApi.md#getCourseVersions) | **GET** /courses/{courseId}/versions | Get all versions of &#x60;courseId&#x60;
+[**getCourseZip()**](CourseApi.md#getCourseZip) | **GET** /courses/{courseId}/zip | Get the zip package for the latest course version
+[**getCourses()**](CourseApi.md#getCourses) | **GET** /courses | Get a list of all courses for the specified tenant
+[**getImportJobStatus()**](CourseApi.md#getImportJobStatus) | **GET** /courses/importJobs/{importJobId} | Check the status of an import job.
+[**getVersionedCourseZip()**](CourseApi.md#getVersionedCourseZip) | **GET** /courses/{courseId}/versions/{versionId}/zip | Get the zip package for the specified course version
+[**importCourseAssetFile()**](CourseApi.md#importCourseAssetFile) | **POST** /courses/{courseId}/asset | Import an asset file for this course.
+[**importCourseVersionAssetFile()**](CourseApi.md#importCourseVersionAssetFile) | **POST** /courses/{courseId}/versions/{versionId}/asset | Import an asset file for this course version.
+[**importCourseWithoutUpload()**](CourseApi.md#importCourseWithoutUpload) | **POST** /courses | Create a course
+[**setCourseConfiguration()**](CourseApi.md#setCourseConfiguration) | **POST** /courses/{courseId}/configuration | Set configuration settings for this course.
+[**setCourseTitle()**](CourseApi.md#setCourseTitle) | **PUT** /courses/{courseId}/title | Sets the course title for &#x60;courseId&#x60;
+[**setCourseVersionConfiguration()**](CourseApi.md#setCourseVersionConfiguration) | **POST** /courses/{courseId}/versions/{versionId}/configuration | Set configuration settings for this course and version.
+[**setCourseVersionsConfiguration()**](CourseApi.md#setCourseVersionsConfiguration) | **POST** /courses/{courseId}/versions/configuration | Set configuration settings for all versions of this course.
+[**uploadAndImportCourse()**](CourseApi.md#uploadAndImportCourse) | **POST** /courses/upload | Upload a course to import
+[**uploadCourseAssetFile()**](CourseApi.md#uploadCourseAssetFile) | **POST** /courses/{courseId}/asset/upload | Upload an asset file for this course.
+[**uploadCourseVersionAssetFile()**](CourseApi.md#uploadCourseVersionAssetFile) | **POST** /courses/{courseId}/versions/{versionId}/asset/upload | Upload an asset file for this course version.
 
 
 ## `buildCoursePreviewLaunchLink()`
@@ -90,11 +88,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
 
 ### Return type
 
@@ -158,12 +156,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
 
 ### Return type
 
@@ -229,12 +227,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. | |
-| **import_request** | [**\RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema**](../Model/ImportFetchRequestSchema.md)|  | |
-| **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
+ **import_request** | [**\RusticiSoftware\Engine\V2\Model\ImportFetchRequestSchema**](../Model/ImportFetchRequestSchema.md)|  |
+ **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
 
 ### Return type
 
@@ -289,7 +287,7 @@ $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this 
 $course_id = 'course_id_example'; // string | A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use.
 $may_create_new_version = false; // bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
 $uploaded_content_type = 'application/zip'; // string | The MIME type identifier for the content to be uploaded
-$file = '/path/to/file.txt'; // \SplFileObject | The course content file to import.
+$file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
 $content_metadata = 'content_metadata_example'; // string | Serialized 'mediaFileMetadata' schema.
 
 try {
@@ -302,14 +300,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. | |
-| **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false] |
-| **uploaded_content_type** | **string**| The MIME type identifier for the content to be uploaded | [optional] [default to &#39;application/zip&#39;] |
-| **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional] |
-| **content_metadata** | **string**| Serialized &#39;mediaFileMetadata&#39; schema. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
+ **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
+ **uploaded_content_type** | **string**| The MIME type identifier for the content to be uploaded | [optional] [default to &#39;application/zip&#39;]
+ **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional]
+ **content_metadata** | **string**| Serialized &#39;mediaFileMetadata&#39; schema. | [optional]
 
 ### Return type
 
@@ -370,10 +368,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
 
 ### Return type
 
@@ -435,11 +433,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **relative_path** | **string**| Relative path of the asset within the course. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **relative_path** | **string**| Relative path of the asset within the course. |
 
 ### Return type
 
@@ -501,11 +499,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **setting_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **setting_id** | **string**|  |
 
 ### Return type
 
@@ -567,11 +565,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
 
 ### Return type
 
@@ -634,12 +632,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **relative_path** | **string**| Relative path of the asset within the course. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **relative_path** | **string**| Relative path of the asset within the course. |
 
 ### Return type
 
@@ -702,12 +700,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **setting_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **setting_id** | **string**|  |
 
 ### Return type
 
@@ -769,11 +767,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **setting_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **setting_id** | **string**|  |
 
 ### Return type
 
@@ -835,11 +833,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **export_type** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **export_type** | **string**|  |
 
 ### Return type
 
@@ -902,12 +900,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **export_type** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **export_type** | **string**|  |
 
 ### Return type
 
@@ -971,12 +969,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false] |
-| **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false]
+ **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false]
 
 ### Return type
 
@@ -1039,11 +1037,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **relative_path** | **string**| Relative path of the asset within the course. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **relative_path** | **string**| Relative path of the asset within the course. |
 
 ### Return type
 
@@ -1109,14 +1107,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **include_metadata** | **bool**|  | [optional] [default to false] |
-| **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false] |
-| **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false] |
-| **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **include_metadata** | **bool**|  | [optional] [default to false]
+ **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false]
+ **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false]
+ **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true]
 
 ### Return type
 
@@ -1178,10 +1176,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
 
 ### Return type
 
@@ -1233,8 +1231,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $course_id = 'course_id_example'; // string
 $learner_id = 'learner_id_example'; // string | Only entries for the specified learner id will be included.
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 
 try {
@@ -1247,14 +1245,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **learner_id** | **string**| Only entries for the specified learner id will be included. | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **learner_id** | **string**| Only entries for the specified learner id will be included. | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
 
 ### Return type
 
@@ -1318,12 +1316,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **relative_path** | **string**| Relative path of the asset within the course. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **relative_path** | **string**| Relative path of the asset within the course. |
 
 ### Return type
 
@@ -1390,15 +1388,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **include_metadata** | **bool**|  | [optional] [default to false] |
-| **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false] |
-| **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false] |
-| **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **include_metadata** | **bool**|  | [optional] [default to false]
+ **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false]
+ **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false]
+ **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true]
 
 ### Return type
 
@@ -1461,11 +1459,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
 
 ### Return type
 
@@ -1530,13 +1528,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false] |
-| **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false]
+ **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false]
 
 ### Return type
 
@@ -1589,8 +1587,8 @@ $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this 
 $course_id = 'course_id_example'; // string
 $version_id = 56; // int | the course version
 $learner_id = 'learner_id_example'; // string | Only entries for the specified learner id will be included.
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 
 try {
@@ -1603,15 +1601,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **learner_id** | **string**| Only entries for the specified learner id will be included. | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **learner_id** | **string**| Only entries for the specified learner id will be included. | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
 
 ### Return type
 
@@ -1662,8 +1660,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $course_id = 'course_id_example'; // string
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $include_registration_count = false; // bool | Include the registration count in the results
 $include_course_metadata = false; // bool | Include course metadata in the results
 
@@ -1677,14 +1675,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false] |
-| **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false]
+ **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false]
 
 ### Return type
 
@@ -1747,11 +1745,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **export_type** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **export_type** | **string**|  |
 
 ### Return type
 
@@ -1802,8 +1800,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\CourseApi(
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $include_registration_count = false; // bool | Include the registration count in the results
 $include_course_metadata = false; // bool | Include course metadata in the results
 
@@ -1817,14 +1815,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false] |
-| **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **include_registration_count** | **bool**| Include the registration count in the results | [optional] [default to false]
+ **include_course_metadata** | **bool**| Include course metadata in the results | [optional] [default to false]
 
 ### Return type
 
@@ -1886,10 +1884,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **import_job_id** | **string**| Id received when the import job was submitted to the importJobs resource. | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **import_job_id** | **string**| Id received when the import job was submitted to the importJobs resource. |
 
 ### Return type
 
@@ -1953,12 +1951,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **export_type** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **export_type** | **string**|  |
 
 ### Return type
 
@@ -2022,12 +2020,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **asset_schema** | [**\RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema**](../Model/ImportAssetRequestSchema.md)|  | |
-| **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **asset_schema** | [**\RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema**](../Model/ImportAssetRequestSchema.md)|  |
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;]
 
 ### Return type
 
@@ -2092,13 +2090,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **asset_schema** | [**\RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema**](../Model/ImportAssetRequestSchema.md)|  | |
-| **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **asset_schema** | [**\RusticiSoftware\Engine\V2\Model\ImportAssetRequestSchema**](../Model/ImportAssetRequestSchema.md)|  |
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;]
 
 ### Return type
 
@@ -2165,13 +2163,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. | |
-| **import_request** | [**\RusticiSoftware\Engine\V2\Model\ImportRequestSchema**](../Model/ImportRequestSchema.md)|  | |
-| **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false] |
-| **dry_run** | **bool**| Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
+ **import_request** | [**\RusticiSoftware\Engine\V2\Model\ImportRequestSchema**](../Model/ImportRequestSchema.md)|  |
+ **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
+ **dry_run** | **bool**| Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. | [optional] [default to false]
 
 ### Return type
 
@@ -2233,11 +2231,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -2299,11 +2297,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **title** | [**\RusticiSoftware\Engine\V2\Model\TitleSchema**](../Model/TitleSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **title** | [**\RusticiSoftware\Engine\V2\Model\TitleSchema**](../Model/TitleSchema.md)|  |
 
 ### Return type
 
@@ -2366,12 +2364,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -2433,11 +2431,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -2493,7 +2491,7 @@ $course_id = 'course_id_example'; // string | A unique identifier your applicati
 $may_create_new_version = false; // bool | Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn't already exist.
 $dry_run = false; // bool | Validate the course can be imported (mainly by validating the manifest), but don't actually import it.
 $uploaded_content_type = 'application/zip'; // string | The MIME type identifier for the content to be uploaded
-$file = '/path/to/file.txt'; // \SplFileObject | The course content file to import.
+$file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
 $content_metadata = 'content_metadata_example'; // string | Serialized 'mediaFileMetadata' schema.
 
 try {
@@ -2506,15 +2504,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. | |
-| **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false] |
-| **dry_run** | **bool**| Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. | [optional] [default to false] |
-| **uploaded_content_type** | **string**| The MIME type identifier for the content to be uploaded | [optional] [default to &#39;application/zip&#39;] |
-| **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional] |
-| **content_metadata** | **string**| Serialized &#39;mediaFileMetadata&#39; schema. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**| A unique identifier your application will use to identify the course after import. Your application is responsible both for generating this unique ID and for keeping track of the ID for later use. |
+ **may_create_new_version** | **bool**| Is it OK to create a new version of this course? If this is set to false and the course already exists, the upload will fail. If true and the course already exists then a new version will be created. No effect if the course doesn&#39;t already exist. | [optional] [default to false]
+ **dry_run** | **bool**| Validate the course can be imported (mainly by validating the manifest), but don&#39;t actually import it. | [optional] [default to false]
+ **uploaded_content_type** | **string**| The MIME type identifier for the content to be uploaded | [optional] [default to &#39;application/zip&#39;]
+ **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional]
+ **content_metadata** | **string**| Serialized &#39;mediaFileMetadata&#39; schema. | [optional]
 
 ### Return type
 
@@ -2567,7 +2565,7 @@ $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this 
 $course_id = 'course_id_example'; // string
 $destination = 'destination_example'; // string | Path, relative to the course's Content Directory, that indicates where to store the uploaded asset file.
 $update_asset_policy = 'lax'; // string | Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases).
-$file = '/path/to/file.txt'; // \SplFileObject | The course content file to import.
+$file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
 
 try {
     $result = $apiInstance->uploadCourseAssetFile($engine_tenant_name, $course_id, $destination, $update_asset_policy, $file);
@@ -2579,13 +2577,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **destination** | **string**| Path, relative to the course&#39;s Content Directory, that indicates where to store the uploaded asset file. | |
-| **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;] |
-| **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **destination** | **string**| Path, relative to the course&#39;s Content Directory, that indicates where to store the uploaded asset file. |
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;]
+ **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional]
 
 ### Return type
 
@@ -2639,7 +2637,7 @@ $course_id = 'course_id_example'; // string
 $version_id = 56; // int | the course version
 $destination = 'destination_example'; // string | Path, relative to the course's Content Directory, that indicates where to store the uploaded asset file.
 $update_asset_policy = 'lax'; // string | Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are 'reject', 'strict', and 'lax'. A 'reject' policy request will fail if the asset file already exists on the system ('overwriting' not allowed). A 'strict' policy request will fail if the asset file does not already exist ('overwriting' is required). A 'lax' policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases).
-$file = '/path/to/file.txt'; // \SplFileObject | The course content file to import.
+$file = "/path/to/file.txt"; // \SplFileObject | The course content file to import.
 
 try {
     $result = $apiInstance->uploadCourseVersionAssetFile($engine_tenant_name, $course_id, $version_id, $destination, $update_asset_policy, $file);
@@ -2651,14 +2649,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**|  | |
-| **version_id** | **int**| the course version | |
-| **destination** | **string**| Path, relative to the course&#39;s Content Directory, that indicates where to store the uploaded asset file. | |
-| **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;] |
-| **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**|  |
+ **version_id** | **int**| the course version |
+ **destination** | **string**| Path, relative to the course&#39;s Content Directory, that indicates where to store the uploaded asset file. |
+ **update_asset_policy** | **string**| Describes how Engine should handle importing asset files with respect to overwriting files. Valid values are &#39;reject&#39;, &#39;strict&#39;, and &#39;lax&#39;. A &#39;reject&#39; policy request will fail if the asset file already exists on the system (&#39;overwriting&#39; not allowed). A &#39;strict&#39; policy request will fail if the asset file does not already exist (&#39;overwriting&#39; is required). A &#39;lax&#39; policy request will not consider whether the file already exists (i.e., it will attempt to import in all cases). | [optional] [default to &#39;lax&#39;]
+ **file** | **\SplFileObject****\SplFileObject**| The course content file to import. | [optional]
 
 ### Return type
 

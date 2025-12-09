@@ -1,18 +1,16 @@
 # RusticiSoftware\Engine\V2\ContentConnectorsApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**createConnector()**](ContentConnectorsApi.md#createConnector) | **POST** /contentConnectors | Create a connector |
-| [**getConnectorContentList()**](ContentConnectorsApi.md#getConnectorContentList) | **GET** /contentConnectors/availableContent | Get list of available content |
-| [**getConnectorsList()**](ContentConnectorsApi.md#getConnectorsList) | **GET** /contentConnectors | Get content connectors |
-| [**getRefreshJobStatus()**](ContentConnectorsApi.md#getRefreshJobStatus) | **GET** /contentConnectors/availableContent/refreshJobs/{refreshJobId} | Check the status of a refresh job. |
-| [**refreshConnectorContentListJob()**](ContentConnectorsApi.md#refreshConnectorContentListJob) | **POST** /contentConnectors/availableContent/refreshJobs | Start a job to refresh the list of available content |
-| [**searchRemoteConnectorContent()**](ContentConnectorsApi.md#searchRemoteConnectorContent) | **POST** /contentConnectors/remoteSearch | search remote content |
-| [**updateConnector()**](ContentConnectorsApi.md#updateConnector) | **PUT** /contentConnectors/{connectorId} | Update a connector |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**createConnector()**](ContentConnectorsApi.md#createConnector) | **POST** /contentConnectors | Create a connector
+[**getConnectorContentList()**](ContentConnectorsApi.md#getConnectorContentList) | **GET** /contentConnectors/availableContent | Get list of available content
+[**getConnectorsList()**](ContentConnectorsApi.md#getConnectorsList) | **GET** /contentConnectors | Get content connectors
+[**getRefreshJobStatus()**](ContentConnectorsApi.md#getRefreshJobStatus) | **GET** /contentConnectors/availableContent/refreshJobs/{refreshJobId} | Check the status of a refresh job.
+[**refreshConnectorContentListJob()**](ContentConnectorsApi.md#refreshConnectorContentListJob) | **POST** /contentConnectors/availableContent/refreshJobs | Start a job to refresh the list of available content
+[**searchRemoteConnectorContent()**](ContentConnectorsApi.md#searchRemoteConnectorContent) | **POST** /contentConnectors/remoteSearch | search remote content
+[**updateConnector()**](ContentConnectorsApi.md#updateConnector) | **PUT** /contentConnectors/{connectorId} | Update a connector
 
 
 ## `createConnector()`
@@ -60,10 +58,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **connector** | [**\RusticiSoftware\Engine\V2\Model\CreateConnectorSchema**](../Model/CreateConnectorSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connector** | [**\RusticiSoftware\Engine\V2\Model\CreateConnectorSchema**](../Model/CreateConnectorSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -116,7 +114,7 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\ContentConnectorsApi(
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | optional tenant for this request
 $connector_id = 'connector_id_example'; // string | the connector id
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 $not_imported = false; // bool
 $search = 'search_example'; // string
@@ -132,15 +130,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **connector_id** | **string**| the connector id | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
-| **not_imported** | **bool**|  | [optional] [default to false] |
-| **search** | **string**|  | [optional] |
-| **include_all_metadata** | **bool**|  | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **connector_id** | **string**| the connector id | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
+ **not_imported** | **bool**|  | [optional] [default to false]
+ **search** | **string**|  | [optional]
+ **include_all_metadata** | **bool**|  | [optional] [default to false]
 
 ### Return type
 
@@ -204,10 +202,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **include_additional_instance_information** | **bool**|  | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **include_additional_instance_information** | **bool**|  | [optional]
 
 ### Return type
 
@@ -269,10 +267,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **refresh_job_id** | **string**| The Id received when the refresh job was submitted to the refreshJobs resource. | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **refresh_job_id** | **string**| The Id received when the refresh job was submitted to the refreshJobs resource. |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -336,10 +334,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
-| **connector_id** | **string**| the connector id | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
+ **connector_id** | **string**| the connector id | [optional]
 
 ### Return type
 
@@ -403,10 +401,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **search_info** | [**\RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema**](../Model/ConnectorContentSearchSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **search_info** | [**\RusticiSoftware\Engine\V2\Model\ConnectorContentSearchSchema**](../Model/ConnectorContentSearchSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 
@@ -470,11 +468,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **connector_id** | **string**| the connector id | |
-| **connector** | [**\RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema**](../Model/UpdateConnectorSchema.md)|  | |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **connector_id** | **string**| the connector id |
+ **connector** | [**\RusticiSoftware\Engine\V2\Model\UpdateConnectorSchema**](../Model/UpdateConnectorSchema.md)|  |
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 

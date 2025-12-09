@@ -1,12 +1,10 @@
 # RusticiSoftware\Engine\V2\PingApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**ping()**](PingApi.md#ping) | **GET** /ping | Get back a message indicating that the API is working. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**ping()**](PingApi.md#ping) | **GET** /ping | Get back a message indicating that the API is working.
 
 
 ## `ping()`
@@ -51,9 +49,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| optional tenant for this request | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| optional tenant for this request | [optional]
 
 ### Return type
 

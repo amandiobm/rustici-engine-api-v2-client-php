@@ -1,38 +1,36 @@
 # RusticiSoftware\Engine\V2\RegistrationApi
 
+All URIs are relative to http://localhost/api/v2.
 
-
-All URIs are relative to http://localhost/api/v2, except if the operation defines another base path.
-
-| Method | HTTP request | Description |
-| ------------- | ------------- | ------------- |
-| [**abandonRegistrationSessions()**](RegistrationApi.md#abandonRegistrationSessions) | **POST** /registrations/{registrationId}/abandon | Abandon all sessions for &#x60;registrationId&#x60;. Currently only cmi5 session abandon is supported. For cmi5, section 9.3.6 of the specification allows for an activity to indicate an abnormal termination by a learner&#39;s action or due to a system failure. This endpoint thus allows for an activity to mark the session belonging to the specified registration as abandoned. |
-| [**buildRegistrationLaunchLink()**](RegistrationApi.md#buildRegistrationLaunchLink) | **POST** /registrations/{registrationId}/launchLink | Returns the link to use to launch this registration |
-| [**createNewRegistrationInstance()**](RegistrationApi.md#createNewRegistrationInstance) | **POST** /registrations/{registrationId}/instances | Create a new instance for this registration specified by the registration ID |
-| [**createRegistration()**](RegistrationApi.md#createRegistration) | **POST** /registrations | Create a registration. |
-| [**createRegistrationWithLaunchLink()**](RegistrationApi.md#createRegistrationWithLaunchLink) | **POST** /registrations/withLaunchLink | Creates a registration and returns the link to use to launch it |
-| [**deleteRegistration()**](RegistrationApi.md#deleteRegistration) | **DELETE** /registrations/{registrationId} | Delete &#x60;registrationId&#x60; |
-| [**deleteRegistrationConfigurationSetting()**](RegistrationApi.md#deleteRegistrationConfigurationSetting) | **DELETE** /registrations/{registrationId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this registration |
-| [**deleteRegistrationGlobalData()**](RegistrationApi.md#deleteRegistrationGlobalData) | **DELETE** /registrations/{registrationId}/globalData | delete global data associated with &#x60;registrationId&#x60; |
-| [**deleteRegistrationInstance()**](RegistrationApi.md#deleteRegistrationInstance) | **DELETE** /registrations/{registrationId}/instances/{instanceId} | Delete instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60; |
-| [**deleteRegistrationInstanceConfigurationSetting()**](RegistrationApi.md#deleteRegistrationInstanceConfigurationSetting) | **DELETE** /registrations/{registrationId}/instances/{instanceId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this registration instance |
-| [**deleteRegistrationProgress()**](RegistrationApi.md#deleteRegistrationProgress) | **DELETE** /registrations/{registrationId}/progress | delete registration progress (clear registration) |
-| [**finalizeRegistrationInstanceProgress()**](RegistrationApi.md#finalizeRegistrationInstanceProgress) | **POST** /registrations/{registrationId}/instances/{instanceId}/finalize | Set registration final progress for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \&quot;waive\&quot; (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires &#x60;isCompleted&#x60; and &#x60;isPassed&#x60; to both be set to &#x60;true&#x60; for the waive operation. |
-| [**finalizeRegistrationProgress()**](RegistrationApi.md#finalizeRegistrationProgress) | **POST** /registrations/{registrationId}/finalize | Set registration&#39;s or activity&#39;s final progress for &#x60;registrationId&#x60;. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \&quot;waive\&quot; (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires &#x60;isCompleted&#x60; and &#x60;isPassed&#x60; to both be set to &#x60;true&#x60; for the waive operation. |
-| [**getRegistration()**](RegistrationApi.md#getRegistration) | **HEAD** /registrations/{registrationId} | Does this registration exist? |
-| [**getRegistrationConfiguration()**](RegistrationApi.md#getRegistrationConfiguration) | **GET** /registrations/{registrationId}/configuration | Returns all configuration settings for this registration |
-| [**getRegistrationInstanceConfiguration()**](RegistrationApi.md#getRegistrationInstanceConfiguration) | **GET** /registrations/{registrationId}/instances/{instanceId}/configuration | Returns all configuration settings for this registration instance |
-| [**getRegistrationInstanceLaunchHistory()**](RegistrationApi.md#getRegistrationInstanceLaunchHistory) | **GET** /registrations/{registrationId}/instances/{instanceId}/launchHistory | Returns history of this registration&#39;s launches |
-| [**getRegistrationInstanceProgress()**](RegistrationApi.md#getRegistrationInstanceProgress) | **GET** /registrations/{registrationId}/instances/{instanceId} | Get registration progress for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60; |
-| [**getRegistrationInstanceStatements()**](RegistrationApi.md#getRegistrationInstanceStatements) | **GET** /registrations/{registrationId}/instances/{instanceId}/xAPIStatements | Get xAPI statements for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60; |
-| [**getRegistrationInstances()**](RegistrationApi.md#getRegistrationInstances) | **GET** /registrations/{registrationId}/instances | Get all the instances of this the registration specified by the registration ID |
-| [**getRegistrationLaunchHistory()**](RegistrationApi.md#getRegistrationLaunchHistory) | **GET** /registrations/{registrationId}/launchHistory | Returns history of this registration&#39;s launches |
-| [**getRegistrationProgress()**](RegistrationApi.md#getRegistrationProgress) | **GET** /registrations/{registrationId} | Get registration progress for &#x60;registrationId&#x60; |
-| [**getRegistrationStatements()**](RegistrationApi.md#getRegistrationStatements) | **GET** /registrations/{registrationId}/xAPIStatements | Get xAPI statements for &#x60;registrationId&#x60; |
-| [**getRegistrations()**](RegistrationApi.md#getRegistrations) | **GET** /registrations | Gets a list of registrations including a summary of the status of each registration. |
-| [**ltiBasicOutcomes()**](RegistrationApi.md#ltiBasicOutcomes) | **POST** /registrations/ltiBasicOutcomes | Endpoint for LTI basic outcomes |
-| [**setRegistrationConfiguration()**](RegistrationApi.md#setRegistrationConfiguration) | **POST** /registrations/{registrationId}/configuration | Set configuration settings for this registration. |
-| [**setRegistrationInstanceConfiguration()**](RegistrationApi.md#setRegistrationInstanceConfiguration) | **POST** /registrations/{registrationId}/instances/{instanceId}/configuration | Set configuration settings for this registration instance. |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**abandonRegistrationSessions()**](RegistrationApi.md#abandonRegistrationSessions) | **POST** /registrations/{registrationId}/abandon | Abandon all sessions for &#x60;registrationId&#x60;. Currently only cmi5 session abandon is supported. For cmi5, section 9.3.6 of the specification allows for an activity to indicate an abnormal termination by a learner&#39;s action or due to a system failure. This endpoint thus allows for an activity to mark the session belonging to the specified registration as abandoned.
+[**buildRegistrationLaunchLink()**](RegistrationApi.md#buildRegistrationLaunchLink) | **POST** /registrations/{registrationId}/launchLink | Returns the link to use to launch this registration
+[**createNewRegistrationInstance()**](RegistrationApi.md#createNewRegistrationInstance) | **POST** /registrations/{registrationId}/instances | Create a new instance for this registration specified by the registration ID
+[**createRegistration()**](RegistrationApi.md#createRegistration) | **POST** /registrations | Create a registration.
+[**createRegistrationWithLaunchLink()**](RegistrationApi.md#createRegistrationWithLaunchLink) | **POST** /registrations/withLaunchLink | Creates a registration and returns the link to use to launch it
+[**deleteRegistration()**](RegistrationApi.md#deleteRegistration) | **DELETE** /registrations/{registrationId} | Delete &#x60;registrationId&#x60;
+[**deleteRegistrationConfigurationSetting()**](RegistrationApi.md#deleteRegistrationConfigurationSetting) | **DELETE** /registrations/{registrationId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this registration
+[**deleteRegistrationGlobalData()**](RegistrationApi.md#deleteRegistrationGlobalData) | **DELETE** /registrations/{registrationId}/globalData | delete global data associated with &#x60;registrationId&#x60;
+[**deleteRegistrationInstance()**](RegistrationApi.md#deleteRegistrationInstance) | **DELETE** /registrations/{registrationId}/instances/{instanceId} | Delete instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;
+[**deleteRegistrationInstanceConfigurationSetting()**](RegistrationApi.md#deleteRegistrationInstanceConfigurationSetting) | **DELETE** /registrations/{registrationId}/instances/{instanceId}/configuration/{settingId} | Clears the &#x60;settingId&#x60; value for this registration instance
+[**deleteRegistrationProgress()**](RegistrationApi.md#deleteRegistrationProgress) | **DELETE** /registrations/{registrationId}/progress | delete registration progress (clear registration)
+[**finalizeRegistrationInstanceProgress()**](RegistrationApi.md#finalizeRegistrationInstanceProgress) | **POST** /registrations/{registrationId}/instances/{instanceId}/finalize | Set registration final progress for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \&quot;waive\&quot; (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires &#x60;isCompleted&#x60; and &#x60;isPassed&#x60; to both be set to &#x60;true&#x60; for the waive operation.
+[**finalizeRegistrationProgress()**](RegistrationApi.md#finalizeRegistrationProgress) | **POST** /registrations/{registrationId}/finalize | Set registration&#39;s or activity&#39;s final progress for &#x60;registrationId&#x60;. Registration or activity will be placed in review mode to prevent any more changes to this progress. This endpoint may be used for any learning standard, but in cmi5 it has the meaning of \&quot;waive\&quot; (see section 9.3.7 of the cmi5 specification for details on the Waived statement). In the case of cmi5, this endpoint requires &#x60;isCompleted&#x60; and &#x60;isPassed&#x60; to both be set to &#x60;true&#x60; for the waive operation.
+[**getRegistration()**](RegistrationApi.md#getRegistration) | **HEAD** /registrations/{registrationId} | Does this registration exist?
+[**getRegistrationConfiguration()**](RegistrationApi.md#getRegistrationConfiguration) | **GET** /registrations/{registrationId}/configuration | Returns all configuration settings for this registration
+[**getRegistrationInstanceConfiguration()**](RegistrationApi.md#getRegistrationInstanceConfiguration) | **GET** /registrations/{registrationId}/instances/{instanceId}/configuration | Returns all configuration settings for this registration instance
+[**getRegistrationInstanceLaunchHistory()**](RegistrationApi.md#getRegistrationInstanceLaunchHistory) | **GET** /registrations/{registrationId}/instances/{instanceId}/launchHistory | Returns history of this registration&#39;s launches
+[**getRegistrationInstanceProgress()**](RegistrationApi.md#getRegistrationInstanceProgress) | **GET** /registrations/{registrationId}/instances/{instanceId} | Get registration progress for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;
+[**getRegistrationInstanceStatements()**](RegistrationApi.md#getRegistrationInstanceStatements) | **GET** /registrations/{registrationId}/instances/{instanceId}/xAPIStatements | Get xAPI statements for instance &#x60;instanceId&#x60; of &#x60;registrationId&#x60;
+[**getRegistrationInstances()**](RegistrationApi.md#getRegistrationInstances) | **GET** /registrations/{registrationId}/instances | Get all the instances of this the registration specified by the registration ID
+[**getRegistrationLaunchHistory()**](RegistrationApi.md#getRegistrationLaunchHistory) | **GET** /registrations/{registrationId}/launchHistory | Returns history of this registration&#39;s launches
+[**getRegistrationProgress()**](RegistrationApi.md#getRegistrationProgress) | **GET** /registrations/{registrationId} | Get registration progress for &#x60;registrationId&#x60;
+[**getRegistrationStatements()**](RegistrationApi.md#getRegistrationStatements) | **GET** /registrations/{registrationId}/xAPIStatements | Get xAPI statements for &#x60;registrationId&#x60;
+[**getRegistrations()**](RegistrationApi.md#getRegistrations) | **GET** /registrations | Gets a list of registrations including a summary of the status of each registration.
+[**ltiBasicOutcomes()**](RegistrationApi.md#ltiBasicOutcomes) | **POST** /registrations/ltiBasicOutcomes | Endpoint for LTI basic outcomes
+[**setRegistrationConfiguration()**](RegistrationApi.md#setRegistrationConfiguration) | **POST** /registrations/{registrationId}/configuration | Set configuration settings for this registration.
+[**setRegistrationInstanceConfiguration()**](RegistrationApi.md#setRegistrationInstanceConfiguration) | **POST** /registrations/{registrationId}/instances/{instanceId}/configuration | Set configuration settings for this registration instance.
 
 
 ## `abandonRegistrationSessions()`
@@ -77,10 +75,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
 
 ### Return type
 
@@ -143,11 +141,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **launch_link_request** | [**\RusticiSoftware\Engine\V2\Model\LaunchLinkRequestSchema**](../Model/LaunchLinkRequestSchema.md)|  |
 
 ### Return type
 
@@ -208,10 +206,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
 
 ### Return type
 
@@ -273,11 +271,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration** | [**\RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema**](../Model/CreateRegistrationSchema.md)|  | |
-| **course_version** | **int**| The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration** | [**\RusticiSoftware\Engine\V2\Model\CreateRegistrationSchema**](../Model/CreateRegistrationSchema.md)|  |
+ **course_version** | **int**| The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. | [optional]
 
 ### Return type
 
@@ -340,11 +338,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **create_request** | [**\RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema**](../Model/CreateRegistrationWithLaunchLinkSchema.md)|  | |
-| **course_version** | **int**| The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **create_request** | [**\RusticiSoftware\Engine\V2\Model\CreateRegistrationWithLaunchLinkSchema**](../Model/CreateRegistrationWithLaunchLinkSchema.md)|  |
+ **course_version** | **int**| The version of the course you want to create the registration for. Unless you have a reason for using this you probably do not need to. | [optional]
 
 ### Return type
 
@@ -405,10 +403,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
 
 ### Return type
 
@@ -470,11 +468,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **setting_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **setting_id** | **string**|  |
 
 ### Return type
 
@@ -535,10 +533,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
 
 ### Return type
 
@@ -600,11 +598,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
 
 ### Return type
 
@@ -667,12 +665,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **setting_id** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **setting_id** | **string**|  |
 
 ### Return type
 
@@ -733,10 +731,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
 
 ### Return type
 
@@ -800,13 +798,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **registration_final_state** | [**\RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema**](../Model/FinalizeRegistrationProgressSchema.md)|  | |
-| **activity_id** | **string**| Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **registration_final_state** | [**\RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema**](../Model/FinalizeRegistrationProgressSchema.md)|  |
+ **activity_id** | **string**| Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. | [optional]
 
 ### Return type
 
@@ -869,12 +867,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **registration_final_state** | [**\RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema**](../Model/FinalizeRegistrationProgressSchema.md)|  | |
-| **activity_id** | **string**| Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **registration_final_state** | [**\RusticiSoftware\Engine\V2\Model\FinalizeRegistrationProgressSchema**](../Model/FinalizeRegistrationProgressSchema.md)|  |
+ **activity_id** | **string**| Empty string indicates the overall course. Otherwise, only the activity (the AU for cmi5) with the specified ID is updated. Updating a single activity is currently only supported in cmi5; for other learning standards, this activity ID must be absent or be an empty string to finalize the progress on the entire course. | [optional]
 
 ### Return type
 
@@ -935,10 +933,10 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
 
 ### Return type
 
@@ -1004,14 +1002,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **include_metadata** | **bool**|  | [optional] [default to false] |
-| **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false] |
-| **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false] |
-| **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **include_metadata** | **bool**|  | [optional] [default to false]
+ **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false]
+ **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false]
+ **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true]
 
 ### Return type
 
@@ -1078,15 +1076,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **include_metadata** | **bool**|  | [optional] [default to false] |
-| **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false] |
-| **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false] |
-| **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **include_metadata** | **bool**|  | [optional] [default to false]
+ **include_hidden_settings** | **bool**| Should settings that are declared to be hidden be included. Note: such settings generally do not need to be modified, and may be confusing. | [optional] [default to false]
+ **include_secret_settings** | **bool**| Should settings that are stored encrypted (type &#39;secretString&#39;) be included. Note: if included, the decrypted value will be returned. | [optional] [default to false]
+ **process_replacement_tokens** | **bool**| Whether to process replacement tokens (false returns the raw value of each setting, without tokens or environment variable replacements) | [optional] [default to true]
 
 ### Return type
 
@@ -1150,12 +1148,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **include_history_log** | **bool**| Whether to include the history log in the launch history | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **include_history_log** | **bool**| Whether to include the history log in the launch history | [optional] [default to false]
 
 ### Return type
 
@@ -1222,15 +1220,15 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false] |
-| **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false] |
-| **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false] |
-| **create_xapi_registration_id_if_absent** | **bool**| create the xAPI registration ID for this registration if one does not already exist | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false]
+ **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false]
+ **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false]
+ **create_xapi_registration_id_if_absent** | **bool**| create the xAPI registration ID for this registration if one does not already exist | [optional] [default to false]
 
 ### Return type
 
@@ -1282,8 +1280,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $registration_id = 'registration_id_example'; // string | id for this registration
 $instance_id = 56; // int | the instance of this registration
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 
 try {
@@ -1296,14 +1294,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
 
 ### Return type
 
@@ -1354,8 +1352,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $registration_id = 'registration_id_example'; // string | id for this registration
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 $include_child_results = false; // bool | Include information about each learning object, not just the top level in the results
 $include_interactions_and_objectives = false; // bool | Include interactions and objectives in the results
@@ -1371,16 +1369,16 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
-| **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false] |
-| **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false] |
-| **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
+ **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false]
+ **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false]
+ **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false]
 
 ### Return type
 
@@ -1443,11 +1441,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **include_history_log** | **bool**| Whether to include the history log in the launch history | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **include_history_log** | **bool**| Whether to include the history log in the launch history | [optional] [default to false]
 
 ### Return type
 
@@ -1513,14 +1511,14 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false] |
-| **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false] |
-| **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false] |
-| **create_xapi_registration_id_if_absent** | **bool**| create the xAPI registration ID for this registration if one does not already exist | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false]
+ **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false]
+ **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false]
+ **create_xapi_registration_id_if_absent** | **bool**| create the xAPI registration ID for this registration if one does not already exist | [optional] [default to false]
 
 ### Return type
 
@@ -1571,8 +1569,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 );
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $registration_id = 'registration_id_example'; // string | id for this registration
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 
 try {
@@ -1585,13 +1583,13 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
 
 ### Return type
 
@@ -1645,8 +1643,8 @@ $apiInstance = new RusticiSoftware\Engine\V2\Api\RegistrationApi(
 $engine_tenant_name = 'engine_tenant_name_example'; // string | tenant for this request
 $course_id = 'course_id_example'; // string | Only registrations for the specified course id will be included.
 $learner_id = 'learner_id_example'; // string | Only entries for the specified learner id will be included.
-$since = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
-$until = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$since = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
+$until = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used.
 $more = 'more_example'; // string | Value for this parameter will be provided in the 'more' property of lists, where needed. An opaque value, construction and parsing may change without notice.
 $include_child_results = false; // bool | Include information about each learning object, not just the top level in the results
 $include_interactions_and_objectives = false; // bool | Include interactions and objectives in the results
@@ -1662,17 +1660,17 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **course_id** | **string**| Only registrations for the specified course id will be included. | [optional] |
-| **learner_id** | **string**| Only entries for the specified learner id will be included. | [optional] |
-| **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional] |
-| **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional] |
-| **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false] |
-| **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false] |
-| **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false] |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **course_id** | **string**| Only registrations for the specified course id will be included. | [optional]
+ **learner_id** | **string**| Only entries for the specified learner id will be included. | [optional]
+ **since** | **\DateTime**| Only items updated since the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **until** | **\DateTime**| Only items updated up until the specified ISO 8601 TimeStamp (inclusive) are included. If a time zone is not specified, UTC time zone will be used. | [optional]
+ **more** | **string**| Value for this parameter will be provided in the &#39;more&#39; property of lists, where needed. An opaque value, construction and parsing may change without notice. | [optional]
+ **include_child_results** | **bool**| Include information about each learning object, not just the top level in the results | [optional] [default to false]
+ **include_interactions_and_objectives** | **bool**| Include interactions and objectives in the results | [optional] [default to false]
+ **include_runtime** | **bool**| Include runtime details in the results | [optional] [default to false]
 
 ### Return type
 
@@ -1724,9 +1722,9 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **outcomes_request** | **string**|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **outcomes_request** | **string**|  |
 
 ### Return type
 
@@ -1788,11 +1786,11 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
@@ -1855,12 +1853,12 @@ try {
 
 ### Parameters
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **engine_tenant_name** | **string**| tenant for this request | |
-| **registration_id** | **string**| id for this registration | |
-| **instance_id** | **int**| the instance of this registration | |
-| **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  | |
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **engine_tenant_name** | **string**| tenant for this request |
+ **registration_id** | **string**| id for this registration |
+ **instance_id** | **int**| the instance of this registration |
+ **configuration_settings** | [**\RusticiSoftware\Engine\V2\Model\SettingsPostSchema**](../Model/SettingsPostSchema.md)|  |
 
 ### Return type
 
