@@ -1,0 +1,9 @@
+# # RefreshConnectorResultListSchema
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**results** | [**\RusticiSoftware\Engine\V2\Model\RefreshConnectorResultSchema[]**](RefreshConnectorResultSchema.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

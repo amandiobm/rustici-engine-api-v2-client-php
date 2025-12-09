@@ -1,0 +1,12 @@
+# # ImportResultSchema
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**web_path_to_course** | **string** | web path to this course | [optional]
+**parser_warnings** | **string[]** |  | [optional]
+**course_languages** | **string[]** |  | [optional]
+**course** | [**\RusticiSoftware\Engine\V2\Model\CourseSchema**](CourseSchema.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

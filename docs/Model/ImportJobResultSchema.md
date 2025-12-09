@@ -1,0 +1,13 @@
+# # ImportJobResultSchema
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**job_id** | **string** |  | [optional]
+**status** | **string** |  | [optional]
+**message** | **string** |  | [optional]
+**is_dry_run** | **bool** |  | [optional]
+**import_result** | [**\RusticiSoftware\Engine\V2\Model\ImportResultSchema**](ImportResultSchema.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

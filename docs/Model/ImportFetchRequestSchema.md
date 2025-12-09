@@ -1,0 +1,11 @@
+# # ImportFetchRequestSchema
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**url** | **string** | URL path to the content to fetch to import this course. |
+**content_type** | **string** | MIME type that corresponds to the course content type. Supported types include application/zip, application/pdf, audio/mpeg, and video/mp4. The default value is application/zip. | [optional]
+**media_file_metadata** | [**\RusticiSoftware\Engine\V2\Model\MediaFileMetadataSchema**](MediaFileMetadataSchema.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
